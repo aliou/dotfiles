@@ -1,0 +1,9 @@
+# Make Tab autocomplete regardless of filename case
+set completion-ignore-case On
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Circles through the possible completions.
+TAB: menu-complete
+
