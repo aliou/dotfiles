@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# https://github.com/Goles/Battery
+# https://github.com/erikw/tmux-powerline/blob/master/segments/battery.sh
+
+battery_charge()
+{
+    ioreg -c AppleSmartBattery -w0 | \
+    grep -o '"[^"]*" = [^ ]*' | \
+    sed -e 's/= //g' -e 's/"//g' | \
+    sort | \
+    while read key value; do
+        case $key in
+            "MaxCapacity")
+                export maxcap=$value;;
+            "CurrentCapacity")
+                export curcap=$value;;
+        esac
+        if [[ -n "$maxcap" && -n $curcap ]]; then
+            CAPACITY=$(( 100 * curcap / maxcap))
+            printf "%d" $CAPACITY
+            break
+        fi
+    done
+}
+
+BATTERY_STATUS=`battery_charge`
+
+[ -z "$BATTERY_STATUS" ] && exit
+
+good_color="green"
+middle_color="yellow"
+warn_color="red"
+
+if [ $BATTERY_STATUS -ge 75 ]; then
+  COLOR="#[fg=$good_color]"
+elif [ $BATTERY_STATUS -ge 25 ] && [ $BATTERY_STATUS -lt 75 ]; then
+  COLOR="#[fg=$middle_color]"
+elif [ $BATTERY_STATUS -lt 25 ]; then
+  COLOR="#[fg=$warn_color]"
+fi
+
+#
+# Print the battery status
+#
+
+GRAPH=$(spark 0 ${BATTERY_STATUS} 100 | awk '{print substr($0,4,3)}')
+
+printf "%s%s %s%s" "$COLOR" "[$BATTERY_STATUS%]" "$GRAPH" "#[default]"

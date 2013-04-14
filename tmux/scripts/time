@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "p Time.now.strftime('%I:%M%P')" | ruby | sed 's/"//g'
