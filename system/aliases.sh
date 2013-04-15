@@ -14,6 +14,9 @@ alias l="l1"
 
 alias ack="ack -i"
 
+alias cdd='cd ~/.dotfiles'
+alias cdv='cd ~/.dotvim'
+
 # Reloads the shell without having PATH re-adding to himself.
 alias update="unset PATH ; exec $SHELL"
 
