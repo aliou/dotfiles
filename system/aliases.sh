@@ -3,19 +3,17 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-alias ls="ls -lA --color"
+alias ls="ls -lAG"
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
 alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
-alias l4='tree --dirsfirst -ChFLa 4 -I ".git*|tags"'
-alias l5='tree --dirsfirst -ChFLa 5 -I ".git*|tags"'
-alias l6='tree --dirsfirst -ChFLa 6 -I ".git*|tags"'
 alias l="l1"
 
 alias ack="ack -i"
 
 alias cdd='cd ~/.dotfiles'
 alias cdv='cd ~/.dotvim'
+alias cds='cd ~/src'
 
 # Reloads the shell without having PATH re-adding to himself.
 alias update="unset PATH ; exec $SHELL"
