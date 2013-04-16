@@ -34,9 +34,9 @@ warn_color="red"
 
 if [ $BATTERY_STATUS -ge 75 ]; then
   COLOR="#[fg=$good_color]"
-elif [ $BATTERY_STATUS -ge 25 ] && [ $BATTERY_STATUS -lt 75 ]; then
+elif [ $BATTERY_STATUS -ge 30 ] && [ $BATTERY_STATUS -lt 75 ]; then
   COLOR="#[fg=$middle_color]"
-elif [ $BATTERY_STATUS -lt 25 ]; then
+elif [ $BATTERY_STATUS -lt 30 ]; then
   COLOR="#[fg=$warn_color]"
 fi
 
