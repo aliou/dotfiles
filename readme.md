@@ -12,12 +12,11 @@ ln -s ~/.dotfiles/git/gitignore ~/.gitignore
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 
 ln -s ~/.dotfile/tmux/tmux.conf ~/.tmux.conf
-
 ```
 
 ## Secrets
 
-Put in the file ~/.secrets` the environment variable you want to set but not
+Put in the file `~/.secrets` the environment variables you want to set but not
 commit or that are different depending on the computer:
 
 ```bash
