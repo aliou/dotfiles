@@ -9,7 +9,6 @@
   amend = commit -v --amend
   c = commit -v
   ca = commit -av
-  commit = commit -v
   cv = commit -v
   d = diff --word-diff
   dc = diff --word-diff --cached
