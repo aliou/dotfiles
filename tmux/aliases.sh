@@ -1,2 +1,3 @@
-alias a="tmux at"
-alias d="tmux detach"
+alias ta="tmux at"
+alias td="tmux detach"
+alias tk="tmux kill-session"
