@@ -6,4 +6,3 @@ set mark-symlinked-directories on
 
 # Circles through the possible completions.
 TAB: menu-complete
-
