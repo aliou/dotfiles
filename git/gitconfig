@@ -12,13 +12,18 @@
   cv = commit -v
   d = diff --word-diff
   dc = diff --word-diff --cached
-  l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -5
-  lo = log --oneline --stat -5
+  empty = commit --allow-empty
+  empty-message = !"git commit -am '' --allow-empty-message"
+  fixup = commit --amend --no-edit
+  l = !"PAGER='' git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -5 && echo"
+  lo = !"PAGER='' git log --oneline --stat -5"
   s = status -sb
   unstash = !"git stash pop"
 [push]
   default = tracking
+[help]
+  autocorrect = 1
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 
 ; vim:ft=gitconfig:
