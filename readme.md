@@ -1,6 +1,6 @@
 ## Install
 
-```bash
+```sh
 git clone https://github.com/aliou/dotfiles.git ~/.dotfiles
 
 # BACKUP UR SHIT
@@ -19,7 +19,7 @@ ln -s ~/.dotfile/tmux/tmux.conf ~/.tmux.conf
 Put in the file `~/.secrets` the environment variables you want to set but not
 commit or that are different depending on the computer:
 
-```bash
+```sh
 # Set your git user info
 export GIT_AUTHOR_NAME='Desmond Hume'
 export GIT_AUTHOR_EMAIL='desmond.hume@orchid.is'
