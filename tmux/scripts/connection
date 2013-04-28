@@ -1,9 +1,9 @@
-# internet=`spark 0 100 | awk '{print substr($0, 4, 3)}'`
+#!/bin/sh
 internetoff="☠"
 interneton="😶"
 network_name=`nm-tool 2> /dev/null | grep "*" | tail -1 | cut -d: -f1 | sed -e 's/ //g' -e 's/*//'`
 
 curl --max-time 2 -s http://whatismyip.akamai.com/ > /dev/null &&\
   echo "#[fg=blue]$network_name #[fg=green]$interneton#[default]" ||\
-  echo "#[fg=blue]$network_name #[fg=red]$internetoff#[default]"
+  echo "#[fg=red]$internetoff#[default]"
 
