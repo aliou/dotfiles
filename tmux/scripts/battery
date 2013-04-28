@@ -1,8 +1,6 @@
 #!/bin/sh
 
 OS=`uname`
-FOLDER="~/.dotfiles/tmux/scripts"
-
 if [ $OS = "Linux" ]; then
   . ~/.dotfiles/tmux/scripts/bat_linux
 elif [ $OS = "Darwin" ]; then

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-curl --max-time 2 -s http://whatismyip.akamai.com/ > /dev/null && echo \
-"#[fg=green]⬆ ⬇#[default]" || echo "#[fg=red]⬆ ⬇#[default]"
