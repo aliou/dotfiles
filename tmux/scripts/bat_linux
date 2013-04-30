@@ -103,6 +103,4 @@ elif [ $BATTERY_STATUS -lt 30 ]; then
   COLOR="#[fg=$warn_color]"
 fi
 
-GRAPH=$(spark 0 ${BATTERY_STATUS} 100 | cut -c 2)
-
-printf "%s%s %s%s" "$COLOR" "[$BATTERY_STATUS%]" "$GRAPH" "#[default]"
+printf "%s%s%s" "$COLOR" "[$BATTERY_STATUS%]" "#[default]"
