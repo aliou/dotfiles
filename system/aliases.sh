@@ -3,7 +3,11 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-alias ls="ls -lAG"
+if [ `uname` = "Linux" ]; then
+  alias ls="ls -lA --color"
+else
+  alias ls="ls -lAG"
+fi
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
 alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
