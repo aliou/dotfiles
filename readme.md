@@ -17,7 +17,7 @@ ln -s ~/.dotfile/tmux/tmux.conf ~/.tmux.conf
 ## Secrets
 
 Put in the file `~/.secrets` the environment variables you want to set but not
-commit or that are different depending on the computer:
+commit or that are different depending on the environment:
 
 ```sh
 # Set your git user info
