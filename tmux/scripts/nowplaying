@@ -9,14 +9,19 @@ if [ `uname` = "Linux" ]; then
     if [ $state = "playing" ]; then
       artist=$(/usr/bin/banshee --query-artist | cut -d' ' -f 2-)
       title=$(/usr/bin/banshee --query-title | cut -d' ' -f 2-)
-      echo "$artist - $title ❮ "
+      info="$artist - $title"
     else
-      . ~/.dotfiles/tmux/scripts/lastfm.sh
+      info=$(. ~/.dotfiles/tmux/scripts/lastfm.sh)
     fi
   else
-    . ~/.dotfiles/tmux/scripts/lastfm.sh
+    info=$(. ~/.dotfiles/tmux/scripts/lastfm.sh)
   fi
-elif [ `uname` = "Darwin" ];
-then
-  . ~/.dotfiles/tmux/scripts/lastfm.sh
+else [ `uname` = "Darwin" ];
+  number=$(ps aux | grep "iTunes " | grep -v "grep\|tmux" | wc -l)
+  if [ $number -gt 0 ]; then
+    info=$(osascript ~/.dotfiles/tmux/scripts/itunes.script)
+  else
+    info=$(. ~/.dotfiles/tmux/scripts/lastfm.sh)
+  fi
 fi
+[[ $info ]] && echo "$info ❮ "

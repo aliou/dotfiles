@@ -10,9 +10,9 @@ LOAD1TMP=`echo $LOAD1*10 | bc -q | cut -d "." -f 1`
 LOAD2TMP=`echo $LOAD2*10 | bc -q | cut -d "." -f 1` 
 LOAD3TMP=`echo $LOAD3*10 | bc -q | cut -d "." -f 1` 
 
-if [ $LOAD1TMP -ge 9 ]; then
+if [ $LOAD1TMP -ge 15 ]; then
   COLOR1="#[fg=red]"
-elif [ $LOAD1TMP -ge 5 ] && [ $LOAD1TMP -lt 9 ]; then
+elif [ $LOAD1TMP -ge 10 ] && [ $LOAD1TMP -lt 15 ]; then
   COLOR1="#[fg=yellow]"
 else
   COLOR1="#[fg=green]"
