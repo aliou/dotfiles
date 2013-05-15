@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ `uname` = "Linux" ]; then
+  number=$(ps aux | grep banshee | grep -v "grep\|tmux" | wc -l)
+
+  if [ $number -gt 0 ]; then
+    state=$(/usr/bin/banshee --query-current-state | cut -d' ' -f 2-)
+
+    if [ $state = "playing" ]; then
+      artist=$(/usr/bin/banshee --query-artist | cut -d' ' -f 2-)
+      title=$(/usr/bin/banshee --query-title | cut -d' ' -f 2-)
+      echo "$artist - $title ❮ "
+    else
+      . ~/.dotfiles/tmux/scripts/lastfm.sh
+    fi
+  else
+    . ~/.dotfiles/tmux/scripts/lastfm.sh
+  fi
+elif [ `uname` = "Darwin" ];
+then
+  . ~/.dotfiles/tmux/scripts/lastfm.sh
+fi
