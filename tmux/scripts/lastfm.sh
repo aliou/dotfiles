@@ -17,4 +17,4 @@ if [ -z "$np" ]; then
     echo "${np}" > $tmp_file
   fi
 fi
-echo "$np
+echo "$np"
