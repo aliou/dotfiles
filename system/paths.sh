@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export PATH="${PATH}:~/.bin/:~/.dotfiles/bin/"
+export PATH="${PATH}:~/.bin"
 
 export INPUTRC="~/.inputrc"
