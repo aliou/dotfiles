@@ -39,6 +39,7 @@ ehthumbs.db
 
 # Folders #
 ####################
+node_modules/
 *-old/*
 */.svn/*
 cours/*
