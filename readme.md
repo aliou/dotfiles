@@ -3,15 +3,10 @@
 ```sh
 git clone https://github.com/aliou/dotfiles.git ~/.dotfiles
 
-# BACKUP UR SHIT
-ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -s ~/.dotfiles/bash/inputrc ~/.inputrc
-ln -s ~/.dotfiles/bash/profile ~/.profile
+# BACKUP UR SHIT and run
+cd ~/.dotfiles
+sh install.sh
 
-ln -s ~/.dotfiles/git/gitignore ~/.gitignore
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
-
-ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ```
 
 ## Secrets
