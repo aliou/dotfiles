@@ -14,4 +14,5 @@ map -builtin ; :
 map -count -modes=n,v j -builtin <count>3j
 map -count -modes=n,v k -builtin <count>3k
 
+set guioption+=B
 " vim: set ft=vim:
