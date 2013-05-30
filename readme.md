@@ -6,7 +6,6 @@ git clone https://github.com/aliou/dotfiles.git ~/.dotfiles
 # BACKUP UR SHIT and run
 cd ~/.dotfiles
 sh install.sh
-
 ```
 
 ## Secrets
