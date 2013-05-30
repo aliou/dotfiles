@@ -10,9 +10,13 @@ function parse_git_added {
 function parse_git_modified {
     [[ $(git status 2> /dev/null | grep modified:) != "" ]] && echo "#"
 }
+function parse_git_stashed {
+    stashed=$(git stash list 2> /dev/null | wc -l | sed 's/ //g')
+    [[ $stashed -ne 0 ]] && echo "[$stashed]"
+}
 function parse_git_dirty {
     echo "$(parse_git_added)$(parse_git_modified)$(parse_git_deleted)"
 }
 function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]$(parse_git_stashed)/"
 }
