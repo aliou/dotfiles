@@ -19,6 +19,7 @@
   lo = !"PAGER='' git log --oneline --stat -5"
   pr = pull --rebase
   s = status -sb
+  savelog = !"git log --graph --pretty=format:'%h %an: %s - %d (%cr)' --abbrev-commit --date=relative > log"
   unstash = !"git stash pop"
 [push]
   default = tracking
