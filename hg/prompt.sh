@@ -13,5 +13,5 @@ function hg_branch() {
 }
 
 function hg_prompt() {
-  echo "($(hg_branch)$(hg_dirty))"
+  hg branch 2> /dev/null > /dev/null && echo "($(hg_branch)$(hg_dirty))"
 }
