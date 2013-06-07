@@ -50,7 +50,6 @@ tmp/*
 ####################
 *-old
 *.local.*
-*.lock
 *.swp
 .env
 .tasks*
