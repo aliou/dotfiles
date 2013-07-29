@@ -1,3 +1,4 @@
+alias tmux="tmux -2"
 alias ta="tmux at"
 alias td="tmux detach"
 alias tl="tmux list-session"
