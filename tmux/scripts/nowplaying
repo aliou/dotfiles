@@ -18,8 +18,6 @@ else [ `uname` = "Darwin" ];
   number=$(ps aux | grep "iTunes " | grep -v "grep\|tmux" | wc -l)
   if [ $number -gt 0 ]; then
     info=$(osascript ~/.dotfiles/tmux/scripts/itunes.script)
-  else
-    info=$(. ~/.dotfiles/tmux/scripts/lastfm.sh)
   fi
 fi
 [[ $info ]] && echo "$info ❮ "
