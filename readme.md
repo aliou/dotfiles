@@ -11,7 +11,7 @@ sh install.sh
 ## Secrets
 
 Put in the file `~/.secrets` the environment variables you want to set but not
-commit or that are different depending on the environment:
+commit or that are different depending on your environment:
 
 ```sh
 # Set your git user info
