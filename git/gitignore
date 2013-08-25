@@ -57,3 +57,5 @@ tmp/*
 .update
 Session.vim
 tags
+.ruby-version
+*.backup
