@@ -1,9 +1,10 @@
 ## Install
 
+Make sure to backup your config files, because this will nuke 'em.
+
 ```sh
 git clone https://github.com/aliou/dotfiles.git ~/.dotfiles
 
-# BACKUP UR SHIT and run
 cd ~/.dotfiles
 sh install.sh
 ```

@@ -1,14 +1,14 @@
 #!/bin/sh
 
-ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -s ~/.dotfiles/bash/inputrc ~/.inputrc
-ln -s ~/.dotfiles/bash/profile ~/.profile
+ln -Fs ~/.dotfiles/bash/bashrc ~/.bashrc
+ln -Fs ~/.dotfiles/bash/inputrc ~/.inputrc
+ln -Fs ~/.dotfiles/bash/profile ~/.profile
 
-ln -s ~/.dotfiles/git/gitignore ~/.gitignore
-ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
+ln -Fs ~/.dotfiles/git/gitignore ~/.gitignore
+ln -Fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 
-ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -Fs ~/.dotfiles/system/pentadactylrc ~/.pentadactylrc
 
-ln -s ~/.dotfiles/system/pentadactylrc ~/.pentadactylrc
+ln -Fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 touch ~/.secret
