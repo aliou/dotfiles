@@ -11,6 +11,7 @@ fi
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
 alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
+alias l4='tree --dirsfirst -ChFLa 4 -I ".git*|tags"'
 alias l="l1"
 
 alias ack="ack -i"
@@ -25,7 +26,7 @@ alias update="unset PATH ; exec $SHELL"
 
 alias su="su -"
 
-sudoWisdom=( 
+sudoWisdom=(
 "ONE COMMAND TO RULE THEM ALL."
 "With great power, comes great responsibility." 
 "One does not simply become Super User."
