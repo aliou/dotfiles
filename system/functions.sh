@@ -18,7 +18,7 @@ h ()
   then
     history | tail
   else
-    history | grep "$1" | tail
+    history | grep -i "$1" | tail
   fi
 }
 
