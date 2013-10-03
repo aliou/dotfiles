@@ -12,3 +12,4 @@ ln -Fs ~/.dotfiles/system/pentadactylrc ~/.pentadactylrc
 ln -Fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 touch ~/.secret
+echo "Remeber to edit the `~/.secret` file."
