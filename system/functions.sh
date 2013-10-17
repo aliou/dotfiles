@@ -36,7 +36,7 @@ fk () { # build menu to kill process
   PS3='Kill which process? '
   select OPT in $(fp $1) "Cancel"; do
     if [ $OPT != "Cancel" ]; then
-      kill $(echo $OPT|awk '{print $NF}')
+      kill -9 $(echo $OPT|awk '{print $NF}')
     fi
     break
   done
