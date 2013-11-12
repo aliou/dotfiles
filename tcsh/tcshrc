@@ -1,0 +1,10 @@
+set prompt = "%m: %c\n› "
+set complete = enhance
+
+bindkey "^I" complete-word-fwd
+bindkey -k down history-search-forward
+bindkey -k up history-search-backward
+
+foreach file (~/.dotfiles/tcsh/*.sh)
+  source $file
+end
