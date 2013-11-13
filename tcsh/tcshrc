@@ -5,6 +5,6 @@ bindkey "^I" complete-word-fwd
 bindkey -k down history-search-forward
 bindkey -k up history-search-backward
 
-foreach file (~/.dotfiles/tcsh/*.sh)
+foreach file (~/.dotfiles/tcsh/*.tcsh)
   source $file
 end
