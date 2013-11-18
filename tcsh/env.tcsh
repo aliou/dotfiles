@@ -8,3 +8,4 @@ setenv PATH "${PATH}:/usr/local/share/npm/bin" # npm/node
 setenv PATH "/usr/local/bin:/usr/local/heroku/bin:${PATH}" #heroku/brew
 
 setenv EDITOR `which vim`
+setenv SHELL /bin/tcsh
