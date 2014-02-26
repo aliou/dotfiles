@@ -21,6 +21,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lo = !"PAGER='' git log --oneline --stat -5"
   pr = pull --rebase
+  rv = remote -v
   s = status -sb
   savelog = !"git log --graph --pretty=format:'%h %an: %s - %d (%cr)' --abbrev-commit --date=relative > log"
   unstash = !"git stash pop"
