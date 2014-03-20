@@ -1,106 +1,24 @@
 servers = (
-  { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
-  { 
-    address = "irc.undernet.org";
-    chatnet = "Undernet";
-    port = "6667";
-  },
-  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
-  { 
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
-  },
-  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6667"; },
   {
-    address = "irc.gamesurge.net";
-    chatnet = "GameSurge";
+    address = "irc.recycled-irc.net";
+    chatnet = "RecycledIRC";
     port = "6667";
   },
-  { address = "irc.webchat.org"; chatnet = "WebChat"; port = "6667"; },
-  { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
-  { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
-  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
   {
-    address = "irc.epita.fr";
-    port = "0";
-    use_ssl = "no";
-    ssl_verify = "no";
-    autoconnect = "yes";
+    address = "irc.irchighway.net";
+    chatnet = "IRCHighway";
+    port = "6667";
   }
 );
 
 chatnets = {
-  IRCnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "5";
-    max_whois = "4";
-    max_query_chans = "5";
-  };
-  EFNet = { 
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  OFTC = { 
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  GameSurge = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  WebChat = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  Rizon = { 
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  LinkNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  SILC = { type = "SILC"; };
-  Epita = { type = "IRC"; nick = "aliou"; };
+  IRCHighway = { type = "IRC"; };
+  RecycledIRC = { type = "IRC"; };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "#infexious"; chatnet = "RecycledIRC"; autojoin = "Yes"; },
+  { name = "#ebooks"; chatnet = "IRCHighway"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -265,11 +183,12 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "aliou diallo";
-    user_name = "aliou";
-    nick = "aliou";
-  };
+  core = { real_name = "aliou"; user_name = "aliou"; nick = "aliou"; };
   "fe-text" = { actlist_sort = "refnum"; colors = "yes"; };
+  "irc/dcc" = {
+    dcc_autoget = "yes";
+    dcc_autoresume = "yes";
+    dcc_download_path = "~/Downloads";
+  };
 };
 keyboard = ( { key = "^Z"; id = "command"; data = "window last"; } );
