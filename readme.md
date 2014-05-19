@@ -4,7 +4,6 @@ Make sure to backup your config files, because this will nuke 'em.
 
 ```sh
 git clone https://github.com/aliou/dotfiles.git ~/.dotfiles
-
 cd ~/.dotfiles
 sh install.sh
 ```
