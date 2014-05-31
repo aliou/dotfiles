@@ -12,8 +12,8 @@ if [[ -n "$PS1" ]] ; then
   # Put secret configuration settings in ~/.secrets
   [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
 
-  if [[ -d /etc/bash_completion.d ]]; then
-    for comp_file in /etc/bash_completion.d/**
+  if [[ -d /usr/local/etc/bash_completion.d ]]; then
+    for comp_file in /usr/local/etc/bash_completion.d/**
     do
       source $comp_file
     done
