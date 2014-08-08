@@ -18,5 +18,5 @@ function parse_git_dirty {
     echo "$(parse_git_added)$(parse_git_modified)$(parse_git_deleted)"
 }
 function parse_git_branch {
-    [[ -d .git ]] && git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]$(parse_git_stashed) /"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]$(parse_git_stashed) /"
 }
