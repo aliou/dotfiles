@@ -1,8 +1,0 @@
-#!/bin/sh
-
-OS=`uname`
-if [ $OS = "Linux" ]; then
-  . ~/.dotfiles/tmux/scripts/bat_linux
-elif [ $OS = "Darwin" ]; then
-  . ~/.dotfiles/tmux/scripts/bat_osx
-fi
