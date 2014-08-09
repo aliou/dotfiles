@@ -8,7 +8,6 @@
   editor = vim -f
   autocrlf = false
 [alias]
-  a = add
   amend = commit -v --amend
   br = branch
   c = commit -v

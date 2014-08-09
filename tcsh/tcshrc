@@ -1,4 +1,4 @@
-set prompt = "%m: %c\n› "
+set prompt = "%m: %c › "
 set complete = enhance
 
 bindkey "^I" complete-word-fwd

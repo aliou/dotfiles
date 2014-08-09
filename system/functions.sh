@@ -1,16 +1,11 @@
 #!/bin/bash
 
-mkcd () 
+mkcd()
 {
   mkdir -p "$*"
   cd "$*"
 }
 
-
-fileCopy()
-{
-  cat "$1" | pbcopy
-}
 
 h ()
 {
