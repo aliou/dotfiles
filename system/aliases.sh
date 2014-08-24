@@ -6,7 +6,7 @@ alias mv="mv -iv"
 if [ `uname` = "Linux" ]; then
   alias ls="ls -lA --color"
 else
-  alias ls="ls -lAG"
+  alias ls="ls -lAGh"
 fi
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
