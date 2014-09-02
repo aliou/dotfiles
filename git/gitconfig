@@ -13,7 +13,7 @@
   c = commit -v
   ca = commit -av
   d = diff --word-diff
-  dc = diff --word-diff --cached
+  dc = diff --cached
   empty = !"git commit -a -m '' --allow-empty-message"
   empty-message = !"git commit -a -m '' --allow-empty-message"
   fixup = commit --amend --no-edit --allow-empty-message

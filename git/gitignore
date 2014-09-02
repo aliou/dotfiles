@@ -53,6 +53,7 @@ tmp/*
 *.local.*
 *.swp
 .env
+.powenv
 .tasks*
 .update
 Session.vim
