@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# Usage: tv list <show>
+# Summary: Prints all the episodes logged or the specific show logged.
+# Help: Prints all the episodes logged or the specific show logged.
+#
+#    tv list
+#    tv list Lost
+require 'json'
+
+FILE = '/Users/alioudiallo/Dropbox/2014/.inbox/tv.json'
+shows = JSON.parse(File.read FILE)
+shows.select! { |s| s["show"].downcase == ARGV.join(' ').downcase } unless ARGV.empty?
+
+shows.each { |s| puts "#{s["date"]}: #{s["show"]} - #{s["epis"]}" }

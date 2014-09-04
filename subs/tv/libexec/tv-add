@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# Usage: tv add <show> <episode>
+# Summary: Adds an episode of a show to the log.
+# Help: Adds an episode of a showto the log.
+#
+#    tv add Lost S01E01
+require 'json'
+
+FILE = '/Users/alioudiallo/Dropbox/2014/.inbox/tv.json'
+shows = JSON.parse(File.read FILE)
+
+if ARGV.length == 2
+  show = { date: Time.new.strftime("%Y-%m-%d"), show: ARGV[0], epis: ARGV[1] }
+  shows << show
+
+  File.write FILE, shows.to_json
+
+  puts "#{show[:date]}: #{show[:show]} - #{show[:epis]}"
+end
