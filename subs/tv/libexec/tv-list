@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby --disable-gems
 # Usage: tv list <show>
 # Summary: Prints all the episodes logged or the specific show logged.
 # Help: Prints all the episodes logged or the specific show logged.
