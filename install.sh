@@ -10,6 +10,8 @@ ln -Fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 
 ln -Fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
+ln -Fs ~/.dotfiles/system/ackrc ~/.ackrc
+
 mkdir ~/.bin
 ln -s ~/.dotfiles/subs/tv/bin/tv ~/.bin/tv
 
