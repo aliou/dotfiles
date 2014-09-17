@@ -57,6 +57,7 @@ tmp/*
 .tasks*
 .update
 Session.vim
+.vimrc
 tags
 .ruby-version
 *.backup
