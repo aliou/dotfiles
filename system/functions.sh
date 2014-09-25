@@ -57,3 +57,7 @@ if [ -f "$1" ] ; then
        echo "'$1' is not a valid file"
     fi
 }
+
+e() {
+  vim $(find . -maxdepth 3 -type f ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | selecta)
+}
