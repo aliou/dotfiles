@@ -59,5 +59,5 @@ if [ -f "$1" ] ; then
 }
 
 e() {
-  vim $(find . -maxdepth 3 -type f ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | selecta)
+  vim $(find . -maxdepth 3 -type f ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | selecta) && clear
 }
