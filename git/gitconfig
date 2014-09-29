@@ -14,7 +14,7 @@
   ca = commit -av
   d = diff --word-diff
   dc = diff --cached
-  empty = !"git commit -a -m '' --allow-empty-message"
+  empty = !"git commit -a -m '' --allow-empty"
   empty-message = !"git commit -a -m '' --allow-empty-message"
   fixup = commit --amend --no-edit --allow-empty-message
   ghost = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
@@ -24,7 +24,7 @@
   lo = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10
   rv = remote -v
   s = status -sb
-  today = log --since=midnight --author='Aliou Diallo' --color --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %Creset' --abbrev-commit
+  today = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %Creset' --abbrev-commit --reverse
   unstash = !"git stash pop"
 [push]
   default = tracking
