@@ -1,6 +1,6 @@
 My dotfiles are inspired by @holman's and like his are organized into topics
-(bash, git, tmux, etc). Make sure to check is blog post ["Dotfiles Are Meant to
-Be Forked"][holman-post] and his [dotfiles][holman-dotfiles].
+(bash, git, tmux, etc). Make sure to check is blog post [Dotfiles Are Meant to
+Be Forked][holman-post] and his [dotfiles][holman-dotfiles].
 
 ## Install
 
