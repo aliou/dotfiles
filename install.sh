@@ -12,8 +12,5 @@ ln -Fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 ln -Fs ~/.dotfiles/ack/ackrc ~/.ackrc
 
-mkdir ~/.bin
-ln -s ~/.dotfiles/subs/tv/bin/tv ~/.bin/tv
-
 touch ~/.secrets
 echo "Remeber to edit the `~/.secrets` file."
