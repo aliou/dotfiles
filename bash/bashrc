@@ -6,9 +6,6 @@ if [[ -n "$PS1" ]] ; then
   # Source global definitions.
   [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
 
-  # Source local shit.
-  [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
-
   # Put secret configuration settings in ~/.secrets
   [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
 
@@ -24,6 +21,9 @@ if [[ -n "$PS1" ]] ; then
   do
     source $config_file
   done
+
+  # Source local shit.
+  [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
 
   # Set teminal as 256 colors.
   if [ -z $TMUX ]; then
