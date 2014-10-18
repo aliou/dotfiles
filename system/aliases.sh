@@ -22,10 +22,10 @@ alias su="su -"
 
 sudoWisdom=(
 "ONE COMMAND TO RULE THEM ALL."
-"With great power, comes great responsibility." 
+"With great power, comes great responsibility."
 "One does not simply become Super User."
 "TREAT. YO. SELF."
-'If someone asks if you are a god, you say, "yes!"'
+'Ray, when someone asks if you are a god, you say, "Yes!"'
 "HATERS GONNA DO THAT THING THEY ARE EPONYMOUSLY REPUTED TO DO."
 )
 
