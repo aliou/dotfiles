@@ -6,13 +6,13 @@ if [[ -n "$PS1" ]] ; then
   # Source global definitions.
   [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
 
-  # Put secret configuration settings in ~/.secrets
-  [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
-
   if [[ -d /usr/local/etc/bash_completion.d ]]; then
     for comp_file in /usr/local/etc/bash_completion.d/**
     do
-      source $comp_file
+      # AG completion sucks balls, so fuck this.
+      if [[ $(basename $comp_file) != 'ag.bashcomp.sh' ]]; then
+        source $comp_file
+      fi
     done
   fi
 
@@ -24,6 +24,9 @@ if [[ -n "$PS1" ]] ; then
 
   # Source local shit.
   [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
+
+  # Put secret configuration settings in ~/.secrets
+  [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
 
   # Set teminal as 256 colors.
   if [ -z $TMUX ]; then
