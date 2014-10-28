@@ -14,6 +14,7 @@
   ca = commit -av
   d = diff --word-diff
   dc = diff --cached
+  dl = !"git last && git diff HEAD~1 HEAD"
   empty = !"git commit -a -m '' --allow-empty"
   empty-message = !"git commit -a -m '' --allow-empty-message"
   fixup = commit --amend --no-edit --allow-empty-message
