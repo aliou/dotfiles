@@ -10,6 +10,7 @@ alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
 alias l4='tree --dirsfirst -ChFLa 4 -I ".git*|tags"'
 alias l="l1"
 
+alias c='cd ..'
 alias cdd='cd ~/.dotfiles'
 alias cds='cd ~/src'
 alias cdt='cd ~/tmp'
