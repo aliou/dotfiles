@@ -12,6 +12,7 @@
   br = branch
   c = commit -v
   ca = commit -av
+  conflicted = diff --name-only --diff-filter=U
   d = diff --word-diff
   dc = diff --cached
   dl = show --pretty=oneline
