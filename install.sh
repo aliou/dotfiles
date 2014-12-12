@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 ln -Fs ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -Fs ~/.dotfiles/bash/inputrc ~/.inputrc
