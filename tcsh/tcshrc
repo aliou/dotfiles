@@ -1,7 +1,11 @@
-set prompt = "%m: %c › "
+set prompt   = "%{\033[34m%}%m%{\033[0m%}: %c › "
 set complete = enhance
+set history  = 2000
+set savehist = (2000 merge)
+set histfile = ~/.tcsh_history
 
 bindkey "^I" complete-word-fwd
+bindkey "^r" i-search-back
 bindkey -k down history-search-forward
 bindkey -k up history-search-backward
 
