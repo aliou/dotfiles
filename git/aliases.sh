@@ -19,4 +19,14 @@ alias git=:
 __git_complete g _git
 
 # 4. Do the same thing for `gc`, `gco`, `gps`, `gpl` etc.
+
+alias gco='g checkout'
+__git_complete gco _git_checkout
+
+alias ga='g add'
+alias gap='g add -p'
+alias gc='g c'
+alias gd='g d'
+alias gdc='g dc'
+alias gs='g s'
 alias gup=git-up
