@@ -24,9 +24,36 @@ alias gco='g checkout'
 __git_complete gco _git_checkout
 
 alias ga='g add'
+__git_complete ga _git_add
+
 alias gap='g add -p'
+__git_complete gap _git_add
+
 alias gc='g c'
+__git_complete gc _git_commit
+
+alias gca='g ca'
+__git_complete gca _git_commit
+
 alias gd='g d'
+__git_complete gd _git_diff
+
 alias gdc='g dc'
+__git_complete gdc _git_diff
+
+alias gl='g l'
+__git_complete gl _git_log
+
+alias glog='g log'
+__git_complete glog _git_log
+
+alias gps='g push'
+__git_complete gps _git_push
+
+alias gpl='g pull'
+__git_complete gpl _git_pull
+
 alias gs='g s'
+__git_complete gs _git_status
+
 alias gup=git-up
