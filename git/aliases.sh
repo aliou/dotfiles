@@ -57,3 +57,6 @@ alias gs='g s'
 __git_complete gs _git_status
 
 alias gup=git-up
+alias gunstash='g unstash'
+
+alias gstash='g stash'
