@@ -1,36 +1,36 @@
 [user]
   email = code@aliou.me
-  name = Aliou Diallo
+  name  = Aliou Diallo
 [color]
   ui = true
 [core]
-  autocrlf = false
-  editor = vim -f
+  autocrlf     = false
+  editor       = vim -f
   excludesfile = ~/.gitignore
 [alias]
-  abort-merge = reset --merge
-  amend = commit -v --amend
-  br = branch
-  c = commit -v
-  ca = commit -av
-  conflicted = diff --name-only --diff-filter=U
-  d = diff --word-diff
-  dc = diff --cached
-  dl = show --pretty=oneline
-  dlast = show --pretty=oneline
-  empty = !"git commit -a -m '' --allow-empty --allow-empty-message"
-  empty-commit = !"git commit --allow-empty"
+  abort-merge   = reset --merge
+  amend         = commit -v --amend
+  br            = branch
+  c             = commit -v
+  ca            = commit -av
+  conflicted    = diff --name-only --diff-filter=U
+  d             = diff --word-diff
+  dc            = diff --cached
+  dl            = show --pretty=oneline
+  dlast         = show --pretty=oneline
+  empty         = !"git commit -a -m '' --allow-empty --allow-empty-message"
+  empty-commit  = !"git commit --allow-empty"
   empty-message = !"git commit -a -m '' --allow-empty-message"
-  fixup = commit --amend --no-edit --allow-empty-message
-  ghost = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
-  l = !"PAGER='' git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 && echo"
-  lo = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10
-  repush = !"git fixup && git push -f"
-  rv = remote -v
-  s = status -sb
-  today = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %Creset' --abbrev-commit --reverse
-  unstash = !"git stash pop"
-  vr = branch
+  fixup         = commit --amend --no-edit --allow-empty-message
+  ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
+  l             = !"PAGER='' git lo && echo"
+  lo            = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10
+  repush        = !"git fixup && git push -f"
+  rv            = remote -v
+  s             = status -sb
+  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %Creset' --abbrev-commit --reverse
+  unstash       = !"git stash pop"
+  vr            = branch
 [push]
   default = tracking
 [help]
