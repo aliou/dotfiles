@@ -29,6 +29,7 @@
   rv            = remote -v
   s             = status -sb
   today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %Creset' --abbrev-commit --reverse
+  typo          = commit -m 'Fix typo.'
   unstash       = !"git stash pop"
   vr            = branch
 [push]
