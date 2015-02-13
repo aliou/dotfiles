@@ -29,6 +29,9 @@ __git_complete ga _git_add
 alias gap='g add -p'
 __git_complete gap _git_add
 
+alias gbr='g br'
+__git_complete gbr _git_branch
+
 alias gc='g c'
 __git_complete gc _git_commit
 
