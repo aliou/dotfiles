@@ -40,3 +40,5 @@
   helper = cache --timeout=3600
 [git-up "bundler"]
   check = true
+[url "https://"]
+  insteadOf = git://
