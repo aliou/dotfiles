@@ -3,6 +3,31 @@
 # Install Homebrew, requires Xcode CLI tools.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Change screenshot location.
-defaults write com.apple.screencapture location ~/Downloads/ && \
-  killall SystemUIServer
+# Install required formulaes
+brew install \
+  ack \
+  bash \
+  git \
+  go \
+  hg \
+  irssi \
+  jq \
+  mongodb \
+  postgresql \
+  rbenv \
+  reattach-to-user-namespace \
+  redis \
+  ruby-build \
+  selecta \
+  tcsh \
+  tmux \
+  tree \
+  vim \
+  wget \
+  youtube-dl
+
+# Install pow
+curl get.pow.cx | sh
+
+# Install heroku toolbelt
+open "https://toolbelt.heroku.com/"
