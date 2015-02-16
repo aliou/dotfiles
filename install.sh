@@ -11,6 +11,3 @@ ln -Fs ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -Fs ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 ln -Fs ~/.dotfiles/ack/ackrc ~/.ackrc
-
-touch ~/.secrets
-echo "Remeber to edit the `~/.secrets` file."
