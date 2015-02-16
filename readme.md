@@ -14,7 +14,7 @@ sh install.sh
 
 ## Vim
 
-My Vim configuration has its [own repo][vim].
+My Vim configuration files have their [own repo][vim].
 
 [vim]: https://github.com/aliou/dotvim
 [holman-post]: http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
