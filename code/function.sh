@@ -2,9 +2,10 @@
 
 gh() {
   FOLDERS=" \
-    $HOME/src/github \
-    $HOME/src/heroku \
-    $HOME/src/sandbox"
+    $HOME/src/.go/src/github.com/aliou/* \
+    $HOME/src/github/**/* \
+    $HOME/src/heroku/**/* \
+    $HOME/src/sandbox/*"
 
-  cd $(find $FOLDERS -maxdepth 2 -type d | sort | uniq | selecta) && clear
+  cd $(find $FOLDERS -maxdepth 0 -type d | sort -f | uniq | selecta) && clear
 }
