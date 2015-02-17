@@ -18,7 +18,7 @@ h ()
 
 server()
 {
-  open "http://localhost:${1}" && python -m SimpleHTTPServer $1
+  python -m SimpleHTTPServer $1 && open "http://localhost:${1}"
 }
 
 fp () { #find and list processes matching a case-insensitive partial-match string
