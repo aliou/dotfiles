@@ -57,7 +57,6 @@ alias gpl='g pull'
 __git_complete gpl _git_pull
 
 alias gs='g s'
-__git_complete gs _git_status
 
 alias gup=git-up
 alias gunstash='g unstash'
