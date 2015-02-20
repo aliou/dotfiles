@@ -10,7 +10,7 @@
 # bullshit.
 alias g=`which git`
 
-# 2. Alias `git` to the no-op command so I lose my mind.
+# 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
 # (99% sure this is a bad idea).
 alias git=:
 
