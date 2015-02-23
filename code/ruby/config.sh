@@ -1,6 +1,10 @@
 #!/bin/bash
 
-export RBENV_ROOT="/usr/local/var/rbenv"
-eval "$(rbenv init -)"
+if [[ -n `which rbenv` ]]; then
+  export RBENV_ROOT="/usr/local/var/rbenv"
+  eval "$(rbenv init -)"
+fi
 
-export PATH="/usr/local/heroku/bin:$PATH" #heroku
+if [[ -n `which heroku` ]]; then
+  export PATH="/usr/local/heroku/bin:$PATH" #heroku
+fi
