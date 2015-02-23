@@ -13,18 +13,18 @@ p() {
     $HOME/src/.go/src/github.com/aliou/* \
     $HOME/src/sandbox/*"
 
-  PROJECTS=$(find $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
+  PROJECTS=$(find -s $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
   MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
 
   TARGET=
 
   if [[ ! $PROJECTS ]]; then
-    TARGET=$(find $FOLDERS -maxdepth 0 -type d | selecta)
+    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | selecta)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$PROJECTS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find $PROJECTS -maxdepth 0 -type d | selecta)
+      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | selecta)
     fi
   fi
 
