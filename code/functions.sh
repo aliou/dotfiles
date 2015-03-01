@@ -28,5 +28,9 @@ p() {
     fi
   fi
 
-  cd $TARGET && clear
+  if [[ -n $TARGET ]]; then
+    cd $TARGET
+  fi
+
+  clear
 }
