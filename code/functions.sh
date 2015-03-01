@@ -10,7 +10,7 @@ p() {
   FOLDERS=" \
     $HOME/src/github/**/* \
     $HOME/src/heroku/**/* \
-    $HOME/src/.go/src/github.com/aliou/* \
+    $HOME/src/.go/src/**/aliou/* \
     $HOME/src/sandbox/*"
 
   PROJECTS=$(find -s $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
