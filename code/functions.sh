@@ -33,4 +33,11 @@ p() {
   fi
 
   clear
+
+  PROJECT_NAME=`basename $TARGET | tr '[[:upper:]]' '[[:lower:]]'`
+  if [[ -f "${HOME}/.tmuxinator/${PROJECT_NAME}.yml" ]]; then
+    echo -en $txtblu
+    echo "This project has a mux config. Run using \`mux $PROJECT_NAME\`"
+    echo -en $txtrst
+  fi
 }
