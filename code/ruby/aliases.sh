@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias b=bundle
 alias be='bundle exec'
 alias reload!='echo "Wrong console, dummy."'
 
