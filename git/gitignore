@@ -59,6 +59,7 @@ tmp/*
 .update
 Session.vim
 .vimrc
+.projections.json
 tags
 .ruby-version
 *.backup
