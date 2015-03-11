@@ -4,6 +4,9 @@ gh() {
   echo 'use `p` instead.'
 }
 
+# Requirements:
+# - pick <http://git.io/pick>
+# - ack
 p() {
   PROJECT=${1:-.*}
 
@@ -19,20 +22,18 @@ p() {
   TARGET=
 
   if [[ ! $PROJECTS ]]; then
-    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | selecta)
+    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | pick)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$PROJECTS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | selecta)
+      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | pick)
     fi
   fi
 
   if [[ -n $TARGET ]]; then
     cd $TARGET
   fi
-
-  clear
 
   PROJECT_NAME=`basename $TARGET | tr '[[:upper:]]' '[[:lower:]]'`
   if [[ -f "${HOME}/.tmuxinator/${PROJECT_NAME}.yml" ]] && [[ -z $TMUX ]]; then
