@@ -26,6 +26,8 @@ __git_complete gco _git_checkout
 alias ga='g add'
 __git_complete ga _git_add
 
+alias ga.='g add .'
+
 alias gap='g add -p'
 __git_complete gap _git_add
 
@@ -59,6 +61,5 @@ __git_complete gpl _git_pull
 alias gs='g s'
 
 alias gup=git-up
-alias gunstash='g unstash'
-
 alias gstash='g stash'
+alias gunstash='g unstash'
