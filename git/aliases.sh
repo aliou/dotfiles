@@ -40,6 +40,8 @@ __git_complete gc _git_commit
 alias gca='g ca'
 __git_complete gca _git_commit
 
+alias gcm='g c -m'
+
 alias gd='g d'
 __git_complete gd _git_diff
 
