@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-gh() {
-  echo 'use `p` instead.'
-}
-
 # Requirements:
 # - pick <http://git.io/pick>
 # - ack

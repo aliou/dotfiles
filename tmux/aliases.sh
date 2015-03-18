@@ -10,12 +10,12 @@ function ts() {
     tmux switch-client
   else
     if [[ $1 == "" ]]; then
-      SESSION=$(tmux list-sessions -F '#S' | selecta)
+      SESSION=$(tmux list-sessions -F '#S' | pick)
     else
       SESSION=$@
     fi
 
-    tmux switch-client -t "$SESSION" && clear
+    tmux switch-client -t "$SESSION"
   fi
 }
 
@@ -25,11 +25,11 @@ function ta() {
     tmux at
   else
     if [[ $1 == "" ]]; then
-      SESSION=$(tmux list-sessions -F '#S' | selecta)
+      SESSION=$(tmux list-sessions -F '#S' | pick)
     else
       SESSION=$@
     fi
 
-    tmux at -t "$SESSION" && clear
+    tmux at -t "$SESSION"
   fi
 }
