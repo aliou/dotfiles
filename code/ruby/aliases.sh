@@ -5,7 +5,7 @@ alias be='bundle exec'
 alias reload!='echo "Wrong console, dummy."'
 
 # Edit last migration.
-alias emig='vim db/migrate/$(\ls -1 db/migrate/ | tail -n 1)'
+alias emig='\vim db/migrate/$(\ls -1 db/migrate/ | tail -n 1)'
 
 migrate() {
   if [[ -f './bin/rake' ]]; then

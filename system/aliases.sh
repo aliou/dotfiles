@@ -13,7 +13,7 @@ alias l="l1"
 alias c='cd ..'
 alias cdd='cd ~/.dotfiles'
 alias cds='cd ~/src'
-alias cdt='cd ~/tmp'
+alias cdt='cd ~/src/tmp'
 alias cdv='cd ~/.dotvim'
 
 # Reloads the shell without having PATH re-adding to himself.

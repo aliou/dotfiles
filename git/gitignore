@@ -46,6 +46,7 @@ node_modules/
 cours/*
 local/*
 tmp/*
+.sass-cache
 
 # Files #
 ####################
