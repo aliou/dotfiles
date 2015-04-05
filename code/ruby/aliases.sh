@@ -2,6 +2,7 @@
 
 alias b=bundle
 alias be='bundle exec'
+alias br='bundle exec rake'
 alias reload!='echo "Wrong console, dummy."'
 
 # Edit last migration.
