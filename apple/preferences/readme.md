@@ -7,3 +7,9 @@ Follow instructions from this [SE thread](http://apple.stackexchange.com/questio
 * Quit Moom.
 * Move the preference file to `~/Library/Preferences/`
 * Relaunch Moom.
+
+#### TextEdit
+Open a new File instead of the iCloud dialog:
+```sh
+defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
+```
