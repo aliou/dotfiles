@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-
 # Requirements:
 # - pick <http://git.io/pick>
 # - ack
+
+j() {
+  cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
+}
+
 p() {
   PROJECT=${1:-.*}
 
