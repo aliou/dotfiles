@@ -1,10 +1,32 @@
 #!/usr/bin/env bash
+# TODO: DRY `j` and `p.`
 # Requirements:
 # - pick <http://git.io/pick>
 # - ack
 
 j() {
-  cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
+  # cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
+  FOLDER=${1:-.*}
+
+  FOLDERS=$(find . -maxdepth 5 -type d | ack --nocolor $FOLDER)
+  MATCHES_COUNT=$(echo $FOLDERS | tr ' ' '\n' | wc -l)
+
+  TARGET=
+
+  if [[ ! $FOLDER ]]; then
+    TARGET=$(find . -maxdepth 5 -type d | pick)
+  else
+    if (( $MATCHES_COUNT == 1 )); then
+      TARGET=$FOLDERS
+    elif (( $MATCHES_COUNT > 1 )); then
+      TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | pick)
+    fi
+  fi
+
+  if [[ -n $TARGET ]]; then
+    cd $TARGET
+  fi
+
 }
 
 p() {
