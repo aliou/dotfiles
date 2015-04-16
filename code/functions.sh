@@ -8,7 +8,7 @@ j() {
   # cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
   FOLDER=${1:-.*}
 
-  FOLDERS=$(find . -maxdepth 5 -type d | ack --nocolor $FOLDER)
+  FOLDERS=$(find . -maxdepth 5 -type d | ack -v '.git' --nocolor $FOLDER)
   MATCHES_COUNT=$(echo $FOLDERS | tr ' ' '\n' | wc -l)
 
   TARGET=
