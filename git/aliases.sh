@@ -51,6 +51,9 @@ __git_complete gd _git_diff
 alias gdc='g dc'
 __git_complete gdc _git_diff
 
+alias gdl='g dl'
+__git_complete gdl _git_diff
+
 alias gl='g l'
 __git_complete gl _git_log
 
