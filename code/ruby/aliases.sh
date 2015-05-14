@@ -26,4 +26,12 @@ migrate() {
   fi
 }
 
+rollback() {
+  if [[ -f './bin/rake' ]]; then
+    ./bin/rake db:rollback
+  else
+    bundle exec rake db:rollback
+  fi
+}
+
 alias powrestart='touch ~/.pow/restart.txt'
