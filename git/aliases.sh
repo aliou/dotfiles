@@ -71,3 +71,5 @@ alias gs='g s'
 alias gup=git-up
 alias gstash='g stash'
 alias gunstash='g unstash'
+
+alias gro='cd "$(\git rev-parse --show-toplevel)"'
