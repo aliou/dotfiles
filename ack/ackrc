@@ -8,6 +8,8 @@
 --ignore-dir=doc
 --ignore-dir=coverage
 
+--ignore-file=is:tags
+
 --type-add=ruby=.haml,.rake,.rsel,.builder
 --type-add=html=.html.erb,.html.haml,.hbs
 --type-add=js=.js.erb
