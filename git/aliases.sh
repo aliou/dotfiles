@@ -54,10 +54,10 @@ __git_complete gdc _git_diff
 alias gdl='g dl'
 __git_complete gdl _git_diff
 
-alias gl='g l'
+alias gl='g l --decorate'
 __git_complete gl _git_log
 
-alias glog='g log'
+alias glog='g log --decorate'
 __git_complete glog _git_log
 
 alias gps='g push'

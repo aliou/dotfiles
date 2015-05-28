@@ -59,8 +59,8 @@ p() {
 
   PROJECT_NAME=`basename $TARGET | tr '[[:upper:]]' '[[:lower:]]'`
   if [[ -z $TMUX ]] && (( $(tmux list-sessions 2> /dev/null | grep $PROJECT_NAME | wc -l) == 1 )); then
-    echo "This project is running in Tmux. Attach it using \`tmux at -t $PROJECT_NAME\`"
+    echo "INFO: This project is running in Tmux. Attach it using \`tmux at -t $PROJECT_NAME\`"
   elif [[ -f "${HOME}/.tmuxinator/${PROJECT_NAME}.yml" ]] && [[ -z $TMUX ]]; then
-    echo "This project has a mux config. Run using \`mux $PROJECT_NAME\`"
+    echo "INFO: This project has a mux config. Run using \`mux $PROJECT_NAME\`"
   fi
 }
