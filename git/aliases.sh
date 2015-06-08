@@ -60,8 +60,14 @@ __git_complete gl _git_log
 alias glog='g log --decorate'
 __git_complete glog _git_log
 
+alias gm='g merge'
+__git_complete gmerge _git_merge
+
 alias gps='g push'
 __git_complete gps _git_push
+
+alias gpsf='g push -f'
+__git_complete gpsf _git_push
 
 alias gpl='g pull'
 __git_complete gpl _git_pull
@@ -69,6 +75,7 @@ __git_complete gpl _git_pull
 alias gs='g s'
 
 alias gup=git-up
+alias gundo='g undo'
 alias gstash='g stash'
 alias gunstash='g unstash'
 

@@ -31,6 +31,7 @@
   today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse
   todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color
   typo          = commit -m 'Fix typo.'
+  undo          = reset HEAD~1
   unstash       = !"git stash pop"
   vr            = branch
 [push]

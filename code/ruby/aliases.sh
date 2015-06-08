@@ -5,6 +5,8 @@ alias be='bundle exec'
 alias br='bundle exec rake'
 alias rc='[[ -f ./bin/rails ]] && ./bin/rails c || rails c'
 alias rcs='[[ -f ./bin/rails ]] && ./bin/rails c -s || rails c -s'
+
+alias reload='echo "Wrong console, dummy."'
 alias reload!='echo "Wrong console, dummy."'
 
 r() {
