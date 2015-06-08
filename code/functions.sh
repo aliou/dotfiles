@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 # TODO: DRY `j` and `p.`
 # Requirements:
-# - pick <http://git.io/pick>
+# - pick <http://git.io/pick> or fzf <http://git.io/C4FBDw> or selecta <http://git.io/oGBVlw>
 # - ack
 
+# Easily switch fuzzy finder by setting the FUZZY_CMD env variable.
+export FUZZY_CMD="fzf --reverse"
+
+# Jump to a subfolder.
+# Usage: j [ folder ]
+# http://stackoverflow.com/questions/4210042/exclude-directory-from-find-command
 j() {
   # cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
   FOLDER=${1:-.*}
@@ -14,21 +20,22 @@ j() {
   TARGET=
 
   if [[ ! $FOLDER ]]; then
-    TARGET=$(find . -maxdepth 5 -type d | pick)
+    TARGET=$(find . -maxdepth 5 -type d | $FUZZY_CMD)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$FOLDERS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | pick)
+      TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
     fi
   fi
 
   if [[ -n $TARGET ]]; then
     cd $TARGET
   fi
-
 }
 
+# Jump to a project file.
+# Usage: p [ project ]
 p() {
   PROJECT=${1:-.*}
 
@@ -44,12 +51,12 @@ p() {
   TARGET=
 
   if [[ ! $PROJECTS ]]; then
-    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | pick)
+    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$PROJECTS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | pick)
+      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | $FUZZY_CMD)
     fi
   fi
 
