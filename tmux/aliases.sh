@@ -4,13 +4,15 @@ alias td="tmux detach"
 alias tl="tmux list-session"
 alias tk="tmux kill-session"
 
+[[ -z $FUZZY_CMD ]] && export FUZZY_CMD="pick"
+
 function ts() {
   COUNT=$(tmux list-sessions | wc -l)
   if (( $COUNT == 1 )); then
     tmux switch-client
   else
     if [[ $1 == "" ]]; then
-      SESSION=$(tmux list-sessions -F '#S' | pick)
+      SESSION=$(tmux list-sessions -F '#S' | $FUZZY_CMD)
     else
       SESSION=$@
     fi
@@ -25,7 +27,7 @@ function ta() {
     tmux at
   else
     if [[ $1 == "" ]]; then
-      SESSION=$(tmux list-sessions -F '#S' | pick)
+      SESSION=$(tmux list-sessions -F '#S' | $FUZZY_CMD)
     else
       SESSION=$@
     fi
