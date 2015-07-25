@@ -12,7 +12,7 @@ alias g=`which git`
 
 # 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
 # (99% sure this is a bad idea).
-alias git=:
+# alias git=:
 
 # 3. Add completion <TAB> completion to `g`.
 # Instructions in `/usr/local/etc/bash_completion.d/git-completion.bash`.

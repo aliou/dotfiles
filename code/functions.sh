@@ -9,10 +9,11 @@ export FUZZY_CMD="fzf --reverse"
 
 # Jump to a subfolder.
 # Usage: j [ folder ]
+# TODO: Ignore common folders.
 # http://stackoverflow.com/questions/4210042/exclude-directory-from-find-command
 j() {
-  # cd $(find . -maxdepth 5 -type d | grep -v '.git' | pick)
   FOLDER=${1:-.*}
+  IGNORED_FOLDERS=('node-modules')
 
   FOLDERS=$(find . -maxdepth 5 -type d | ack -v '.git' --nocolor $FOLDER)
   MATCHES_COUNT=$(echo $FOLDERS | tr ' ' '\n' | wc -l)
@@ -64,6 +65,10 @@ p() {
     cd $TARGET && folder_info
   fi
 
+}
+
+e() {
+  vim $(find . -maxdepth 3 -type f ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | $FUZZY_CMD) && clear
 }
 
 folder_info() {

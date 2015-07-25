@@ -7,3 +7,4 @@ done
 
 alias :w='echo "Not in vim, dummy"'
 alias :e='\vim'
+alias m='tmuxinator'
