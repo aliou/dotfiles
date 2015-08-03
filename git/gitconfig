@@ -28,6 +28,7 @@
   repush        = !"git fixup && git push -f"
   rv            = remote -v
   s             = status -sb
+  tags          = tag
   today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse
   todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color
   typo          = commit -m 'Fix typo.'
