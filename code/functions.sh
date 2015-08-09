@@ -21,12 +21,12 @@ j() {
   TARGET=
 
   if [[ ! $FOLDER ]]; then
-    TARGET=$(find . -maxdepth 5 -type d | $FUZZY_CMD)
+    TARGET=$(find -L . -maxdepth 5 -type d | $FUZZY_CMD)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$FOLDERS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
+      TARGET=$(find -L -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
     fi
   fi
 
@@ -46,18 +46,18 @@ p() {
     $HOME/src/.go/src/**/aliou/* \
     $HOME/src/sandbox/*"
 
-  PROJECTS=$(find -s $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
+  PROJECTS=$(find -L -s $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
   MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
 
   TARGET=
 
   if [[ ! $PROJECTS ]]; then
-    TARGET=$(find -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
+    TARGET=$(find -L -s $FOLDERS -maxdepth 0 -type d | $FUZZY_CMD)
   else
     if (( $MATCHES_COUNT == 1 )); then
       TARGET=$PROJECTS
     elif (( $MATCHES_COUNT > 1 )); then
-      TARGET=$(find -s $PROJECTS -maxdepth 0 -type d | $FUZZY_CMD)
+      TARGET=$(find -L -s $PROJECTS -maxdepth 0 -type d | $FUZZY_CMD)
     fi
   fi
 
