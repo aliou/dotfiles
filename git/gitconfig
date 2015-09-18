@@ -29,8 +29,8 @@
   rv            = remote -v
   s             = status -sb
   tags          = tag
-  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse
-  todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color
+  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
+  todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color --all
   typo          = commit -m 'Fix typo.'
   undo          = reset HEAD~1
   unstash       = !"git stash pop"

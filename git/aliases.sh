@@ -73,6 +73,7 @@ alias gpl='g pull'
 __git_complete gpl _git_pull
 
 alias gs='g s'
+alias gsl='g stash list'
 
 alias gup=git-up
 alias gundo='g undo'
@@ -80,3 +81,7 @@ alias gstash='g stash'
 alias gunstash='g unstash'
 
 alias gro='cd "$(\git rev-parse --show-toplevel)"'
+
+git-new-remote-tracking() {
+  git checkout -b $1 && git push -u origin $1
+}
