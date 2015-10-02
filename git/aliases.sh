@@ -73,14 +73,27 @@ alias gpl='g pull'
 __git_complete gpl _git_pull
 
 alias gs='g s'
+
+alias gst='git stash'
+__git_complete gpl _git_stash
+
+# Show content of stash at index.
+function gsts() {
+  if [ -n $1 ]; then
+    git stash show -p stash@{$1}
+  fi
+}
+
 alias gsl='g stash list'
+alias gstash='echo "Use gst"'
 
 alias gup=git-up
 alias gundo='g undo'
-alias gstash='g stash'
 alias gunstash='g unstash'
 
 alias gro='cd "$(\git rev-parse --show-toplevel)"'
+
+alias amend='\git amend'
 
 git-new-remote-tracking() {
   git checkout -b $1 && git push -u origin $1
