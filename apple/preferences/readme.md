@@ -1,4 +1,7 @@
-### OS X application preferences.
+### OS X applications preferences.
+
+#### Global
+Install [Hack](https://github.com/chrissimpkins/Hack).
 
 #### Iterm2
 Follow instructions from this [SE thread](http://apple.stackexchange.com/questions/111534/iterm2-doesnt-read-com-googlecode-iterm2-plist/167143#167143)
