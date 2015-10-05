@@ -17,4 +17,4 @@ export HISTIGNORE="history:pwd:exit:df:ls:update:fg:env:aldl:cdd:cdv:h:gh"
 export HISTCONTROL=ignoredups:ignorespace
 
 # Pretty self explanatory.
-export EDITOR=`which vim`
+export EDITOR=`which nvim || which vim`
