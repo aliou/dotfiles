@@ -54,11 +54,8 @@ __git_complete gdc _git_diff
 alias gdl='g dl'
 __git_complete gdl _git_diff
 
-alias gl='g l --decorate'
+alias gl='g l'
 __git_complete gl _git_log
-
-alias glog='g log --decorate'
-__git_complete glog _git_log
 
 alias gm='g merge'
 __git_complete gmerge _git_merge
