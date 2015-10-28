@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 alias tmux="tmux -2"
 alias td="tmux detach"
-alias tl="tmux list-session"
 alias tk="tmux kill-session"
+alias tl="tmux list-session"
+alias tm='tmux'
 
 [[ -z $FUZZY_CMD ]] && export FUZZY_CMD="pick"
 
