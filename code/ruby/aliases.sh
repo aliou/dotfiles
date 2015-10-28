@@ -18,7 +18,7 @@ r() {
 }
 
 # Edit last migration.
-alias emig='\vim db/migrate/$(\ls -1 db/migrate/ | tail -n 1)'
+alias emig='$EDITOR db/migrate/$(\ls -1 db/migrate/ | tail -n 1)'
 
 migrate() {
   if [[ -f './bin/rake' ]]; then
