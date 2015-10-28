@@ -44,3 +44,5 @@
   check = true
 [url "https://"]
   insteadOf = git://
+[init]
+  templatedir = ~/.dotfiles/git/templates
