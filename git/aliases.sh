@@ -92,6 +92,16 @@ alias gro='cd "$(\git rev-parse --show-toplevel)"'
 
 alias amend='\git amend'
 
+# Create new branch both locally and on the origin remote.
 git-new-remote-tracking() {
   git checkout -b $1 && git push -u origin $1
+}
+
+# Clone from gihub in the right directory.
+function hc() {
+  if [ -x $(which hub) ]; then
+    hub clone $1 $2 ~/src/github/$1 && cd ~/src/github/$1
+  else
+    echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
+  fi
 }
