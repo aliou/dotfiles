@@ -13,3 +13,6 @@ ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -Fis ~/.dotfiles/ack/ackrc ~/.ackrc
 
 ln -Fis ~/.dotfiles/irssi ~/.irssi
+
+mkdir -p ~/.dotfiles/work.local
+echo "#!/usr/bin/env bash" >> ~/.dotfiles/work.local/config.sh
