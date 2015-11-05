@@ -15,4 +15,4 @@ ln -Fis ~/.dotfiles/ack/ackrc ~/.ackrc
 ln -Fis ~/.dotfiles/irssi ~/.irssi
 
 mkdir -p ~/.dotfiles/work.local
-echo "#!/usr/bin/env bash" >> ~/.dotfiles/work.local/config.sh
+echo -e "#!/usr/bin/env bash\n" >> ~/.dotfiles/work.local/config.sh
