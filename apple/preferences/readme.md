@@ -2,7 +2,8 @@
 
 #### Global
 
-Install [Hack](https://github.com/chrissimpkins/Hack).
+Install the [Hack](https://github.com/chrissimpkins/Hack) and
+[Input Mono](http://input.fontbureau.com/download/) fonts.
 
 #### `*.plist` files
 1. Open the application at least once.
