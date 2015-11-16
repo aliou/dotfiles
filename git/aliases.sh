@@ -105,3 +105,8 @@ function hc() {
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi
 }
+
+function git-push-set-upstream() {
+  # TODO: Ask for upstream, plus other checks
+  git push -u origin `git rev-parse --abbrev-ref HEAD`
+}
