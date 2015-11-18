@@ -6,3 +6,7 @@
 #   export DOCKER_CERT_PATH="${HOME}/.boot2docker/certs/boot2docker-vm"
 #   export DOCKER_TLS_VERIFY=1
 # fi
+
+if [[ -n `which docker-compose` ]]; then
+  alias dcp='docker-compose'
+fi
