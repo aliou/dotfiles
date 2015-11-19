@@ -24,6 +24,7 @@
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
   l             = !"PAGER='' git lo && echo"
   lo            = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
+  me            = log --author='Aliou Diallo' --color --reverse --all
   repush        = !"git fixup && git push -f"
   rv            = remote -v
   s             = status -sb
@@ -42,7 +43,9 @@
   helper = cache --timeout=3600
 [git-up "bundler"]
   check = true
-[url "https://"]
-  insteadOf = git://
+# [url "https://"]
+#   insteadOf = git://
 [init]
   templatedir = ~/.dotfiles/git/templates
+[hub]
+	protocol = git

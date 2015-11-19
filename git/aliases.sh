@@ -99,8 +99,9 @@ git-new-remote-tracking() {
 
 # Clone from gihub in the right directory.
 function hc() {
+  # TODO: Use the env variable for project folder.
   if [ -x $(which hub) ]; then
-    hub clone $1 $2 ~/src/github/$1 && cd ~/src/github/$1
+    hub clone $1 $2 ~/src/$1 && cd ~/src/$1
   else
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi

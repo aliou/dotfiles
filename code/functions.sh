@@ -41,9 +41,10 @@ p() {
   PROJECT=${1:-.*}
 
   FOLDERS=" \
-    $HOME/src/github/**/* \
-    $HOME/src/heroku/**/* \
-    $HOME/src/.go/src/**/aliou/*"
+    $HOME/src/**/*"
+    # $HOME/src/github/**/* \
+    # $HOME/src/heroku/**/* \
+    # $HOME/src/.go/src/**/aliou/*"
 
   PROJECTS=$(find -L -s $FOLDERS -maxdepth 0 -type d | ack --nocolor $PROJECT)
   MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
