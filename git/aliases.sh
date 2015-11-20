@@ -61,7 +61,9 @@ alias gm='g merge'
 __git_complete gmerge _git_merge
 
 alias gps='g push'
+alias gsp='g push'
 __git_complete gps _git_push
+__git_complete gsp _git_push
 
 alias gpsf='g push -f'
 __git_complete gpsf _git_push
