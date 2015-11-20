@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# if [[ -n `which boot2docker` ]]; then
-#   # eval "$(boot2docker shellinit)"
-#   export DOCKER_HOST=tcp://192.168.59.103:2376
-#   export DOCKER_CERT_PATH="${HOME}/.boot2docker/certs/boot2docker-vm"
-#   export DOCKER_TLS_VERIFY=1
-# fi
-
 if [[ -n `which docker-compose` ]]; then
   alias dcp='docker-compose'
+  alias dcpl='docker-compose logs'
+  alias dcpu='docker-compose up'
+  alias dcpr='docker-compose restart'
+fi
+
+if [[ -n `which docker-machine` ]]; then
+  alias dcm='docker-machine'
 fi
