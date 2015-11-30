@@ -10,10 +10,8 @@ alias :e="$EDITOR"
 alias m='tmuxinator'
 
 # vi stuff.
+alias vi=$EDITOR
+alias vim=$EDITOR
 alias v=$EDITOR
 alias nv=$EDITOR
 alias vs="$EDITOR -S Session.vim"
-
-# Muscle memory training.
-alias vi=:
-alias vim=:
