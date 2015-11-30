@@ -98,6 +98,7 @@ git-new-remote-tracking() {
 }
 
 # Clone from gihub in the right directory.
+# TODO: Extract project path.
 function hc() {
   if [ -x $(which hub) ]; then
     hub clone $1 $2 ~/src/github/$1 && cd ~/src/github/$1
