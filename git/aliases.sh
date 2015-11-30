@@ -106,3 +106,46 @@ function hc() {
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi
 }
+
+
+function git-push-set-upstream() {
+  # TODO: Ask for upstream, plus other checks
+  git push -u origin `git rev-parse --abbrev-ref HEAD`
+}
+
+# TODO: Extract this whole function, this is basically `p`.
+function git-fuzzy-checkout() {
+  TARGET=
+  BRANCH=${1}
+  BRANCHES=$(
+      git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
+        | sort | uniq \
+        | ack --nocolor $BRANCH
+    )
+
+  BRANCH_COUNT=$(echo $BRANCHES | tr ' ' '\n' | wc -l)
+
+  if [[ ! $BRANCHES ]]; then
+    TARGET=$(
+      git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
+        | sort | uniq \
+        | $FUZZY_CMD -q $BRANCH
+    )
+  elif (( $BRANCH_COUNT == 1 )); then
+    TARGET=$BRANCHES
+  elif (( $BRANCH_COUNT > 1 )); then
+    TARGET=$(
+      echo $BRANCHES | tr ' ' '\n' \
+        | $FUZZY_CMD
+    )
+  fi
+
+  if [[ -n $TARGET ]]; then
+    git checkout $TARGET
+  else
+    echo "Could not find branch."
+  fi
+}
+
+alias gfco="git-fuzzy-checkout"
+__git_complete gco _git_checkout
