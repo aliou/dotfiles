@@ -129,7 +129,7 @@ function git-fuzzy-checkout() {
     TARGET=$(
       git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
         | sort | uniq \
-        | $FUZZY_CMD
+        | $FUZZY_CMD -q $BRANCH
     )
   elif (( $BRANCH_COUNT == 1 )); then
     TARGET=$BRANCHES
@@ -146,3 +146,5 @@ function git-fuzzy-checkout() {
     echo "Could not find branch."
   fi
 }
+
+alias gfco="git-fuzzy-checkout"
