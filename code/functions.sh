@@ -64,7 +64,7 @@ j() {
 
 
 e() {
-  vim $(
+  $EDITOR $(
     find . -maxdepth 3 -type f \
     ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | $FUZZY_CMD
   ) && clear
