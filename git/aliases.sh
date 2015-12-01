@@ -155,4 +155,4 @@ function git-fuzzy-checkout() {
 }
 
 alias gfco="git-fuzzy-checkout"
-__git_complete gco _git_checkout
+__git_complete gfco _git_checkout
