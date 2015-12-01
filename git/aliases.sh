@@ -100,8 +100,15 @@ git-new-remote-tracking() {
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
 function hc() {
+  if [[ -z $__PROJECT_FOLDER ]]; then
+    >&2 echo 'The environment variable `__PROJECT_FOLDERS` is not defined.'
+    >&2 echo 'Please define it to use `hc`.'
+    return 1
+  fi
+
   if [ -x $(which hub) ]; then
-    hub clone $1 $2 ~/src/github/$1 && cd ~/src/github/$1
+    hub clone $1 $2 $__PROJECT_FOLDER/github/$1 && \
+      cd $__PROJECT_FOLDER/github/$1
   else
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi
