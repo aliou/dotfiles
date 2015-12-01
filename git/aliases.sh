@@ -123,7 +123,7 @@ function git-push-set-upstream() {
 # TODO: Extract this whole function, this is basically `p`.
 function git-fuzzy-checkout() {
   TARGET=
-  BRANCH=${1}
+  BRANCH=${1:-.*}
   BRANCHES=$(
       git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
         | sort | uniq \
