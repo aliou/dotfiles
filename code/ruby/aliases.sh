@@ -6,6 +6,10 @@ alias br='bundle exec rake'
 alias rc='[[ -f ./bin/rails ]] && ./bin/rails c || rails c'
 alias rcs='[[ -f ./bin/rails ]] && ./bin/rails c -s || rails c -s'
 
+if [[ -n `which heroku` ]]; then
+  alias hk='heroku'
+fi
+
 alias reload='echo "Wrong console, dummy."'
 alias reload!='echo "Wrong console, dummy."'
 
