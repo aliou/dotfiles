@@ -4,3 +4,8 @@ beep() {
   SOUNDS=(/System/Library/Sounds/*)
   afplay -v 3 ${SOUNDS[ $RANDOM % ${#SOUNDS[@]} ]}
 }
+
+# Set the title of the current iTerm window / tab.
+function iterm_title() {
+  echo -ne "\033]0;"$*"\007"
+}
