@@ -65,3 +65,4 @@ tags
 .ruby-version
 *.backup
 TODO
+.byebug_history
