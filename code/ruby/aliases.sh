@@ -24,6 +24,7 @@ r() {
 # Edit last migration.
 alias emig='$EDITOR db/migrate/$(\ls -1 db/migrate/ | tail -n 1)'
 
+# Migrate using Spring when present.
 migrate() {
   if [[ -f './bin/rake' ]]; then
     ./bin/rake db:migrate
@@ -32,6 +33,7 @@ migrate() {
   fi
 }
 
+# Rollback using Spring when present.
 rollback() {
   if [[ -f './bin/rake' ]]; then
     ./bin/rake db:rollback
