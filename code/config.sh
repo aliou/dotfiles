@@ -23,7 +23,7 @@ alias vs="$EDITOR -S Session.vim"
 # `tmuxinator list` without changing the terminal name.
 function m() {
   if (( $# != 1 )); then
-    exit 1
+    return 1
   fi
   # Change terminal name on OS X.
   echo -ne "\033]0;"$*"\007"
