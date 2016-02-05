@@ -1,2 +1,11 @@
+-- Upcase the tab-completed words.
 \set comp_keyword_case upper
+
+-- Use the extended output when needed.
 \x auto
+
+-- Show how long each query takes.
+\timing
+
+-- Show something when the value is null.
+\pset null '(null)'
