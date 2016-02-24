@@ -10,6 +10,7 @@
   abort-merge   = reset --merge
   amend         = commit -v --amend
   br            = branch
+  branches      = branch -a
   c             = commit -v
   ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
