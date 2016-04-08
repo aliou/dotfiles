@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-  # ctags --tag-relative -L - --languages=ruby
 set -e
+
 PATH="/usr/local/bin:$PATH"
-dir="`git rev-parse --git-dir`"
-trap 'rm -f "$dir/$$.tags"' EXIT
-git ls-files | ctags -L - -R --languages=ruby --exclude=.git --exclude=log $dir $(bundle list --paths) --tag-relative
+WORKING_DIRECTORY="`git rev-parse --git-dir`"
+trap 'rm -f "$WORKING_DIRECTORY/$$.tags"' EXIT
+
+git ls-files | ctags -L - -R --languages=ruby --exclude=.git --exclude=log \
+  --exclude=db/migrate $WORKING_DIRECTORY $(bundle list --paths) --tag-relative
