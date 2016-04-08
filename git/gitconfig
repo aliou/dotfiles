@@ -1,6 +1,8 @@
 [user]
   email = code@aliou.me
   name  = Aliou Diallo
+[include]
+  path = ~/.gitconfig.local
 [color]
   ui = true
 [core]
