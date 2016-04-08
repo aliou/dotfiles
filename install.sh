@@ -15,5 +15,11 @@ ln -Fis ~/.dotfiles/code/psql/psqlrc ~/.psqlrc
 
 ln -Fis ~/.dotfiles/irssi ~/.irssi
 
-mkdir -p ~/.dotfiles/work.local
-echo -e "#!/usr/bin/env bash\n" >> ~/.dotfiles/work.local/config.sh
+mkdir -p ~/.dotfiles/zfiles.local
+echo -e "#!/usr/bin/env bash\n" >> ~/.dotfiles/zfiles.local/config.sh
+
+touch ~/.dotfiles/zfiles.local/gitcongig
+ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.gitconfig.local
+
+touch ~/.dotfiles/zfiles.local/bashrc
+ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
