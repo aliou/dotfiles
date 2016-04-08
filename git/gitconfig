@@ -11,28 +11,27 @@
   amend         = commit -v --amend
   br            = branch
   branches      = branch -a
-  c             = commit -v
-  ca            = commit -av
+  c             = commit -v -S
+  ca            = commit -av -S
   conflicted    = diff --name-only --diff-filter=U
   d             = diff --word-diff
   dc            = diff --cached
   dl            = show --pretty=oneline
-  dlast         = show --pretty=oneline
   empty         = !"git commit -a -m '' --allow-empty --allow-empty-message"
   empty-commit  = !"git commit --allow-empty"
   empty-message = !"git commit -a -m '' --allow-empty-message"
   fixup         = commit --amend --no-edit --allow-empty-message
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
   l             = !"PAGER='' git lo && echo"
-  lo            = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
-  me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
-  mefull        = log --author='Aliou Diallo' --color --reverse --all
+  lo            = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate --show-signature
+  me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all --show-signature
+  mefull        = log --author='Aliou Diallo' --color --reverse --all --show-signature
   repush        = !"git fixup && git push -f"
   rv            = remote -v
   s             = status -sb
   tags          = tag
-  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
-  todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color --all
+  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all --show-signature
+  todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color --all --show-signature
   typo          = commit -m 'Fix typo.'
   undo          = reset HEAD~1
   unstash       = !"git stash pop"
@@ -43,9 +42,9 @@
   autocorrect = 1
 [credential]
   helper = cache --timeout=3600
-[git-up "bundler"]
-  check = true
-[url "https://"]
-  insteadOf = git://
 [init]
   templatedir = ~/.dotfiles/git/templates
+[filter "lfs"]
+  smudge = git-lfs smudge %f
+  required = true
+  clean = git-lfs clean %f
