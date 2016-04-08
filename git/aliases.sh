@@ -107,8 +107,13 @@ function hc() {
   fi
 
   if [ -x $(which hub) ]; then
-    hub clone $1 $2 $__PROJECT_FOLDER/github/$1 && \
-      cd $__PROJECT_FOLDER/github/$1
+    FOLDER="$__PROJECT_FOLDER/github/$1"
+    if [ -d $FOLDER ]; then
+      echo "Folder already exists. Pulling."
+      cd $FOLDER && git pull
+    else
+      hub clone $1 $FOLDER && cd $FOLDER
+    fi
   else
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi
