@@ -18,7 +18,7 @@ ln -Fis ~/.dotfiles/irssi ~/.irssi
 mkdir -p ~/.dotfiles/zfiles.local
 echo -e "#!/usr/bin/env bash\n" >> ~/.dotfiles/zfiles.local/config.sh
 
-touch ~/.dotfiles/zfiles.local/gitcongig
+touch ~/.dotfiles/zfiles.local/gitconfig
 ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.gitconfig.local
 
 touch ~/.dotfiles/zfiles.local/bashrc
