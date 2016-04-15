@@ -1,0 +1,11 @@
+# ~/.tmuxinator/jekyll.yml
+
+name: jekyll
+root: ~/
+
+tmux_options: -2
+
+windows:
+  - shell: clear
+  - editor: vim
+  - server: bundle exec jekyll build --watch --incremental

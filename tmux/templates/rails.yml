@@ -1,0 +1,13 @@
+# ~/.tmuxinator/rails.yml
+
+name: rails
+root: ~/
+
+tmux_options: -2
+
+windows:
+  - shell:
+  - editor: nvim
+  - console: ./bin/rails console
+  - test: ./bin/rspec spec/
+  - logs: tail -f log/development.log
