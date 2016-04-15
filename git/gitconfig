@@ -9,8 +9,7 @@
   autocrlf     = false
   excludesfile = ~/.gitignore
 [alias]
-  abort-merge   = reset --merge
-  amend         = commit -v --amend
+  amend         = commit -v -S --amend
   br            = branch
   branches      = branch -a
   c             = commit -v -S
@@ -25,16 +24,15 @@
   fixup         = commit --amend --no-edit --allow-empty-message
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
   l             = !"PAGER='' git lo && echo"
-  lo            = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate --show-signature
-  me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all --show-signature
-  mefull        = log --author='Aliou Diallo' --color --reverse --all --show-signature
+  lo            = log --graph --pretty=format:'%Cred%h%Creset %an (%GK): %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
+  me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
+  mefull        = log --author='Aliou Diallo' --color --reverse --all
   repush        = !"git fixup && git push -f"
   rv            = remote -v
   s             = status -sb
   tags          = tag
-  today         = log --since=midnight --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all --show-signature
-  todayfull     = log --since=midnight --author='Aliou Diallo' --color --reverse --no-color --all --show-signature
-  typo          = commit -m 'Fix typo.'
+  today         = !"git me --since=midnight"
+  todayfull     = !"git mefull --since=midnight"
   undo          = reset HEAD~1
   unstash       = !"git stash pop"
   vr            = branch
