@@ -42,7 +42,7 @@ __git_complete gca _git_commit
 
 gcm() {
   MESSAGE="$@"
-  [[ -n $MESSAGE ]] && gc -S -m "$MESSAGE" || gc -S
+  [[ -n $MESSAGE ]] && gc -m "$MESSAGE" || gc
 }
 
 alias gd='g d'

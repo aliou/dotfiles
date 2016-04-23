@@ -1,6 +1,8 @@
 [user]
   email = code@aliou.me
   name  = Aliou Diallo
+[commit]
+  gpgsign = true
 [include]
   path = ~/.gitconfig.local
 [color]
@@ -9,11 +11,11 @@
   autocrlf     = false
   excludesfile = ~/.gitignore
 [alias]
-  amend         = commit -v -S --amend
+  amend         = commit -v --amend
   br            = branch
   branches      = branch -a
-  c             = commit -v -S
-  ca            = commit -av -S
+  c             = commit -v
+  ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
   d             = diff --word-diff
   dc            = diff --cached
