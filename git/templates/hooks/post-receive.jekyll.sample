@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+PROJECT_NAME=
+GIT_REPO=
+PUBLIC_WWW=
+WORKING_DIR=/tmp/$PROJECT_NAME-working-dir
+BUNDLE=$HOME/.rbenv/shims/bundle
+
+set -e
+
+rm -rf $WORKING_DIR
+git clone $GIT_REPO $WORKING_DIR
+cd $WORKING_DIR
+$BUNDLE install
+JEKYLL_ENV=production $BUNDLE exec jekyll build -s $WORKING_DIR -d $PUBLIC_WWW
