@@ -10,5 +10,5 @@ cp ~/.dotfiles/tmux/templates/* ~/.tmuxinator/
 
 #### How to use
 
-When setting a new project, copy the template using `tmuxinator edit <TEMPLATE>`
+When setting a new project, copy the template using `tmuxinator copy <TEMPLATE> <PROJECT-NAME>`
 and edit the `root` key to match your project path.
