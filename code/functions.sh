@@ -24,7 +24,7 @@ p() {
 
   # Filter the projects using the name passed as argument.
   PROJECTS=$(
-    find -L -s $FOLDERS -maxdepth $DEPTH -type d | \
+    find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | \
       uniq | \
       ack --nocolor $PROJECT
   )
@@ -35,7 +35,7 @@ p() {
   # If the filtering returns nothing, let the user choose between every projects.
   if [[ ! $PROJECTS ]]; then
     TARGET=$(
-      find -L -s $FOLDERS -maxdepth $DEPTH -type d | $FUZZY_CMD
+      find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | $FUZZY_CMD
     )
     # If there is only one match we're done.
   elif (( $MATCHES_COUNT == 1 )); then
@@ -43,7 +43,7 @@ p() {
     # If there are several matches, let the user choose between the matches.
   elif (( $MATCHES_COUNT > 1 )); then
     TARGET=$(
-      find -L -s $PROJECTS -maxdepth $DEPTH -type d | $FUZZY_CMD
+      find -L $PROJECTS -maxdepth $DEPTH -type d | sort -f | $FUZZY_CMD
     )
   fi
 
