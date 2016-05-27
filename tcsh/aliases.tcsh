@@ -1,8 +1,8 @@
 #!/bin/tcsh
 
 alias cdd 'cd ~/.dotfiles'
-alias cds 'cd ~/src'
-alias cdt 'cd ~/src/tmp'
+alias cds 'cd ~/code/src'
+alias cdt 'cd ~/code/src/tmp'
 alias cdv 'cd ~/.dotvim'
 
 alias ls 'ls -lAG'
