@@ -1353,17 +1353,17 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 114 445 281 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>362 398 924 485 0 0 1440 900 </string>
+	<string>530 520 924 485 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1002 748 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>95 119 1250 666 0 0 1440 900 </string>
+	<string>215 183 1250 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>165 114 1250 666 0 0 1440 900 </string>
+	<string>369 7 1250 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>21 189 1249 656 0 0 1440 877 </string>
+	<string>46 298 1250 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>225 22 990 476 0 0 1440 878 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
@@ -3513,7 +3513,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454887927.056153</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>467731558.55743998</real>
+	<real>486079062.33516097</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3582,7 +3582,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-28T13:25:27Z</date>
+	<date>2016-05-27T21:55:20Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -3591,6 +3591,8 @@
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
