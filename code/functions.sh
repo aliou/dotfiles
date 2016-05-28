@@ -10,6 +10,7 @@ export FUZZY_CMD="fzf --reverse"
 # Jump to a project file.
 # Usage: p [ project_name ]
 # TODO: Ignore common folders.
+# TODO: Refactor this whole mess.
 p() {
   if [[ -z $__P_PROJECT_FOLDERS ]]; then
     >&2 echo 'The environment variable `__P_PROJECT_FOLDERS` is not defined.'
@@ -32,10 +33,12 @@ p() {
 
   TARGET=
 
+  BASE_PATH="/Users/alioudiallo/code/src/"
+
   # If the filtering returns nothing, let the user choose between every projects.
   if [[ ! $PROJECTS ]]; then
     TARGET=$(
-      find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | $FUZZY_CMD
+      find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | sed "s|$BASE_PATH||g" | $FUZZY_CMD
     )
     # If there is only one match we're done.
   elif (( $MATCHES_COUNT == 1 )); then
@@ -43,12 +46,12 @@ p() {
     # If there are several matches, let the user choose between the matches.
   elif (( $MATCHES_COUNT > 1 )); then
     TARGET=$(
-      find -L $PROJECTS -maxdepth $DEPTH -type d | sort -f | $FUZZY_CMD
+      find -L $PROJECTS -maxdepth $DEPTH -type d | sort -f | sed "s|$BASE_PATH||g" | $FUZZY_CMD
     )
   fi
 
   if [[ -n $TARGET ]]; then
-    cd $TARGET && folder_info
+    cd $BASE_PATH$TARGET && folder_info
   fi
 }
 
