@@ -16,6 +16,8 @@ alias v=$EDITOR
 alias nv=$EDITOR
 alias vs="$EDITOR -S Session.vim"
 
+alias cdp='cd ~/code/src/github.com/aliou/'
+
 # Change terminal title and open tmuxinator config.
 # TODO: Check if the tmuxinator config is present.
 # TODO: Either retrain my muscle memory or don't change the title when sending a
