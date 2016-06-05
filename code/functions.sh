@@ -27,6 +27,7 @@ p() {
   PROJECTS=$(
     find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | \
       uniq | \
+      sed "s|$BASE_PATH||g" | \
       ack --nocolor $PROJECT
   )
   MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
