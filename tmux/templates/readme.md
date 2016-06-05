@@ -5,7 +5,7 @@ A bunch of [Tmuxinator](https://github.com/tmuxinator/tmuxinator) templates.
 ```bash
 gem install tmuxinator
 mkdir -p ~/.tmuxinator/
-cp ~/.dotfiles/tmux/templates/* ~/.tmuxinator/
+ln -s ~/.dotfiles/tmux/templates/*.yml ~/.tmuxinator/
 ```
 
 #### How to use
