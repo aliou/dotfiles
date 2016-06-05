@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AutoCommandHistory</key>
+	<false/>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -1307,6 +1309,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -1353,13 +1357,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 114 445 281 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>530 520 924 485 0 0 1680 1050 </string>
+	<string>530 549 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1002 748 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>215 183 1250 666 0 0 1680 1027 </string>
+	<string>112 48 1458 912 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>369 7 1250 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3510,10 +3514,14 @@
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
+	<key>NoSyncInstallationId</key>
+	<string>8239B9D8-2EAB-4294-AC9B-1EC592697096</string>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486583811.97870898</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454887927.056153</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486079062.33516097</real>
+	<real>486410659.691755</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3577,12 +3585,14 @@
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=66</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-27T21:55:20Z</date>
+	<date>2016-06-02T18:08:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -3593,6 +3603,8 @@
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
+	<key>ShowNewOutputIndicator</key>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
@@ -3634,7 +3646,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.0</string>
 	<key>kPreferenceKeyWindowStyle</key>
 	<integer>0</integer>
 </dict>
