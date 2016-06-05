@@ -18,23 +18,21 @@ p() {
     return 1
   fi
 
-  PROJECT=${1:-.*}
+  local PROJECT=${1:-.*}
 
-  FOLDERS=$__P_PROJECT_FOLDERS
-  DEPTH=${__P_MAX_DEPTH:-0}
+  local FOLDERS=$__P_PROJECT_FOLDERS
+  local DEPTH=${__P_MAX_DEPTH:-0}
 
   # Filter the projects using the name passed as argument.
-  PROJECTS=$(
+  local PROJECTS=$(
     find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | \
       uniq | \
-      sed "s|$BASE_PATH||g" | \
       ack --nocolor $PROJECT
   )
-  MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
+  local MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
 
-  TARGET=
-
-  BASE_PATH="/Users/alioudiallo/code/src/"
+  local BASE_PATH="/Users/alioudiallo/code/src/"
+  local TARGET=
 
   # If the filtering returns nothing, let the user choose between every projects.
   if [[ ! $PROJECTS ]]; then
