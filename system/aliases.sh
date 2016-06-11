@@ -14,7 +14,7 @@ alias c='cd ..'
 alias cdd='cd ~/.dotfiles'
 alias cds='cd ~/code/src'
 alias cdt='cd ~/code/src/tmp'
-alias cdg='cd ~/code/src/github/aliou/'
+alias cdg='cd ~/code/src/github.com/aliou/'
 alias cdv='cd ~/.dotvim'
 
 # Reloads the shell without having PATH re-adding to himself.
