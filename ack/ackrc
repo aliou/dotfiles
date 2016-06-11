@@ -8,6 +8,7 @@
 --ignore-dir=doc
 --ignore-dir=coverage
 --ignore-dir=node_modules
+--ignore-dir=deps
 
 --ignore-file=is:tags
 
