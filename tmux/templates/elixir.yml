@@ -10,4 +10,4 @@ windows:
   - editor: vim
   - console: iex -S mix
   - test: mix test
-  - server: mix phoenix.server
+  - server: iex -S mix phoenix.server
