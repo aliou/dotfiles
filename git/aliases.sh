@@ -121,8 +121,7 @@ function hc() {
 
 
 function git-push-set-upstream() {
-  # TODO: Ask for upstream, plus other checks
-  git push -u origin `git rev-parse --abbrev-ref HEAD`
+  echo "DEPRECTATED: Use \`git psu\`."
 }
 
 # TODO: Extract this whole function, this is basically `p`.
