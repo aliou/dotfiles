@@ -56,3 +56,5 @@
   show = diff-highlight | less
 [interactive]
   diffFilter = diff-highlight
+[diff]
+  compactionHeuristic = true
