@@ -67,3 +67,4 @@ tags
 *.backup
 TODO
 .byebug_history
+.iex.exs
