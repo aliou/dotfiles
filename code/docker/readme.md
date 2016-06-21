@@ -1,4 +1,5 @@
 
+Update 2016-06-21: Use the Docker for Mac thingy, "_It Just Works_".
 Update November 4th: Nevermind this and checkout `docker-machine` instead.
 
 ### Installation
