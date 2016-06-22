@@ -26,6 +26,8 @@
   fixup         = commit --amend --no-edit --allow-empty-message
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
   l             = !"PAGER='' git lo && echo"
+  last          = log -1
+  latest        = log -1
   lo            = log --graph --pretty=format:'%Cred%h%Creset %an (%GK): %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
   me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
   mefull        = log --author='Aliou Diallo' --color --reverse --all
