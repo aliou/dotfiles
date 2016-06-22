@@ -15,6 +15,15 @@ Install the [Hack](https://github.com/chrissimpkins/Hack) and
 #### TextEdit
 
 Open a new File instead of the iCloud dialog:
+
 ```sh
 defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
+```
+
+#### Global
+
+Remove animation when opening windows, popup, etc:
+
+```sh
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 ```
