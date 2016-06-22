@@ -1,4 +1,7 @@
+Update 2016-06-22: Just use Docker for Mac.
 
+<details>
+<summary>Previous instructions.</summary>
 Update November 4th: Nevermind this and checkout `docker-machine` instead.
 
 ### Installation
@@ -17,3 +20,4 @@ variables.
 However, since running `boot2docker` means also running Virtualbox, there's a
 good change the launchagent file is disabled. So make sure to run
 `boot2docker up` before using Docker.
+</details>
