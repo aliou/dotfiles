@@ -1363,9 +1363,9 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>112 48 1458 912 0 0 1680 1027 </string>
+	<string>217 170 1250 667 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>369 7 1250 666 0 0 1680 1027 </string>
+	<string>112 293 1250 667 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>46 298 1250 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1913,7 +1913,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Regular 13</string>
+			<string>SFMono-Medium 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -3594,7 +3594,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-14T20:12:22Z</date>
+	<date>2016-06-22T18:23:04Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
