@@ -1,0 +1,10 @@
+# ~/.tmuxinator/ios.yml
+
+name: ios
+root: ~/
+
+tmux_options: -2
+
+windows:
+  - shell: clear
+  - editor: vim
