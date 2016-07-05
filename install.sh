@@ -24,8 +24,6 @@ ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.gitconfig.local
 touch ~/.dotfiles/zfiles.local/bashrc
 ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
 
-mkdir -p ~/.bin
-
 echo 'What remains to be done:'
 echo '- Generate SSH key and add it to GitHub.'
 echo '- Generate GPG key and add it to GitHub.'
