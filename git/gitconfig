@@ -39,6 +39,7 @@
   todayfull     = !"git mefull --since=midnight"
   undo          = reset HEAD~1
   unstash       = !"git stash pop"
+  untracked     = !"git ls-files --others --exclude-standard"
   vr            = branch
 [push]
   default = tracking
