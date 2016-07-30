@@ -4,6 +4,7 @@ name: elixir
 root: ~/
 
 tmux_options: -2
+pre_window: ! test -f .env && source .env
 
 windows:
   - shell:
