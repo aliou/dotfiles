@@ -25,7 +25,8 @@ chatnets = {
 channels = (
   { name = "#infexious"; chatnet = "RecycledIRC"; autojoin = "Yes"; },
   { name = "#ebooks"; chatnet = "IRCHighway"; autojoin = "Yes"; },
-  { name = "#relayfm"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#relayfm"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#elixir-lang"; chatnet = "Freenode"; autojoin = "No"; }
 );
 
 aliases = {
