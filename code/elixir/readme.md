@@ -20,3 +20,13 @@ exenv init
 # Download Elixir versions from <https://github.com/elixir-lang/elixir/releases>
 # and add them to `~/.exenv/versions`
 ```
+
+### Installing on Raspberry Pi
+To install on a Raspberry Pi, export the following environment variables:
+```bash
+GOOS=linux
+GOARCH=arm
+```
+
+And follow the regular instructions to build `exenv`. Then, move it to the Raspberry Pi
+and follow the rest of the instructions to set it up on the Pi.
