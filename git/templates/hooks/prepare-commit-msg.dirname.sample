@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Adds the folder of the first file changed as commit message prefix.
+# For example, with the repo in this state:
+#  $> git status
+#  On branch master
+#  Changes not staged for commit:
+#    (use "git add <file>..." to update what will be committed)
+#    (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#          modified:   project-b/file
+#
+#  no changes added to commit (use "git add" and/or "git commit -a")
+#
+# This script will prepend the string "[project-b]" to the commit.
+
+UPDATE_FILE=$(git status -s -uno | grep -v '^ ' | awk '{print $2}' | head -n 1)
+FOLDER_NAME="[$(dirname $UPDATE_FILE)]"
+
+# Check if the folder name is already in the message, exit early if it is.
+
+# Prepends the folder name to the message.
+# sed -i "1s;^;$FOLDER_NAME;" $1
+sed -i -e "1 s/^/$FOLDER_NAME /" "$1"
