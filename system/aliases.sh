@@ -39,3 +39,6 @@ if [ -x $(which ack) ]; then
   alias grep=ack
   alias gerp=grep
 fi
+
+alias first='head -n 1'
+alias last='tail -n 1'
