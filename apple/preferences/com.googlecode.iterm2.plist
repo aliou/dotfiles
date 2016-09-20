@@ -1357,17 +1357,19 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 114 445 281 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>530 549 606 456 0 0 1680 1027 </string>
+	<string>698 578 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1002 748 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>269 93 1016 502 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>217 170 1250 667 0 0 1680 1027 </string>
+	<string>28 360 1250 667 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>112 293 1250 667 0 0 1680 1027 </string>
+	<string>196 257 1250 667 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>46 298 1250 666 0 0 1680 1027 </string>
+	<string>72 306 1250 667 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>225 22 990 476 0 0 1440 878 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
@@ -1755,9 +1757,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>b</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -1783,9 +1785,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>f</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -3510,12 +3512,16 @@
 			<string>/Users/alioudiallo</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
 	<string>8239B9D8-2EAB-4294-AC9B-1EC592697096</string>
+	<key>NoSyncLastTipTime</key>
+	<real>491676728.04810798</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -3524,6 +3530,12 @@
 	<real>454887927.056153</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>486410659.691755</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3594,7 +3606,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-22T18:23:04Z</date>
+	<date>2016-08-27T20:51:36Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -3648,7 +3660,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.0</string>
+	<string>3.0.7</string>
 	<key>kPreferenceKeyWindowStyle</key>
 	<integer>0</integer>
 </dict>
