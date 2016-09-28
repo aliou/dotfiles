@@ -1,7 +1,16 @@
 #!/bin/bash
 
-mkcd()
-{
+# mkcd()
+# {
+#   mkdir -p "$*" && cd "$*"
+# }
+
+mkcd() {
+  if (( $# != 1 )); then
+    echo >&2 "mkcd: missing operand"
+    return 1
+  fi
+
   mkdir -p "$*" && cd "$*"
 }
 
