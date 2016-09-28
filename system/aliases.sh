@@ -13,7 +13,7 @@ alias l="l1"
 alias c='cd ..'
 alias cdd='cd ~/.dotfiles'
 alias cds='cd ~/code/src'
-alias cdt='cd ~/code/src/tmp'
+alias cdt='cd ~/code/tmp'
 alias cdg='cd ~/code/src/github.com/aliou/'
 alias cdv='cd ~/.dotvim'
 

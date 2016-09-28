@@ -2,7 +2,7 @@
 
 alias cdd 'cd ~/.dotfiles'
 alias cds 'cd ~/code/src'
-alias cdt 'cd ~/code/src/tmp'
+alias cdt 'cd ~/code/tmp'
 alias cdv 'cd ~/.dotvim'
 
 alias ls 'ls -lAG'
