@@ -2,6 +2,10 @@
 
 mkcd()
 {
+  if (( $# < 1 )); then
+    echo >&2 "mkcd: Missing operand"
+    return 1
+  fi
   mkdir -p "$*" && cd "$*"
 }
 
