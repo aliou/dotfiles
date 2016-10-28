@@ -1,6 +1,6 @@
-# ~/.tmuxinator/elixir.yml
+# ~/.tmuxinator/phoenix.yml
 
-name: elixir
+name: phoenix
 root: ~/
 
 tmux_options: -2
@@ -11,3 +11,4 @@ windows:
   - editor: vim
   - console: iex -S mix
   - test: mix test
+  - server: mix phoenix.server
