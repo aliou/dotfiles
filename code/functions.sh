@@ -6,6 +6,7 @@
 
 # Easily switch fuzzy finder by setting the FUZZY_CMD env variable.
 export FUZZY_CMD="fzf --reverse"
+export SEARCH_CMD="$(which ack) --nocolor"
 
 # Jump to a project file.
 # Usage: p [ project_name ]
@@ -27,7 +28,7 @@ p() {
   local PROJECTS=$(
     find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | \
       uniq | \
-      ack --nocolor $PROJECT
+      $SEARCH_CMD $PROJECT
   )
   local MATCHES_COUNT=$(echo $PROJECTS | tr ' ' '\n' | wc -l)
 
