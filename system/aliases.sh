@@ -35,9 +35,9 @@ sudoWisdom=(
 alias sudo="echo ${sudoWisdom[$RANDOM % 6]} ; sudo"
 
 # Herping and Derping
-if [ -x $(which ack) ]; then
-  alias grep=ack
-  alias gerp=grep
+if [ -x $(which rg) ]; then
+  alias grep=rg
+  alias ack=rg
 fi
 
 alias first='head -n 1'
