@@ -9,6 +9,7 @@
 # 1. Alias `g` to the binary instead of the command `git` to avoid recursive
 # bullshit.
 alias g=`which git`
+alias gti=`which git`
 
 # 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
 # (99% sure this is a bad idea).
@@ -17,6 +18,7 @@ alias g=`which git`
 # 3. Add completion <TAB> completion to `g`.
 # Instructions in `/usr/local/etc/bash_completion.d/git-completion.bash`.
 __git_complete g _git
+__git_complete gti _git
 
 # 4. Do the same thing for `gc`, `gco`, `gps`, `gpl` etc.
 
@@ -84,7 +86,6 @@ function gsts() {
 alias gsl='g stash list'
 alias gstash='echo "Use gst"'
 
-alias gup=git-up
 alias gundo='g undo'
 alias gunstash='g unstash'
 
