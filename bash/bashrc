@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export EDITOR=`which nvim || which vim`
+export EDITOR=`which vim`
 
 # If not running interactively, don't do anything
 if [[ -n "$PS1" ]] ; then
