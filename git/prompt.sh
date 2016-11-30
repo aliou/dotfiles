@@ -16,7 +16,7 @@ function parse_git_stashed {
 }
 
 function parse_git_wip {
-  wip=$(git log --graph --pretty=format:'%s' -1 2> /dev/null | \grep -i wip | wc -l | sed 's/ //g')
+  wip=$(git log --pretty=format:'%s' -1 2> /dev/null | \grep -i wip | wc -l | sed 's/ //g')
   [[ $wip -ne 0 ]] && echo "[WIP]"
 }
 
