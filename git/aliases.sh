@@ -134,7 +134,7 @@ function git-fuzzy-checkout() {
   BRANCHES=$(
       git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
         | sort | uniq \
-        | ack --nocolor $BRANCH
+        | \ack --nocolor $BRANCH
     )
 
   BRANCH_COUNT=$(echo $BRANCHES | tr ' ' '\n' | wc -l)
