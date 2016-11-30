@@ -68,3 +68,7 @@ tags
 TODO
 .byebug_history
 .iex.exs
+
+# Project files
+.tmux
+config/projections.json
