@@ -73,8 +73,9 @@ __git_complete gpl _git_pull
 
 alias gs='g s'
 
-alias gst='git stash'
-__git_complete gpl _git_stash
+alias gst='echo "Use git wip instead."'
+# alias gst='git stash'
+# __git_complete gpl _git_stash
 
 # Show content of stash at index.
 function gsts() {
