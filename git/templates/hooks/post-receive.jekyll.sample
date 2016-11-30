@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e -o pipefail
+
 PROJECT_NAME=
 GIT_REPO=
 PUBLIC_WWW=
@@ -8,8 +10,26 @@ BUNDLE=$HOME/.rbenv/shims/bundle
 
 set -e
 
+function indent() {
+  c='s/^/       /'
+  case $(uname) in
+    Darwin) sed -l "$c";;
+    *)      sed -u "$c";;
+  esac
+}
+
+echo "-----> Removing previous build artifacts."
+# Delete working directory to start clean.
 rm -rf $WORKING_DIR
-git clone $GIT_REPO $WORKING_DIR
+
+# Get updated site.
+echo "-----> Cloning site."
+git clone $GIT_REPO $WORKING_DIR | indent
 cd $WORKING_DIR
-$BUNDLE install
-JEKYLL_ENV=production $BUNDLE exec jekyll build -s $WORKING_DIR -d $PUBLIC_WWW
+
+# Update deps.
+echo "-----> Installing / Updating dependencies."
+$BUNDLE install | indent
+# Build site.
+echo "-----> Building site."
+JEKYLL_ENV=production $BUNDLE exec jekyll build --incremental -s $WORKING_DIR -d $PUBLIC_WWW | indent
