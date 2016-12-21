@@ -72,3 +72,4 @@ TODO
 # Project files
 .tmux
 config/projections.json
+.pryrc
