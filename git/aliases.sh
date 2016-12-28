@@ -114,8 +114,7 @@ function hc() {
       echo "Folder already exists. Pulling."
       cd $FOLDER && git pull
     else
-      hub clone $1 $FOLDER --depth=1 && cd $FOLDER
-      git fetch --unshallow > /dev/null 2>&1 &
+      hub clone $1 $FOLDER && cd $FOLDER
     fi
   else
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
