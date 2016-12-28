@@ -37,7 +37,7 @@ p() {
 
   # If the filtering returns nothing, let the user choose between every projects.
   if [[ ! $PROJECTS ]]; then
-    TARGET=$(
+    TARGET=$BASE_PATH$(
       find -L $FOLDERS -maxdepth $DEPTH -type d | sort -f | sed "s|$BASE_PATH||g" | $FUZZY_CMD
     )
     # If there is only one match we're done.
@@ -45,13 +45,13 @@ p() {
     TARGET=$PROJECTS
     # If there are several matches, let the user choose between the matches.
   elif (( $MATCHES_COUNT > 1 )); then
-    TARGET=$(
+    TARGET=$BASE_PATH$(
       find -L $PROJECTS -maxdepth $DEPTH -type d | sort -f | sed "s|$BASE_PATH||g" | $FUZZY_CMD
     )
   fi
 
   if [[ -n $TARGET ]]; then
-    cd $BASE_PATH$TARGET && folder_info
+    cd $TARGET && folder_info
   fi
 }
 
