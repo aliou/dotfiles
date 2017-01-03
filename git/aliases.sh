@@ -85,6 +85,7 @@ function gsts() {
 }
 
 alias gsl='g stash list'
+alias gss='g stash show -p'
 alias gstash='echo "Use gst"'
 
 alias gundo='g undo'
