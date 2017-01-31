@@ -12,6 +12,8 @@ export HISTTIMEFORMAT='%b %d %I:%M %p '
 # Ignore those commands in history.
 export HISTIGNORE='history:pwd:exit:df:ls:update:fg:env:cdd:cdv:h:gh:gs:hs'
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-export HISTCONTROL=ignoredups:ignorespace
+# `ignoreboth`: Ignore duplicates and commands starting by space.
+# `erasedups`: Remove from identical commands from history before saving the
+# current command.
+# See bash(1) for more options.
+export HISTCONTROL='ignoreboth:erasedups'
