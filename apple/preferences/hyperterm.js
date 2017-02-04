@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: 'SF Mono Regular, Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.75)',
+    cursorColor: '#AAA',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
@@ -16,7 +16,7 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: '#272727',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -28,7 +28,7 @@ module.exports = {
     termCSS: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '6px 7px',
+    padding: '1px 1px 1px 1px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -54,9 +54,11 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    shell: ''
+    shell: '',
 
     // for advanced config flags please refer to https://hyperterm.org/#cfg
+
+    bell: false,
   },
 
   // a list of plugins to fetch and install from npm
