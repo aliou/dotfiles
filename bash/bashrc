@@ -27,9 +27,6 @@ if [[ -n "$PS1" ]] ; then
   # Source local shit.
   [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
 
-  # Put secret configuration settings in ~/.secrets
-  [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
-
   # Set teminal as 256 colors.
   if [ -z $TMUX ]; then
     export TERM='screen-256color'
