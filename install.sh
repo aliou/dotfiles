@@ -11,7 +11,7 @@ ln -Fis ~/.dotfiles/git/gitconfig ~/.gitconfig
 ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 ln -Fis ~/.dotfiles/ack/ackrc ~/.ackrc
-ln -Fis ~/.dotfiles/code/psql/psqlrc ~/.psqlrc
+ln -Fis ~/.dotfiles/code/postgres/psqlrc ~/.psqlrc
 
 ln -Fis ~/.dotfiles/irssi ~/.irssi
 
