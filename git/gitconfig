@@ -32,7 +32,6 @@
   lo            = log --graph --pretty=format:'%Cred%h%Creset %an (%GK): %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
   me            = log --author='Aliou Diallo' --color --pretty=format:'%h - %s (%cr)' --reverse --all
   mefull        = log --author='Aliou Diallo' --color --reverse --all
-  repush        = !"git fixup && git push -f"
   rv            = remote -v
   s             = status -sb
   tags          = tag
