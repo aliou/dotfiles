@@ -109,6 +109,11 @@ function hc() {
     return 1
   fi
 
+  if [[ -z "$1" ]]; then
+    >&2 echo 'Please pass a repo as an argument. Ex. aliou/www'
+    return 1
+  fi
+
   if [ -x $(which hub) ]; then
     FOLDER="$__PROJECT_FOLDER/github.com/$1"
     if [ -d $FOLDER ]; then
