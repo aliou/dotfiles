@@ -62,5 +62,7 @@
   diffFilter = diff-highlight
 [diff]
   compactionHeuristic = true
+[tag]
+  sort = version:refname
 [gpg]
   program = /usr/local/bin/gpg
