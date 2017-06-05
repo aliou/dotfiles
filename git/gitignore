@@ -61,7 +61,6 @@ tmp/*
 Session.vim
 .vimrc
 .projections.json
-tags
 .ruby-version
 *.backup
 TODO
@@ -72,3 +71,8 @@ TODO
 .tmux
 config/projections.json
 .pryrc
+
+# Tags
+tags
+tags.lock
+tags.temp
