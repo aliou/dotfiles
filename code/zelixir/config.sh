@@ -23,3 +23,6 @@ if [[ -n $(which exenv) ]]; then
 
   complete -F _exenv exenv
 fi
+
+# Enable history.
+export ERL_AFLAGS="-kernel shell_history enabled"
