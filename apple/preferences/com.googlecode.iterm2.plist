@@ -1340,7 +1340,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>4AA2A7CA-53E0-4667-8AEA-1F117BDADF5C</string>
+	<string>5EE55397-D5B1-4CC4-B2B9-EF53314398B9</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -1573,13 +1573,13 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>137 596 918 381 0 0 1920 1058 </string>
+	<string>108 458 918 512 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>127 70 1706 740 0 0 1920 1058 </string>
+	<string>4 258 1650 666 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>485 271 948 521 0 0 1920 1058 </string>
+	<string>215 225 1250 644 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>46 295 1250 644 0 0 1680 1028 </string>
+	<string>72 317 1250 644 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>344 -146 1250 644 0 0 1680 1028 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
@@ -4617,7 +4617,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-17T20:02:24Z</date>
+	<date>2017-07-22T08:21:03Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
