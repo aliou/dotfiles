@@ -76,3 +76,5 @@ config/projections.json
 tags
 tags.lock
 tags.temp
+
+.env.snapshift
