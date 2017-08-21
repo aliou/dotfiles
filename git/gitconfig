@@ -4,7 +4,9 @@
 [commit]
   gpgsign = true
 [include]
-  path = ~/.gitconfig.local
+  path = ~/.gitconfig.local # Contains custom config for the current machine.
+[includeIf "gitdir:~/code/src/github.com/snapshift/**"]
+  path = .gitconfig-snapshift
 [color]
   ui = true
 [core]
