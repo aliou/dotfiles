@@ -1,3 +1,5 @@
+\set QUIET 1
+
 -- Upcase the tab-completed words.
 \set comp_keyword_case upper
 
@@ -9,3 +11,5 @@
 
 -- Show something when the value is null.
 \pset null '(null)'
+
+\unset QUIET
