@@ -13,3 +13,5 @@
 \pset null '(null)'
 
 \unset QUIET
+
+-- vim: ft=sql
