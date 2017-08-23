@@ -18,14 +18,14 @@ if [[ -n "$PS1" ]] ; then
   # Source personnal config files.
   for config_file in ~/.dotfiles/**/*.sh
   do
-    source $config_file
+    source "$config_file"
   done
 
   # Source local shit.
   [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
 
   # Set teminal as 256 colors.
-  if [ -z $TMUX ]; then
+  if [ -z "$TMUX" ]; then
     export TERM='screen-256color'
   fi
 fi
