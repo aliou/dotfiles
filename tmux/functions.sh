@@ -2,9 +2,12 @@
 
 # Open projects with custom tmux configuration.
 function t() {
+  local session_name
   if [[ -f .tmux ]] && [[ -x .tmux ]]; then
-    source .tmux
+    source "$PWD/.tmux"
   else
-    (>&2 echo "Missing or not executable '.tmux' file.")
+    session_name="$(basename "$PWD" | sed 's/\.//g')"
+    tmux at -t "$session_name" || tmux new -s "$session_name"
+    # (>&2 echo "Missing or not executable '.tmux' file.")
   fi
 }
