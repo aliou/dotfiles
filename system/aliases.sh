@@ -3,7 +3,12 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-alias ls="ls -lAGh"
+if [[ -x $(which exa) ]]; then
+  alias ls='exa -lah --git'
+else
+  alias ls="ls -lAGh"
+fi
+
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
 alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
