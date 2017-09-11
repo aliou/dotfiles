@@ -9,6 +9,4 @@ pre_window: ! test -f .env && source .env
 windows:
   - shell:
   - editor: vim
-  - console:
-  - test:
-  - server: cargo run
+  - misc:
