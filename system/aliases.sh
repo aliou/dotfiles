@@ -4,7 +4,7 @@ alias rm="rm -iv"
 alias mv="mv -iv"
 
 if [[ -x $(which exa) ]]; then
-  alias ls='exa -lah --color=never --git'
+  alias ls='exa -lah --color=auto --git'
 else
   alias ls="ls -lAGh"
 fi
