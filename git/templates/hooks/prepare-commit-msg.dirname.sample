@@ -14,7 +14,7 @@
 # This script will prepend the string "[project-b]" to the commit.
 
 UPDATE_FILE=$(git status -s -uno | grep -v '^ ' | awk '{print $2}' | head -n 1)
-FOLDER_NAME="[$(dirname $UPDATE_FILE)]"
+FOLDER_NAME="[$(dirname "$UPDATE_FILE")]"
 
 # Check if the folder name is already in the message, exit early if it is.
 
