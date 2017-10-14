@@ -8,8 +8,8 @@
 # Train my muscle memory to use the `g` alias:
 # 1. Alias `g` to the binary instead of the command `git` to avoid recursive
 # bullshit.
-alias g=`which git`
-alias gti=`which git`
+alias g="\$(which git)"
+alias gti="\$(which git)"
 
 # 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
 # (99% sure this is a bad idea).
@@ -43,8 +43,13 @@ alias gca='g ca'
 __git_complete gca _git_commit
 
 gcm() {
-  MESSAGE="$@"
-  [[ -n $MESSAGE ]] && gc -m "$MESSAGE" || gc
+  MESSAGE="$*"
+  if [[ -n "$MESSAGE" ]]
+  then
+    gc -m "$MESSAGE"
+  else
+    gc
+  fi
 }
 
 alias gd='g d'
@@ -73,20 +78,8 @@ __git_complete gpl _git_pull
 
 alias gs='g s'
 
-alias gst='echo "Use git wip instead."'
-# alias gst='git stash'
-# __git_complete gpl _git_stash
-
-# Show content of stash at index.
-function gsts() {
-  if [ -n $1 ]; then
-    git stash show -p stash@{$1}
-  fi
-}
-
 alias gsl='g stash list'
 alias gss='g stash show -p'
-alias gstash='echo "Use gst"'
 
 alias gundo='g undo'
 alias gunstash='g unstash'
@@ -95,17 +88,12 @@ alias gro='cd "$(\git rev-parse --show-toplevel)"'
 
 alias amend='\git amend'
 
-# Create new branch both locally and on the origin remote.
-git-new-remote-tracking() {
-  git checkout -b $1 && git push -u origin $1
-}
-
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
 function hc() {
   if [[ -z $__PROJECT_FOLDER ]]; then
-    >&2 echo 'The environment variable `__PROJECT_FOLDERS` is not defined.'
-    >&2 echo 'Please define it to use `hc`.'
+    >&2 echo 'The environment variable __PROJECT_FOLDERS is not defined.'
+    >&2 echo 'Please define it to use hc.'
     return 1
   fi
 
@@ -114,22 +102,17 @@ function hc() {
     return 1
   fi
 
-  if [ -x $(which hub) ]; then
+  if [ -x "$(which hub)" ]; then
     FOLDER="$__PROJECT_FOLDER/github.com/$1"
-    if [ -d $FOLDER ]; then
+    if [ -d "$FOLDER" ]; then
       echo "Folder already exists. Pulling."
-      cd $FOLDER && git pull
+      cd "$FOLDER" && git pull
     else
-      hub clone $1 $FOLDER && cd $FOLDER
+      hub clone "$1" "$FOLDER" && cd "$FOLDER" || return
     fi
   else
     echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
   fi
-}
-
-
-function git-push-set-upstream() {
-  echo "DEPRECTATED: Use \`git psu\`."
 }
 
 # TODO: Extract this whole function, this is basically `p`.
@@ -139,28 +122,28 @@ function git-fuzzy-checkout() {
   BRANCHES=$(
       git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
         | sort | uniq \
-        | \ack --nocolor $BRANCH
+        | \ack --nocolor "$BRANCH"
     )
 
-  BRANCH_COUNT=$(echo $BRANCHES | tr ' ' '\n' | wc -l)
+  BRANCH_COUNT=$(echo "$BRANCHES" | tr ' ' '\n' | wc -l)
 
   if [[ ! $BRANCHES ]]; then
     TARGET=$(
       git branch -a | sed "s:.* remotes/origin/::" | sed "s:.* ::" \
         | sort | uniq \
-        | $FUZZY_CMD -q $BRANCH
+        | $FUZZY_CMD -q "$BRANCH"
     )
-  elif (( $BRANCH_COUNT == 1 )); then
+  elif (( BRANCH_COUNT == 1 )); then
     TARGET=$BRANCHES
-  elif (( $BRANCH_COUNT > 1 )); then
+  elif (( BRANCH_COUNT > 1 )); then
     TARGET=$(
-      echo $BRANCHES | tr ' ' '\n' \
+      echo "$BRANCHES" | tr ' ' '\n' \
         | $FUZZY_CMD
     )
   fi
 
   if [[ -n $TARGET ]]; then
-    git checkout $TARGET
+    git checkout "$TARGET"
   else
     echo "Could not find branch."
   fi

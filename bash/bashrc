@@ -1,6 +1,8 @@
 #!/bin/bash
+# shellcheck source=/dev/null
 
-export EDITOR=`which vim`
+EDITOR=$(which vim)
+export EDITOR
 
 # If not running interactively, don't do anything
 if [[ -n "$PS1" ]] ; then

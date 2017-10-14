@@ -21,10 +21,10 @@ alias cdt='cd ~/code/tmp'
 alias cdv='cd ~/.dotvim'
 
 # Reloads the shell without having PATH re-adding to himself.
-alias update="unset PATH ; exec $SHELL"
+alias update="unset PATH ; exec \$SHELL"
 
 # Herping and Derping
-if [ -x $(which rg) ]; then
+if [ -x "$(which rg)" ]; then
   alias grep=rg
   alias ack=rg
 fi

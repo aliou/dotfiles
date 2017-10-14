@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck source=/dev/null
 
 # Setup Node Version Manager.
 export NVM_DIR="/Users/alioudiallo/.nvm"

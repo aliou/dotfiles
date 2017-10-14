@@ -11,9 +11,9 @@ alias reload!='echo "Wrong console, dummy."'
 
 r() {
   if [[ -f './bin/rspec' ]]; then
-    ./bin/rspec $1
+    ./bin/rspec "$1"
   else
-    bundle exec rspec $1
+    bundle exec rspec "$1"
   fi
 }
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck source=/dev/null
 
 for config_file in ~/.dotfiles/code/**/*.sh
 do
@@ -6,15 +7,15 @@ do
 done
 
 alias :w='echo "Not in \$EDITOR, dummy"'
-alias :e="$EDITOR"
+alias :e="\$EDITOR"
 # alias m='tmuxinator'
 
 # vi stuff.
-alias vi=$EDITOR
-alias vim=$EDITOR
-alias v=$EDITOR
-alias nv=$EDITOR
-alias vs="$EDITOR -S Session.vim"
+alias vi="\$EDITOR"
+alias vim="\$EDITOR"
+alias v="\$EDITOR"
+alias nv="\$EDITOR"
+alias vs="\$EDITOR -S Session.vim"
 
 alias cdp='cd ~/code/src/github.com/aliou/'
 
@@ -28,7 +29,7 @@ function m() {
     return 1
   fi
   # Change terminal name on OS X.
-  echo -ne "\033]0;"$*"\007"
+  echo -ne "\033]0;" "$*" "\007"
 
-  tmuxinator $*
+  tmuxinator "$*"
 }

@@ -1,3 +1,4 @@
 #!/bin/bash
+# shellcheck source=/dev/null
 
 [[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
