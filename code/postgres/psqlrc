@@ -1,7 +1,8 @@
+-- Silence the messages from the following config.
 \set QUIET 1
 
 -- Upcase the tab-completed words.
-\set comp_keyword_case upper
+\set COMP_KEYWORD_CASE upper
 
 -- Use the extended output when needed.
 \x auto
@@ -12,6 +13,7 @@
 -- Show something when the value is null.
 \pset null '(null)'
 
+-- Un-silence the messages.
 \unset QUIET
 
 -- vim: ft=sql
