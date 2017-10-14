@@ -19,5 +19,5 @@ FOLDER_NAME="[$(dirname "$UPDATE_FILE")]"
 # Check if the folder name is already in the message, exit early if it is.
 
 # Prepends the folder name to the message.
-# sed -i "1s;^;$FOLDER_NAME;" $1
-sed -i -e "1 s/^/$FOLDER_NAME /" "$1"
+# Meta: Using `;` as a delimiter so we can have messages containing a `/`.
+sed -i -e "1 s;^;$FOLDER_NAME ;" "$1"
