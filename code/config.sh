@@ -7,15 +7,10 @@ do
 done
 
 alias :w='echo "Not in \$EDITOR, dummy"'
-alias :e="\$EDITOR"
-# alias m='tmuxinator'
+alias :e="vim"
 
-# vi stuff.
-alias vi="\$EDITOR"
-alias vim="\$EDITOR"
-alias v="\$EDITOR"
-alias nv="\$EDITOR"
-alias vs="\$EDITOR -S Session.vim"
+alias v="vim"
+alias vs="vim -S Session.vim"
 
 alias cdp='cd ~/code/src/github.com/aliou/'
 
