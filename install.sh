@@ -27,8 +27,3 @@ ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
 
 ln -Fis ~/.dotfiles/alacritty/config.yml ~/.config/alacritty/alacritty.yml
 ln -Fis ~/.dotfiles/yamllint/config.yml ~/.config/yamllint/config
-
-echo 'What remains to be done:'
-echo '- Generate SSH key and add it to GitHub.'
-echo '- Generate GPG key and add it to GitHub.'
-echo '- Setup the `signingkey` for Git.'
