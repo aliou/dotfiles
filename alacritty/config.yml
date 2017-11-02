@@ -17,7 +17,7 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 dimensions:
-  columns: 155
+  columns: 160
   lines: 40
 
 # Adds this many blank pixels of padding around the window
