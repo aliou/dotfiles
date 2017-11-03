@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Generate completions for exenv command.
+# TODO: Try to have this installed with the brew formula.
 _exenv() {
   COMPREPLY=()
   local word="${COMP_WORDS[COMP_CWORD]}"
