@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -n $(which go) ]]; then
+if [[ -x /usr/local/bin/go ]]; then
   export GOPATH="$HOME/code"
   export GOBIN="$GOPATH/bin"
   export PATH="$PATH:$GOBIN"

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ -n $(which hub) ]]; then
+if [[ -x /usr/local/bin/hub ]]; then
   alias hs='hub sync'
 fi

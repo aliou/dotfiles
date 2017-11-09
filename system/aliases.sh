@@ -3,7 +3,7 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-if [[ -x $(which exa) ]]; then
+if [[ -x /usr/local/bin/exa ]]; then
   alias ls='exa -lah --color=auto --git'
 else
   alias ls="ls -lAGh"
