@@ -9,13 +9,3 @@ beep() {
 iterm_title() {
   echo -ne "\033]0;" "$*" "\007"
 }
-
-reveal() {
-  if [[ -d "$1" ]];
-  then
-    basedir="$1"
-  else
-    basedir=$(dirname "$1")
-  fi
-  open "$basedir"
-}
