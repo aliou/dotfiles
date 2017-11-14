@@ -3,6 +3,8 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
+alias vi=vim
+
 if [[ -x /usr/local/bin/exa ]]; then
   alias ls='exa -lah --color=auto --git'
 else
