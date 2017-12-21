@@ -23,7 +23,8 @@ if [[ -n "$PS1" ]] ; then
     source "$config_file"
   done
 
-  # Source local shit.
+  # Source local shit. (For example private credentials or scripts that only
+  # make sense on the current machine). Hey Bachir!
   [[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
 
   # Set teminal as 256 colors.
