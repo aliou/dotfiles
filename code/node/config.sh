@@ -2,5 +2,7 @@
 # shellcheck source=/dev/null
 
 # Setup Node Version Manager.
-export NVM_DIR="/Users/alioudiallo/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+  export NVM_DIR="/Users/alioudiallo/.nvm"
+  source "$NVM_DIR/nvm.sh"
+fi
