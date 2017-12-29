@@ -5,11 +5,7 @@ alias mv="mv -iv"
 
 alias vi=vim
 
-if [[ -x /usr/local/bin/exa ]]; then
-  alias ls='exa -lah --color=auto --git'
-else
-  alias ls="ls -lAGh"
-fi
+alias ls="ls -lAGh"
 
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
