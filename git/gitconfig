@@ -22,6 +22,7 @@
   ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
   d             = diff --word-diff
+  dad           = add
   dc            = diff --cached
   dl            = show --pretty=oneline
   empty         = !"git commit -a -m '' --allow-empty --allow-empty-message"
