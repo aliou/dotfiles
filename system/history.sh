@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Disable the entry limit for the history file.
-export HISTSIZE=
+export HISTSIZE=-1
 
 # Disable file size limit for the history file.
-export HISTFILESIZE=
+export HISTFILESIZE=-1
 
 # History date format.
 export HISTTIMEFORMAT='%b %d %I:%M %p '
@@ -17,3 +17,6 @@ export HISTIGNORE='history:pwd:exit:df:ls:update:fg:env:cdd:cdv:h:gh:gs:hs'
 # current command.
 # See bash(1) for more options.
 export HISTCONTROL='ignoreboth:erasedups'
+
+# Append to history, don't overwrite.
+shopt -s histappend
