@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-clean_old_postgres_pid() {
-  rm /usr/local/var/postgres/postmaster.pid
-}
+if [[ -n $(which pg) ]]; then
+  # Only works if pg is installed from brew, be careful.
+  eval "$(pg init -)"
+fi
