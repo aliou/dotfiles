@@ -14,18 +14,24 @@ env:
   # `infocmp xterm-256color`.
   TERM: xterm-256color
 
-# Window dimensions in character columns and lines
-# (changes require restart)
-dimensions:
-  columns: 160
-  lines: 40
+window:
+  # Window dimensions in character columns and lines
+  # Falls back to size specified by window manager if set to 0x0.
+  # (changes require restart)
+  dimensions:
+    columns: 160
+    lines: 40
 
-# Adds this many blank pixels of padding around the window
-# Units are physical pixels; this is not DPI aware.
-# (change requires restart)
-padding:
-  x: 2
-  y: 2
+  # Adds this many blank pixels of padding around the window
+  # Units are physical pixels; this is not DPI aware.
+  # (change requires restart)
+  padding:
+    x: 2
+    y: 2
+
+  # Window decorations
+  # Setting this to false will result in window without borders and title bar.
+  decorations: true
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
@@ -201,6 +207,10 @@ key_bindings:
 
   - { key: Return, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/fullscreen" } }
 
+  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Subtract, mods: Command, action: DecreaseFontSize }
+
   - { key: Insert, mods: Shift, action: PasteSelection }
   - { key: Home, chars: "\x1bOH", mode: AppCursor }
   - { key: Home, chars: "\x1b[H", mode: ~AppCursor }
@@ -267,6 +277,17 @@ key_bindings:
 # - Copy (TODO)
 # mouse_bindings:
 #   - { mouse: Middle, action: PasteSelection }
+
+# Style of the cursor
+#
+# Values for 'cursor_style':
+# - Block
+# - Underline
+# - Beam
+cursor_style: Block
+
+# Live config reload (changes require restart)
+live_config_reload: true
 
 mouse:
   double_click: { threshold: 300 }
