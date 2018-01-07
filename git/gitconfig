@@ -62,6 +62,7 @@
   diffFilter = diff-highlight
 [diff]
   compactionHeuristic = true
+  colorMoved = zebra
 [tag]
   sort = version:refname
 [gpg]
