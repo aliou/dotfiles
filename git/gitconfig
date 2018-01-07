@@ -42,7 +42,6 @@
   unstash       = !"git stash pop"
   untracked     = !"git ls-files --others --exclude-standard"
   vr            = branch
-  wip           = !"git add . && git commit -m 'WIP'"
 [push]
   default = tracking
 [help]
