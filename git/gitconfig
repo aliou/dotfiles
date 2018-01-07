@@ -21,7 +21,7 @@
   c             = commit -v
   ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
-  d             = diff --word-diff
+  d             = diff
   dad           = add
   dc            = diff --cached
   dl            = show --pretty=oneline
