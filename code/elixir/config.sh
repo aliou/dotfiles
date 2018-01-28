@@ -18,7 +18,7 @@ _exenv() {
   # fi
 }
 
-if [[ -x /usr/local/bin/exenv ]]; then
+if [[ $(type -p exenv) ]]; then
   export EXENV_ROOT="$HOME/.exenv"
   eval "$(exenv init -)"
 
