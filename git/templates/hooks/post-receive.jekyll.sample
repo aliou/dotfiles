@@ -8,8 +8,6 @@ PUBLIC_WWW=
 WORKING_DIR=/tmp/$PROJECT_NAME-working-dir
 BUNDLE=$HOME/.rbenv/shims/bundle
 
-set -e
-
 function indent() {
   c='s/^/       /'
   case $(uname) in
@@ -18,8 +16,8 @@ function indent() {
   esac
 }
 
-echo "-----> Removing previous build artifacts."
 # Delete working directory to start clean.
+echo "-----> Removing previous build artifacts."
 rm -rf $WORKING_DIR
 
 # Get updated site.
@@ -30,6 +28,7 @@ cd $WORKING_DIR
 # Update deps.
 echo "-----> Installing / Updating dependencies."
 $BUNDLE install | indent
+
 # Build site.
 echo "-----> Building site."
 JEKYLL_ENV=production $BUNDLE exec jekyll build --incremental -s $WORKING_DIR -d $PUBLIC_WWW | indent
