@@ -67,3 +67,5 @@
   sort = version:refname
 [gpg]
   program = /usr/local/bin/gpg
+[advice]
+  waitingForEditor = false
