@@ -23,7 +23,9 @@ __git_complete gti _git
 # 4. Do the same thing for `gc`, `gco`, `gps`, `gpl` etc.
 
 alias gco='g checkout'
+alias goc='g checkout'
 __git_complete gco _git_checkout
+__git_complete goc _git_checkout
 
 alias ga='g add'
 __git_complete ga _git_add
