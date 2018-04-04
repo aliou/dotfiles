@@ -1585,13 +1585,13 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>343 127 796 473 0 0 1680 1028 </string>
+	<string>343 199 918 401 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>215 192 1250 644 0 0 1680 1028 </string>
+	<string>63 328 1250 644 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 381 1250 644 0 0 1680 1028 </string>
+	<string>0 13 1138 1012 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>46 7 458 932 0 0 1680 1028 </string>
+	<string>46 295 1250 644 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>344 -146 1250 644 0 0 1680 1028 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
@@ -1773,7 +1773,7 @@
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Blur Radius</key>
@@ -4635,7 +4635,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-24T10:27:43Z</date>
+	<date>2018-03-29T07:47:51Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
