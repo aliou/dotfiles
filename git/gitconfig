@@ -7,12 +7,11 @@
 [include]
   path = ~/.gitconfig.local # Contains custom config for the current machine.
 [includeIf "gitdir:~/code/src/github.com/snapshift/**"]
-  path = .gitconfig-snapshift
+  path = ~/..gitconfig-snapshift
 [color]
   ui = true
 [core]
   autocrlf     = false
-  excludesfile = ~/.gitignore
 [alias]
   amend         = commit -v --amend
   br            = branch

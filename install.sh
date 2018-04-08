@@ -5,8 +5,9 @@ ln -Fis ~/.dotfiles/bash/inputrc ~/.inputrc
 ln -Fis ~/.dotfiles/bash/profile ~/.profile
 ln -Fis ~/.dotfiles/tcsh/tcshrc ~/.tcshrc
 
-ln -Fis ~/.dotfiles/git/gitignore ~/.gitignore
-ln -Fis ~/.dotfiles/git/gitconfig ~/.gitconfig
+mkdir -p ~/.config/git
+ln -Fis ~/.dotfiles/git/gitignore ~/.config/git/ignore
+ln -Fis ~/.dotfiles/git/gitconfig ~/.config/git/config
 
 ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
