@@ -5,9 +5,8 @@
   gpgsign = true
   verbose = true
 [include]
-  path = ~/.gitconfig.local # Contains custom config for the current machine.
-[includeIf "gitdir:~/code/src/github.com/snapshift/**"]
-  path = ~/..gitconfig-snapshift
+  # Contains custom config for the current machine.
+  path = config.local
 [color]
   ui = true
 [core]

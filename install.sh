@@ -18,10 +18,10 @@ ln -Fis ~/.dotfiles/code/redis/redisclirc ~/.redisclirc
 ln -Fis ~/.dotfiles/irssi ~/.irssi
 
 mkdir -p ~/.dotfiles/zfiles.local
-echo -e "#!/usr/bin/env bash\n" >> ~/.dotfiles/zfiles.local/config.sh
+echo -e '#!/usr/bin/env bash\n' >> ~/.dotfiles/zfiles.local/config.sh
 
 touch ~/.dotfiles/zfiles.local/gitconfig
-ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.gitconfig.local
+ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.config/git/config.local
 
 touch ~/.dotfiles/zfiles.local/bashrc
 ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
