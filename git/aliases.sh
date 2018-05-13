@@ -1,15 +1,10 @@
 #!/bin/bash
 
-# HERP DERP
-# alias gt=git
-# alias gti=git
-# alias qgit=git
-
 # Train my muscle memory to use the `g` alias:
 # 1. Alias `g` to the binary instead of the command `git` to avoid recursive
 # bullshit.
-alias g="\$(which git)"
-alias gti="\$(which git)"
+alias g="git"
+alias gti="git"
 
 # 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
 # (99% sure this is a bad idea).
@@ -53,6 +48,9 @@ gcm() {
     gc
   fi
 }
+
+alias gmc='gcm'
+__git_complete gcm _git_commit
 
 alias gd='g d'
 __git_complete gd _git_diff
