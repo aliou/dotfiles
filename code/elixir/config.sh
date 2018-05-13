@@ -27,3 +27,8 @@ fi
 
 # Enable history.
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Add escripts to PATH if the folder is present.
+if [[ -d "$HOME/.mix/escripts" ]]; then
+  export PATH="${PATH}:$HOME/.mix/escripts/"
+fi
