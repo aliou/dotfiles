@@ -202,8 +202,8 @@ key_bindings:
   - { key: Q, mods: Command, action: Quit }
   - { key: W, mods: Command, action: Quit }
 
-  - { key: N, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/alacritty" } }
-  - { key: T, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/alacritty" } }
+  - { key: N, mods: Command, command: { program: "open", args: ["-n", "-a", "Alacritty"] } }
+  - { key: T, mods: Command, command: { program: "open", args: ["-n", "-a", "Alacritty"] } }
 
   - { key: Return, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/fullscreen" } }
 
