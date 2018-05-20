@@ -7,7 +7,7 @@ tmux_options: -2
 
 windows:
   - shell:
-  - editor: nvim
+  - editor: vim
   - console: ./bin/rails console
   - test: ./bin/rspec spec/
   - logs: tail -f log/development.log
