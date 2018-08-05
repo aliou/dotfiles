@@ -1,6 +1,6 @@
 refreshFrequency: '15s'
 
-command: "uptime | cut -d ' ' -f 9-"
+command: "sysctl -n vm.loadavg | awk '{printf \"%s %s %s\",$2,$3,$4}'"
 
 style: """
   bottom: 15px;
