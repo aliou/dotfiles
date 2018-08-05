@@ -16,8 +16,8 @@
   br            = branch
   branches      = branch -a
   bv            = !"git for-each-ref --format='%(refname:short), %(upstream:short)' refs/heads | column -t -s ','"
-  c             = commit -v
-  ca            = commit -av
+  c             = commit -v --cleanup=scissors
+  ca            = commit -av --cleanup=scissors
   conflicted    = diff --name-only --diff-filter=U
   d             = diff
   dad           = add
