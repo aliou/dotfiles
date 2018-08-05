@@ -19,8 +19,8 @@ window:
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
   dimensions:
-    columns: 160
-    lines: 40
+    columns: 320
+    lines: 80
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -69,7 +69,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 13.5
+  size: 12.5
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -102,6 +102,9 @@ colors:
   primary:
     background: '0x232323'
     foreground: '0xffffff'
+
+    # foreground: '0x232323'
+    # background: '0xf7f7f7'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -202,13 +205,14 @@ key_bindings:
   - { key: Q, mods: Command, action: Quit }
   - { key: W, mods: Command, action: Quit }
 
-  - { key: N, mods: Command, command: { program: "open", args: ["-n", "-a", "Alacritty"] } }
-  - { key: T, mods: Command, command: { program: "open", args: ["-n", "-a", "Alacritty"] } }
+  - { key: N, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
+  - { key: T, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
 
   - { key: Return, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/fullscreen" } }
 
   - { key: Key0, mods: Command, action: ResetFontSize }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
+    # The decrease doesn't work for some reason.
   - { key: Subtract, mods: Command, action: DecreaseFontSize }
 
   - { key: Insert, mods: Shift, action: PasteSelection }
@@ -290,8 +294,23 @@ cursor_style: Block
 live_config_reload: true
 
 mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+
+  # Faux Scrollback
+  #
+  # The `faux_scrollback_lines` setting controls the number
+  # of lines the terminal should scroll when the alternate
+  # screen buffer is active. This is used to allow mouse
+  # scrolling for applications like `man`.
+  #
+  # To disable this completely, set `faux_scrollback_lines` to 0.
+  faux_scrollback_lines: 1
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
