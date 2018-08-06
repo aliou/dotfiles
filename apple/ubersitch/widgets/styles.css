@@ -1,0 +1,33 @@
+/* Get monitor width */
+.screen {
+  width: 100vw;
+  height: 100vh;
+
+  color: white;
+  font: 11.5px SF Mono, Menlo;
+}
+
+/* .background { */
+/*   display: block; */
+/*   position: absolute; */
+/*   background-color: black; */
+/*   left: 10px; */
+
+/*   height: 20px; */
+/* } */
+
+.date {
+  display: inline-block;
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+}
+
+.load {
+  display: inline-block;
+  position: absolute;
+
+  bottom: 15px;
+  left: 125px;
+}
