@@ -14,6 +14,21 @@ exenv init
 # and add them to `~/.exenv/versions`
 ```
 
+## Installing `elixir_ls`
+```bash
+# Pull the code
+git clone git@github.com:JakeBecker/elixir-ls.git
+cd elixir-ls
+
+# Compile and build
+mix compile
+mkdir -p ~/code/lib
+mix elixir_ls.release -o ~/code/lib/elixir_ls
+
+# Link the launch script to a folder in path.
+ln -s ~/code/lib/elixir_ls/language_server.sh ~/code/bin/elixir_ls
+```
+
 <!--
 ### Installing on Raspberry Pi
 To install on a Raspberry Pi, export the following environment variables:
