@@ -1,4 +1,4 @@
-refreshFrequency: '5s'
+refreshFrequency: false
 
 render: () ->
     return '''
