@@ -17,6 +17,9 @@ UPDATE_FILE=$(git status -s -uno | grep -v '^ ' | awk '{print $2}' | head -n 1)
 FOLDER_NAME="[$(dirname "$UPDATE_FILE")]"
 
 # Check if the folder name is already in the message, exit early if it is.
+if head -n1 "$1" | grep -q "^\["; then
+  exit 0
+fi
 
 # Prepends the folder name to the message.
 # Meta: Using `;` as a delimiter so we can have messages containing a `/`.
