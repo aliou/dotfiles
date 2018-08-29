@@ -8,6 +8,5 @@ if [[ -d "$HOME/.cargo" ]]; then
   # Language Server).
   # This requires to have the rust source installed.
   #   => rustup component add rust-src
-  export RUST_SRC_PATH
-  RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 fi
