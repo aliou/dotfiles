@@ -79,3 +79,6 @@ tags.temp
 .notags
 
 .env.snapshift
+
+# Elixir language server files.
+.elixir_ls/
