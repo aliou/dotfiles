@@ -1,6 +1,8 @@
 #!/bin/bash
 # shellcheck source=/dev/null
 
+start=`gdate +%s.%N`
+
 EDITOR="vim"
 export EDITOR
 
@@ -32,3 +34,7 @@ if [[ -n "$PS1" ]] ; then
     export TERM='screen-256color'
   fi
 fi
+end=`gdate +%s.%N`
+
+runtime=$( echo "$end - $start" | bc -l )
+echo $runtime
