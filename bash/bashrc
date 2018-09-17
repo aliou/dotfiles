@@ -36,5 +36,6 @@ if [[ -n "$PS1" ]] ; then
 fi
 end=`gdate +%s.%N`
 
+# Only display in interactive shells.
 runtime=$( echo "$end - $start" | bc -l )
-echo $runtime
+[[ $- == *i* ]] && echo $runtime
