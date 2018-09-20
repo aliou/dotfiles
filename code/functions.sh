@@ -5,7 +5,7 @@
 # - ack
 
 # Easily switch fuzzy finder by setting the FUZZY_CMD env variable.
-export FUZZY_CMD="fzf"
+export FUZZY_CMD="fzf --no-sort --exact"
 export SEARCH_CMD="$(which ack) --nocolor"
 
 # Jump to a project file.
