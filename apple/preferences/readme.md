@@ -27,3 +27,8 @@ Remove animation when opening windows, popup, etc:
 ```sh
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 ```
+
+Re-enable press and hold for accents (needs logout):
+```sh
+defaults write -g ApplePressAndHoldEnabled -bool true
+```
