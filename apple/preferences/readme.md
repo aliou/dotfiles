@@ -2,8 +2,10 @@
 
 #### Global
 
-Install the [Hack](https://github.com/chrissimpkins/Hack) and
-[Input Mono](http://input.fontbureau.com/download/) fonts.
+Install the SF Mono font:
+```code
+open /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/*
+```
 
 #### `*.plist` files
 1. Open the application at least once.
@@ -31,4 +33,14 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 Re-enable press and hold for accents (needs logout):
 ```sh
 defaults write -g ApplePressAndHoldEnabled -bool true
+```
+
+Move screenshot directory:
+```sh
+defaults write com.apple.screencapture location /Users/alioudiallo/Pictures/screenshots
+```
+
+Dark menu bar and dock without Dark theme:
+```sh
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
 ```
