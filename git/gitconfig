@@ -16,12 +16,10 @@
   amend         = commit -v --amend
   br            = branch
   branches      = branch -a
-  bv            = !"git for-each-ref --format='%(refname:short), %(upstream:short)' refs/heads | column -t -s ','"
   c             = commit -v
   ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
   d             = diff
-  dad           = add
   dc            = diff --cached
   dl            = show --pretty=oneline
   empty         = !"git commit -a -m '' --allow-empty --allow-empty-message"
@@ -30,10 +28,8 @@
   filediff      = diff --name-only
   fixup         = commit --amend --no-edit --allow-empty-message
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
-  l             = !"PAGER='' git lo && echo"
   last          = log -1
-  latest        = log -1
-  lo            = log --graph --pretty=format:'%Cred%h%Creset %an (%GK): %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
+  l             = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
   rv            = remote -v
   s             = status -sb
   tags          = tag

@@ -64,9 +64,6 @@ __git_complete gdl _git_diff
 alias gl='g l'
 __git_complete gl _git_log
 
-alias gm='g merge'
-__git_complete gmerge _git_merge
-
 alias gps='g push'
 __git_complete gps _git_push
 
@@ -85,8 +82,6 @@ alias gundo='g undo'
 alias gunstash='g unstash'
 
 alias gro='cd "$(\git rev-parse --show-toplevel)"'
-
-alias amend='\git amend'
 
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
