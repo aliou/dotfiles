@@ -68,3 +68,5 @@
   program = /usr/local/bin/gpg
 [advice]
   waitingForEditor = false
+[rebase]
+  autosquash = true
