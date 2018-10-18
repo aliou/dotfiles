@@ -2,7 +2,6 @@
   email = code@aliou.me
   name  = Aliou Diallo
 [commit]
-  gpgsign = true
   verbose = true
   cleanup = scissors
 [include]
@@ -60,8 +59,6 @@
   colorMoved = zebra
 [tag]
   sort = version:refname
-[gpg]
-  program = /usr/local/bin/gpg
 [advice]
   waitingForEditor = false
 [rebase]
