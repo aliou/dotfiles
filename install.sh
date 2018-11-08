@@ -28,3 +28,4 @@ ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
 
 ln -Fis ~/.dotfiles/alacritty/config.yml ~/.config/alacritty/alacritty.yml
 ln -Fis ~/.dotfiles/yamllint/config.yml ~/.config/yamllint/config
+ln -Fis ~/.dotfiles/code/ruby/pryrc ~/.pryrc

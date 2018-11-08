@@ -1,0 +1,36 @@
+# frozen_string_literal: true
+
+def disable_pry
+  ENV['DISABLE_PRY'] = true
+end
+
+def enable_pry
+  ENV['DISABLE_PRY'] = nil
+end
+
+# rubocop:disable Style/GlobalVars
+def disable_logs
+  $old_logger ||= ActiveRecord::Base.logger
+  ActiveRecord::Base.logger = nil
+end
+
+def enable_logs
+  ActiveRecord::Base.logger = $old_logger
+end
+# rubocop:enable Style/GlobalVars
+
+def pbcopy(input)
+  input = input.to_s
+
+  IO.popen('pbcopy', 'w') do |pipe|
+    pipe << input
+  end
+
+  input
+end
+
+def pbpaste
+  `pbpaste`
+end
+
+# vim:ft=ruby
