@@ -18,9 +18,9 @@
   c             = commit -v
   ca            = commit -av
   conflicted    = diff --name-only --diff-filter=U
-  d             = diff
-  dc            = diff --cached
-  dl            = show --pretty=oneline
+  d             = diff --ignore-all-space
+  dc            = diff --cached --ignore-all-space
+  dl            = show --pretty=oneline --ignore-all-space
   empty         = !"git commit -a -m '' --allow-empty --allow-empty-message"
   empty-commit  = !"git commit --allow-empty"
   empty-message = !"git commit -a -m '' --allow-empty-message"
