@@ -5,7 +5,8 @@ alias mv="mv -iv"
 
 alias vi=vim
 
-alias ls="ls -lAGh"
+# alias ls="ls -lAGh"
+alias ls="exa -la --git"
 
 alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
 alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
