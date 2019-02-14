@@ -8,3 +8,5 @@ done
 
 alias v="vim"
 alias vs="vim -S Session.vim"
+
+export PATH="$HOME/code/bin:$PATH"
