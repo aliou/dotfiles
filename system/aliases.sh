@@ -25,7 +25,7 @@ alias update="unset PATH ; exec \$SHELL"
 alias reset="\reset; echo 'terminfo database reset, maybe you meant to use \`update\`?'"
 
 # Herping and Derping
-if [ -x "$(which rg)" ]; then
+if [ -x "$(command -v rg)" ]; then
   alias grep="echo 'use rg or \\grep'"
   alias ack="echo 'use rg or \\ack'"
 fi
