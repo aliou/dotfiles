@@ -9,11 +9,15 @@ alias im=vim
 # alias ls="ls -lAGh"
 alias ls="exa -la --git"
 
-alias l1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
-alias l2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
-alias l3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
+alias l1='echo "use t1"'
+alias l2='echo "use t2"'
+alias l3='echo "use t3"'
 
-alias cdb='cd ~/.dotbin'
+alias t1='tree --dirsfirst -ChFLa 1 -I ".git*|tags"'
+alias t2='tree --dirsfirst -ChFLa 2 -I ".git*|tags"'
+alias t3='tree --dirsfirst -ChFLa 3 -I ".git*|tags"'
+
+alias cdb='cd ~/code/bin/'
 alias cdd='cd ~/.dotfiles'
 alias cdg='cd ~/code/src/github.com/aliou/'
 alias cds='cd ~/code/src'
