@@ -26,6 +26,6 @@ alias reset="\reset; echo 'terminfo database reset, maybe you meant to use \`upd
 
 # Herping and Derping
 if [ -x "$(which rg)" ]; then
-  alias grep=rg
-  alias ack=rg
+  alias grep="echo 'use rg or \\grep'"
+  alias ack="echo 'use rg or \\ack'"
 fi
