@@ -2,15 +2,15 @@
 # https://gist.github.com/48207
 
 function parse_git_deleted {
-    [[ $(git status 2> /dev/null | grep deleted:) != "" ]] && echo "-"
+    [[ $(git status 2> /dev/null | \grep deleted:) != "" ]] && echo "-"
 }
 
 function parse_git_added {
-    [[ $(git status 2> /dev/null | grep "Untracked files:") != "" ]] && echo '+'
+    [[ $(git status 2> /dev/null | \grep "Untracked files:") != "" ]] && echo '+'
 }
 
 function parse_git_modified {
-    [[ $(git status 2> /dev/null | grep modified:) != "" ]] && echo "#"
+    [[ $(git status 2> /dev/null | \grep modified:) != "" ]] && echo "#"
 }
 
 function parse_git_stashed {
