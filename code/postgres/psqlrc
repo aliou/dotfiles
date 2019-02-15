@@ -16,4 +16,18 @@
 -- Un-silence the messages.
 \unset QUIET
 
+-- Make the prompt look like : [hostname] database_user_name@database_name=#
+\set PROMPT1 '%M %n@%/%R%%# '
+
+-- PROMPT2 is printed when the prompt expects more input, like when you type
+-- SELECT * FROM<enter>. %R shows what type of input it expects.
+\set PROMPT2 '[more] %R > '
+
+-- Ignore duplicated queries in history.
+\set HISTCONTROL ignoredups
+
+\set VERBOSITY verbose
+
+-- Buffer the results. This may display results before a query fails.
+\set FETCH_COUNT 1000
 -- vim: ft=sql
