@@ -55,24 +55,7 @@ p() {
   fi
 }
 
-# Jump to a subfolder.
-# Usage: j [ folder ]
-# http://stackoverflow.com/questions/4210042/exclude-directory-from-find-command
-j() {
-  local __P_PROJECT_FOLDERS="."
-  local __P_MAX_DEPTH=5
-  local __P_IGNORED_FOLDERS=( '.git' 'node_modules' )
-  p $@
-}
-
-
-e() {
-  $EDITOR $(
-    find . -maxdepth 3 -type f \
-    ! -path '*/.git*' ! -path '*/.hg*' ! -path '*/.svn*' | $FUZZY_CMD
-  ) && clear
-}
-
+# TODO: fix this.
 folder_info() {
   TARGET=$PWD
   PROJECT_NAME=`basename $TARGET | tr '[[:upper:]]' '[[:lower:]]'`

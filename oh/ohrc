@@ -1,2 +1,0 @@
-# Setting the editor
-export EDITOR = /usr/local/bin/vim
