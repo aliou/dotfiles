@@ -6,7 +6,7 @@
 
 # Easily switch fuzzy finder by setting the FUZZY_CMD env variable.
 export FUZZY_CMD="fzf"
-export SEARCH_CMD="$(which rg)"
+export SEARCH_CMD="$(which ack) --nocolor"
 
 # Jump to a project file.
 # Usage: p [ project_name ]
