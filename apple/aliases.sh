@@ -1,5 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-alias opne=open
-alias flushdns="\sudo dscacheutil -flushcache && \sudo killall -HUP mDNSResponder"
-alias editdict="$EDITOR ~/Library/Spelling/LocalDictionary"
+alias flushdns="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"

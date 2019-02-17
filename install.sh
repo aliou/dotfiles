@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 ln -Fis ~/.dotfiles/bash/bashrc ~/.bashrc
-ln -Fis ~/.dotfiles/bash/inputrc ~/.inputrc
 ln -Fis ~/.dotfiles/bash/profile ~/.profile
-ln -Fis ~/.dotfiles/tcsh/tcshrc ~/.tcshrc
+ln -Fis ~/.dotfiles/readline/inputrc ~/.inputrc
 
 mkdir -p ~/.config/git
 ln -Fis ~/.dotfiles/git/gitignore ~/.config/git/ignore
@@ -14,8 +13,6 @@ ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -Fis ~/.dotfiles/ack/ackrc ~/.ackrc
 ln -Fis ~/.dotfiles/code/postgres/psqlrc ~/.psqlrc
 ln -Fis ~/.dotfiles/code/redis/redisclirc ~/.redisclirc
-
-ln -Fis ~/.dotfiles/irssi ~/.irssi
 
 mkdir -p ~/.dotfiles/zfiles.local
 echo -e '#!/usr/bin/env bash\n' >> ~/.dotfiles/zfiles.local/config.sh
