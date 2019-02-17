@@ -10,8 +10,8 @@ alias tl="tmux list-session"
 alias ts='tmuxifier load-session'
 
 function ta() {
-  COUNT=$(tmux list-sessions 2> /dev/null | \grep '^.*:.*' | wc -l)
-  if (( $COUNT > 1 )); then
+  COUNT=$(tmux list-sessions 2> /dev/null | \grep -c '^.*:.*')
+  if (( COUNT >= 1 )); then
     SESSION=$(tmux list-sessions -F '#S' | $FUZZY_CMD -1)
 
     tmux at -t "$SESSION"
