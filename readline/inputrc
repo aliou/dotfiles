@@ -6,3 +6,14 @@ set mark-symlinked-directories on
 
 # Circles through the possible completions.
 TAB: menu-complete
+
+# Show multiple completions on first tab press
+set show-all-if-ambiguous on
+
+$if Bash
+    # Expand ! history with a spacebar press.
+    Space: magic-space
+$endif
+
+# Don't display control characters like ^C if I input them.
+set echo-control-characters off
