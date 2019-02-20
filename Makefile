@@ -1,4 +1,5 @@
-all: install-bash \
+all: install-bin \
+	install-bash \
 	install-readline \
 	install-git \
 	install-tmux \
@@ -9,6 +10,10 @@ all: install-bash \
 	install-yamllint \
 	install-pry \
 	install-local
+
+install-bin:
+	mkdir -p ~/code/bin
+	ln -Fis ~/.dotfiles/bin/* ~/code/bin/
 
 install-bash:
 	ln -Fis ~/.dotfiles/bash/profile ~/.profile
