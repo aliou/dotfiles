@@ -73,6 +73,9 @@ __git_complete gpsf _git_push
 alias gpl='g pull'
 __git_complete gpl _git_pull
 
+alias gri='git rebase -i'
+__git_complete gri _git_rebase
+
 alias gs='g s'
 
 alias gsl='g stash list'
