@@ -105,7 +105,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 12.5
+  size: 13.5
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -164,6 +164,17 @@ colors:
     magenta: '0xb489ae'
     cyan: '0x30e2e4'
     white: '0xefefee'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '0xff00ff' }`
+  #
+  indexed_colors: []
+
 
 # Visual Bell
 #
@@ -240,12 +251,16 @@ key_bindings:
   - { key: N, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
   - { key: T, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
 
-  - { key: Return, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/fullscreen" } }
-
-  - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: Key0,   mods: Command, action: ResetFontSize    }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
-    # The decrease doesn't work for some reason.
-  - { key: Subtract, mods: Command, action: DecreaseFontSize }
+  - { key: Minus,  mods: Command, action: DecreaseFontSize }
+  - { key: K,      mods: Command, action: ClearHistory     }
+  - { key: K,      mods: Command, chars: "\x0c"            }
+  - { key: V,      mods: Command, action: Paste            }
+  - { key: C,      mods: Command, action: Copy             }
+  - { key: H,      mods: Command, action: Hide             }
+  - { key: Q,      mods: Command, action: Quit             }
+  - { key: W,      mods: Command, action: Quit             }
 
   - { key: Insert, mods: Shift, action: PasteSelection }
   - { key: Home, chars: "\x1bOH", mode: AppCursor }
@@ -367,6 +382,9 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
 
 dynamic_title: true
 
