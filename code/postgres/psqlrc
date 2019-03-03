@@ -13,9 +13,6 @@
 -- Show something when the value is null.
 \pset null '(null)'
 
--- Un-silence the messages.
-\unset QUIET
-
 -- Make the prompt look like : [hostname] database_user_name@database_name=#
 \set PROMPT1 '%M %n@%/%R%%# '
 
@@ -26,8 +23,10 @@
 -- Ignore duplicated queries in history.
 \set HISTCONTROL ignoredups
 
+-- Controls the verbosity of error reports. Can be default, verbose or terse.
 \set VERBOSITY verbose
 
--- Buffer the results. This may display results before a query fails.
-\set FETCH_COUNT 1000
+-- Un-silence the messages.
+\unset QUIET
+
 -- vim: ft=sql
