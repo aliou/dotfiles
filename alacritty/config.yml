@@ -251,16 +251,12 @@ key_bindings:
   - { key: N, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
   - { key: T, mods: Command, command: { program: "open", args: ["-n", "-b", "io.alacritty"] } }
 
-  - { key: Key0,   mods: Command, action: ResetFontSize    }
+  - { key: Return, mods: Command, command: { program: "/Users/alioudiallo/.dotbin/fullscreen" } }
+
+  - { key: Key0, mods: Command, action: ResetFontSize }
   - { key: Equals, mods: Command, action: IncreaseFontSize }
-  - { key: Minus,  mods: Command, action: DecreaseFontSize }
-  - { key: K,      mods: Command, action: ClearHistory     }
-  - { key: K,      mods: Command, chars: "\x0c"            }
-  - { key: V,      mods: Command, action: Paste            }
-  - { key: C,      mods: Command, action: Copy             }
-  - { key: H,      mods: Command, action: Hide             }
-  - { key: Q,      mods: Command, action: Quit             }
-  - { key: W,      mods: Command, action: Quit             }
+    # The decrease doesn't work for some reason.
+  - { key: Subtract, mods: Command, action: DecreaseFontSize }
 
   - { key: Insert, mods: Shift, action: PasteSelection }
   - { key: Home, chars: "\x1bOH", mode: AppCursor }
