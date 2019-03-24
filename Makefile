@@ -7,6 +7,7 @@ all: install-bin \
 	install-psql \
 	install-redis \
 	install-alacritty \
+	install-kitty \
 	install-yamllint \
 	install-pry \
 	install-local
@@ -38,6 +39,9 @@ install-psql:
 
 install-redis:
 	ln -Fis ~/.dotfiles/code/redis/redisclirc ~/.redisclirc
+
+install-kitty:
+	ln -Fis ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 install-alacritty:
 	ln -Fis ~/.dotfiles/alacritty/config.yml ~/.config/alacritty/alacritty.yml
