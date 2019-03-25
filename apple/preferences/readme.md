@@ -40,6 +40,12 @@ Move screenshot directory:
 defaults write com.apple.screencapture location /Users/alioudiallo/Pictures/screenshots
 ```
 
+Disable floating screenshot thumbnail
+
+1. Open Screenshot.app
+2. Click "options" at the bottom of the screen
+3. Uncheck "Show Floating Thumbnail"
+
 Dark menu bar and dock without Dark theme:
 ```sh
 defaults write -g NSRequiresAquaSystemAppearance -bool Yes
