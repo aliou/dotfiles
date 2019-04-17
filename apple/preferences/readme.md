@@ -22,6 +22,13 @@ Open a new File instead of the iCloud dialog:
 defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
 ```
 
+#### Mail.app
+Disable send or reply animations:
+```sh
+defaults write com.apple.Mail DisableReplyAnimations -bool YES
+defaults write com.apple.Mail DisableSendAnimations -bool YES
+```
+
 #### Global
 
 Remove animation when opening windows, popup, etc:
