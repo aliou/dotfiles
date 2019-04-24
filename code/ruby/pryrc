@@ -3,11 +3,11 @@
 require 'csv'
 
 def disable_pry
-  ENV['DISABLE_PRY'] = true
+  ENV.present? && ENV['DISABLE_PRY'] = true
 end
 
 def enable_pry
-  ENV['DISABLE_PRY'] = nil
+  ENV.present? && ENV['DISABLE_PRY'] = nil
 end
 
 # rubocop:disable Style/GlobalVars
