@@ -27,3 +27,5 @@ alias cdv='cd ~/.dotvim'
 # Reloads the shell without having PATH re-adding to himself.
 alias update="unset PATH ; exec \$SHELL"
 alias reset="\reset; echo 'terminfo database reset, maybe you meant to use \`update\`?'"
+
+alias x=xargs
