@@ -26,6 +26,9 @@
 -- Controls the verbosity of error reports. Can be default, verbose or terse.
 \set VERBOSITY verbose
 
+-- Load local configuration.
+\ir ~/.config/psql/psqlrc-local
+
 -- Un-silence the messages.
 \unset QUIET
 
