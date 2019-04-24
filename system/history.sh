@@ -20,3 +20,6 @@ export HISTCONTROL='ignoreboth:erasedups'
 
 # Append to history, don't overwrite.
 shopt -s histappend
+
+# Display the command before running it.
+shopt -s histverify
