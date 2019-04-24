@@ -29,6 +29,7 @@ alias ga.='g add .'
 
 alias gap='g add -p'
 alias agp=gap
+alias gpa=gap
 __git_complete gap _git_add
 
 alias gita='git add --intent-to-add'
