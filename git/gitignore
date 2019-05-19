@@ -52,19 +52,23 @@ tmp/*
 *-old
 *.local.*
 *.local
-*.swp
 .env
 .powenv
 .rbenv-vars
 .tasks*
 .update
+
+# Vim things
+*.swp
 Session.vim
 .vimrc
+NetrwTreeListing*
 .projections.json
 .ruby-version
 *.backup
-TODO
 .byebug_history
+
+TODO
 .iex.exs
 
 # Project files
