@@ -19,6 +19,14 @@ end
 def enable_logs
   ActiveRecord::Base.logger = $old_logger
 end
+
+def with_disable_logs
+  disable_logs
+  value = block_given? ? yield : nil
+  enable_logs
+
+  value
+end
 # rubocop:enable Style/GlobalVars
 
 def pbcopy(input)
