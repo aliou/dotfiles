@@ -28,5 +28,5 @@ function parse_git_dirty {
 }
 
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]$(parse_git_stashed)$(parse_git_wip) /"
+  [[ -z $_NO_GIT_PROMPT ]] && git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]$(parse_git_stashed)$(parse_git_wip) /"
 }
