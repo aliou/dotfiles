@@ -5,6 +5,7 @@ alias mv="mv -iv"
 
 alias vi=vim
 alias im=vim
+alias vm=vim
 
 # alias ls="ls -lAGh"
 alias ls="exa -la --git"
