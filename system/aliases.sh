@@ -31,3 +31,7 @@ alias reset="\reset; echo 'terminfo database reset, maybe you meant to use \`upd
 alias .reset='reset'
 
 alias x=xargs
+
+alias first='nth 1'
+alias second='nth 2'
+# alias last='nth -1'
