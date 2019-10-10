@@ -1,21 +1,17 @@
 #!/bin/bash
 
 # Train my muscle memory to use the `g` alias:
-# 1. Alias `g` to the binary instead of the command `git` to avoid recursive
-# bullshit.
 alias g="git"
 alias gti="git"
+alias ggit="git"
 
-# 2. Alias `git` to the no-op command so I lose my mind / Muscle memory.
-# (99% sure this is a bad idea).
-# alias git=:
-
-# 3. Add completion <TAB> completion to `g`.
+# 2. Add completion <TAB> completion to `g`.
 # Instructions in `/usr/local/etc/bash_completion.d/git-completion.bash`.
 __git_complete g _git
 __git_complete gti _git
+__git_complete ggit _git
 
-# 4. Do the same thing for `gc`, `gco`, `gps`, `gpl` etc.
+# 3. Do the same thing for `gc`, `gco`, `gps`, `gpl` etc.
 
 alias gco='g checkout'
 alias goc='g checkout'
