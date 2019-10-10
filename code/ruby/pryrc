@@ -11,6 +11,7 @@ def enable_pry
 end
 
 # rubocop:disable Style/GlobalVars
+# rubocop:disable Style/Alias
 def disable_logs
   $old_logger ||= ActiveRecord::Base.logger
   ActiveRecord::Base.logger = nil
@@ -27,7 +28,10 @@ def with_disable_logs
 
   value
 end
+alias_method :with_disabled_logs, :with_disable_logs
+alias_method :without_logs, :with_disable_logs
 # rubocop:enable Style/GlobalVars
+# rubocop:enable Style/Alias
 
 def pbcopy(input)
   input = input.to_s
