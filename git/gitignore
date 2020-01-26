@@ -75,6 +75,7 @@ TODO
 .tmux
 config/projections.json
 .pryrc
+.root
 
 # Tags
 tags
