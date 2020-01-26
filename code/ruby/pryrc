@@ -11,7 +11,6 @@ def enable_pry
 end
 
 # rubocop:disable Style/GlobalVars
-# rubocop:disable Style/Alias
 def disable_logs
   $old_logger ||= ActiveRecord::Base.logger
   ActiveRecord::Base.logger = nil
@@ -20,6 +19,7 @@ end
 def enable_logs
   ActiveRecord::Base.logger = $old_logger
 end
+# rubocop:enable Style/GlobalVars
 
 def with_disable_logs
   disable_logs
@@ -28,10 +28,22 @@ def with_disable_logs
 
   value
 end
+
+# rubocop:disable Style/Alias
 alias_method :with_disabled_logs, :with_disable_logs
 alias_method :without_logs, :with_disable_logs
-# rubocop:enable Style/GlobalVars
 # rubocop:enable Style/Alias
+
+# rubocop:disable Style/RescueStandardError
+# rubocop:disable Lint/Debugger
+def rescue_with_debugger(&block)
+  block.call
+rescue => e
+  binding.pry
+  raise
+end
+# rubocop:enable Style/RescueStandardError
+# rubocop:enable Lint/Debugger
 
 def pbcopy(input)
   input = input.to_s
