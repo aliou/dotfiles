@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
 
-PROMPT_COMMAND='hasjobs=$(jobs -p)'
-export PS1="\[$bldblu\]\${hasjobs:+[\j] }\$(impel)\[$txtrst\]"
+prompt_cmd() {
+  local hasjobs=$(jobs -p)
+  PS1="\[$bldblu\]\${hasjobs:+[\j] }\[\$(impel)\]\[$txtrst\]\n› "
+}
+
+PROMPT_COMMAND=prompt_cmd
