@@ -82,6 +82,7 @@ tags
 tags.lock
 tags.temp
 .notags
+rusty-tags.vi
 
 .env.snapshift
 
