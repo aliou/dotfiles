@@ -51,6 +51,7 @@
   show = diff-highlight | less
 [interactive]
   diffFilter = diff-highlight
+  singleKey=1
 [diff]
   compactionHeuristic = true
   colorMoved = zebra
