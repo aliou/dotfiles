@@ -21,18 +21,13 @@ def enable_logs
 end
 # rubocop:enable Style/GlobalVars
 
-def with_disable_logs
+def with_disabled_logs
   disable_logs
   value = block_given? ? yield : nil
   enable_logs
 
   value
 end
-
-# rubocop:disable Style/Alias
-alias_method :with_disabled_logs, :with_disable_logs
-alias_method :without_logs, :with_disable_logs
-# rubocop:enable Style/Alias
 
 # rubocop:disable Style/RescueStandardError
 # rubocop:disable Lint/Debugger
