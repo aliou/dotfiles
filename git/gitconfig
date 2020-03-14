@@ -62,3 +62,5 @@
   waitingForEditor = false
 [rebase]
   autosquash = true
+[fixup]
+  fzfOptions = --height 40% --reverse
