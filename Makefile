@@ -41,7 +41,7 @@ install-redis:
 	ln -Fis ~/.dotfiles/code/redis/redisclirc ~/.redisclirc
 
 install-kitty:
-	ln -Fis ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+	ln -Fis ~/.dotfiles/kitty ~/.config/kitty
 
 install-alacritty:
 	ln -Fis ~/.dotfiles/alacritty/config.yml ~/.config/alacritty/alacritty.yml
@@ -59,3 +59,4 @@ install-local:
 	ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.config/git/config.local
 	touch ~/.dotfiles/zfiles.local/bashrc
 	ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
+	touch ~/.dotfiles/kitty/local.conf
