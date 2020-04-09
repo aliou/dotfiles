@@ -54,4 +54,24 @@ def pbpaste
   `pbpaste`
 end
 
+# rubocop:disable Style/GlobalVars
+def with_duration
+  $result = nil
+  return nil unless block_given?
+
+  start_time = Time.now.to_i
+  $result = yield
+  end_time = Time.now.to_i
+
+  duration = end_time - start_time
+  puts "Lasted #{duration} seconds."
+end
+
+def with_duration_last_result
+  return $result unless $result.nil?
+
+  raise 'with_duration not yet called in this pry session'
+end
+# rubocop:enable Style/GlobalVars
+
 # vim:ft=ruby
