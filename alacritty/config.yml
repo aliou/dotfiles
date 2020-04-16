@@ -61,17 +61,11 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
-
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
 dpi:
   x: 96.0
   y: 96.0
-
-# Display tabs using this many cells (changes require restart)
-tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -83,7 +77,7 @@ font:
     family: "SF Mono"
     # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: Medium
+    style: Light
 
   # The bold font face
   bold:
