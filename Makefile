@@ -29,6 +29,7 @@ install-git:
 	ln -Fis ~/.dotfiles/git/gitconfig ~/.config/git/config
 
 install-tmux:
+	mkdir -p ~/.config/tmux
 	ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 install-ack:
@@ -60,3 +61,5 @@ install-local:
 	touch ~/.dotfiles/zfiles.local/bashrc
 	ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
 	touch ~/.dotfiles/kitty/local.conf
+	touch ~/.dotfiles/tmux/tmux.local.conf
+	ln -Fis ~/.dotfiles/tmux/tmux.local.conf ~/.config/tmux/local.conf
