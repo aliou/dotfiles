@@ -67,3 +67,5 @@
   autosquash = true
 [fixup]
   fzfOptions = --height 40% --reverse
+
+; vim:ft=gitconfig tw=0
