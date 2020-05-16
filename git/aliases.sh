@@ -95,7 +95,7 @@ function hc() {
     return 1
   fi
 
-  if [ -x "$(which hub)" ]; then
+  if [ -x "$(command -v hub)" ]; then
     FOLDER="$__PROJECT_FOLDER/github.com/$1"
     if [ -d "$FOLDER" ]; then
       echo "Folder already exists. Pulling."
