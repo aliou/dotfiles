@@ -79,7 +79,7 @@ alias gs='g s'
 alias gundo='g undo'
 alias gunstash='g unstash'
 
-alias gro='cd "$(\git rev-parse --show-toplevel)"'
+alias gro='cd "$(git root)"'
 
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
