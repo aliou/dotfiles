@@ -29,6 +29,7 @@
   root          = rev-parse --show-toplevel
   rv            = remote -v
   s             = status -sb
+  set-upstream  = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
   tags          = tag
   undo          = reset HEAD~1
   unstash       = !"git stash pop"
