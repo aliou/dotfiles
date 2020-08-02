@@ -1,6 +1,8 @@
 [user]
   email = code@aliou.me
   name  = Aliou Diallo
+[github]
+  user = aliou
 [commit]
   verbose = true
   cleanup = scissors
