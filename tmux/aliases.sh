@@ -7,12 +7,10 @@ alias tl="tmux list-session"
 
 [[ -z $FUZZY_CMD ]] && export FUZZY_CMD="fzf"
 
-alias ts='tmuxifier load-session'
-
 function ta() {
   COUNT=$(tmux list-sessions 2> /dev/null | \grep -c '^.*:.*')
   if (( COUNT >= 1 )); then
-    SESSION=$(tmux list-sessions -F '#S' | $FUZZY_CMD -1)
+    SESSION=$(tmux list-sessions -F '#S' | $FUZZY_CMD -1 -0)
 
     tmux at -t "$SESSION"
   fi
