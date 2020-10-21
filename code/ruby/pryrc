@@ -23,8 +23,13 @@ end
 
 def with_disabled_logs
   disable_logs
-  value = block_given? ? yield : nil
-  enable_logs
+  value = nil
+
+  begin
+    value = block_given? ? yield : nil
+  ensure
+    enable_logs
+  end
 
   value
 end
