@@ -12,7 +12,9 @@
 [color]
   ui = true
 [core]
-  autocrlf     = false
+  autocrlf       = false
+  excludesfile   = /Users/alioudiallo/.config/git/ignore
+  attributesfile = /Users/alioudiallo/.config/git/attributes
 [alias]
   amend         = commit -v --amend
   br            = branch

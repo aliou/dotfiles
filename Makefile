@@ -26,6 +26,7 @@ install-readline:
 install-git:
 	mkdir -p ~/.config/git
 	ln -Fis ~/.dotfiles/git/gitignore ~/.config/git/ignore
+	ln -Fis ~/.dotfiles/git/gitattributes ~/.config/git/attributes
 	ln -Fis ~/.dotfiles/git/gitconfig ~/.config/git/config
 
 install-tmux:
