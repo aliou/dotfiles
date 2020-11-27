@@ -271,10 +271,19 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
+
+# Use Tmux as login shell, with a custom configuration and a custom socket. This
+# is a way to support tabs in Alacritty.
+# Allowing this means that each instance of Alacritty will have its own session
+# and tabs, emulating other terminal emulators (ooh, BARS).
 shell:
- program: /usr/local/bin/bash
+ program: /usr/local/bin/tmux
  args:
-   - --login
+   - -f
+   - /Users/alioudiallo/.dotfiles/alacritty/tabs/tmux-tabs.conf
+   - -L
+   - alacritty
+   - new-session
 
 # Startup directory
 #
@@ -574,8 +583,8 @@ key_bindings:
   - { key: F,              mods: Command,            action: SearchForward    }
   - { key: B,              mods: Command,            action: SearchBackward   }
 
-    # TODO: Replace this by a bin that uses environment variables to know which tmux-alacritty session use.
-    # For now, all windows will share sessions.
+  # Create a new window in the current tmux session, emulating a new tab in a
+  # window.
   - { key: T,              mods: Command,            command: { program: "/usr/local/bin/tmux", args: ["-L", "alacritty", "new-window"] } }
 
 debug:

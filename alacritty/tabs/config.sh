@@ -28,6 +28,7 @@ if [[ -n "$ALACRITTY" ]] && [[ -z "$TMUX" ]]; then
   # TODO: Each window has its own tmux-alacritty session.
   # Ideally, get the session name from the environment, no idea how tho.
   atabs attach 2> /dev/null || atabs new-session
+  exit
 fi
 
 # Allow creating "regular" tmux sessions.
