@@ -574,6 +574,10 @@ key_bindings:
   - { key: F,              mods: Command,            action: SearchForward    }
   - { key: B,              mods: Command,            action: SearchBackward   }
 
+    # TODO: Replace this by a bin that uses environment variables to know which tmux-alacritty session use.
+    # For now, all windows will share sessions.
+  - { key: T,              mods: Command,            command: { program: "/usr/local/bin/tmux", args: ["-L", "alacritty", "new-window"] } }
+
 debug:
   # Display the time it takes to redraw each frame.
   render_timer: false
