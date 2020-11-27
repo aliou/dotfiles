@@ -3,7 +3,7 @@
 
 start=`gdate +%s.%N`
 
-EDITOR="vim"
+EDITOR="nvim"
 export EDITOR
 
 # If not running interactively, don't do anything
