@@ -582,15 +582,29 @@ key_bindings:
   - { key: F,              mods: Command,            action: SearchForward    }
   - { key: B,              mods: Command,            action: SearchBackward   }
 
+
+  # Tab support through tmux.
   # Create a new window in the current tmux session, emulating a new tab in a
   # window.
   - { key: T,              mods: Command,            command: { program: "/usr/local/bin/tmux", args: ["-L", "alacritty", "new-window"] } }
+
   # Move to the next / prev tmux window. This works by sending the escape
   # sequences for the tmux binding.
   # See <http://ascii-table.com/ansi-escape-sequences.php> for reference on the
   # escape sequences.
   - { key: Tab,            mods: Control,            chars: "\x02\x0E" }
   - { key: Tab,            mods: Control|Shift,      chars: "\x02\x10" }
+
+  # Move to tabs using <cmd-number>, like other terminals and browsers.
+  - { key: Key1,           mods: Command,            chars: "\x021" }
+  - { key: Key2,           mods: Command,            chars: "\x022" }
+  - { key: Key3,           mods: Command,            chars: "\x023" }
+  - { key: Key4,           mods: Command,            chars: "\x024" }
+  - { key: Key5,           mods: Command,            chars: "\x025" }
+  - { key: Key6,           mods: Command,            chars: "\x026" }
+  - { key: Key7,           mods: Command,            chars: "\x027" }
+  - { key: Key8,           mods: Command,            chars: "\x028" }
+  - { key: Key9,           mods: Command,            chars: "\x029" }
 
 debug:
   # Display the time it takes to redraw each frame.
