@@ -585,6 +585,12 @@ key_bindings:
   # Create a new window in the current tmux session, emulating a new tab in a
   # window.
   - { key: T,              mods: Command,            command: { program: "/usr/local/bin/tmux", args: ["-L", "alacritty", "new-window"] } }
+  # Move to the next / prev tmux window. This works by sending the escape
+  # sequences for the tmux binding.
+  # See <http://ascii-table.com/ansi-escape-sequences.php> for reference on the
+  # escape sequences.
+  - { key: Tab,            mods: Control,            chars: "\x02\x0E" }
+  - { key: Tab,            mods: Control|Shift,      chars: "\x02\x10" }
 
 debug:
   # Display the time it takes to redraw each frame.

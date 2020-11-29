@@ -9,7 +9,10 @@ In the [Alacritty confiuration file](../config.yml), we configure the `shell` ke
 - We use another Socket name (`alacritty`) to not separate from other tmux sessions.
 This means that opening a new instance with the key binding <kbd>⌘</kbd> + <kbd>N</kbd>.
 
-We also configure a key binding on <kbd>⌘</kbd> + <kbd>T</kbd> to behave like creating a new tab by opening a new window in the current Alacritty session.
+We also configure key bindings:
+- <kbd>⌘</kbd> + <kbd>T</kbd>: Pretend to open a new tab by creating a new tmux window.
+- <kbd>Ctrl</kbd> + <kbd>Tab</kbd>: Send escape sequences to move to the next window.
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>: Send escape sequences to move to the previous window.
 
 ### tmux
 In the [tmux configuration file](./tmux-tabs.conf):
@@ -20,6 +23,6 @@ In the [tmux configuration file](./tmux-tabs.conf):
 If we detect we're in Alacritty and in its tmux session for tabs, we unset the `TMUX` environment variable, allowing the creation of other tmux session inside the Alacritty tmux session.
 
 ## Issue and future improvements
-- [ ] Currently, using <kbd>Ctrl</kbd> + <kbd>Tab</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> to cycle through tabs is not working.
+- [x] ~Currently, using <kbd>Ctrl</kbd> + <kbd>Tab</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> to cycle through tabs is not working.~
 - [ ] Each Alacritty instance as its own tmux session, we need to add a way to simply differentiate them (through the session name perhaps?)
 - [ ] Improve tab bar appearance so that it works with both light and dark themes.
