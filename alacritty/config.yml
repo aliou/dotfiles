@@ -9,6 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
+  - /Users/alioudiallo/.dotfiles/alacritty/theme.yml
   - /Users/alioudiallo/.config/alacritty/local.yml
 
 # Any items in the `env` entry below will be added as
