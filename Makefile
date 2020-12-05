@@ -47,6 +47,7 @@ install-kitty:
 
 install-alacritty:
 	ln -Fis ~/.dotfiles/alacritty/config.yml ~/.config/alacritty/alacritty.yml
+	cp ~/.dotfiles/alacritty/local.sample.yml ~/.config/alacritty/local.yml
 
 install-yamllint:
 	ln -Fis ~/.dotfiles/yamllint/config.yml ~/.config/yamllint/config
