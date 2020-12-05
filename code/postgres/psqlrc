@@ -27,7 +27,7 @@
 \set VERBOSITY verbose
 
 -- Load local configuration.
-\ir ~/.config/psql/psqlrc-local
+\ir ~/.config/psql/local.sql
 
 -- Un-silence the messages.
 \unset QUIET
