@@ -28,16 +28,20 @@ install-git:
 	ln -Fis ~/.dotfiles/git/gitignore ~/.config/git/ignore
 	ln -Fis ~/.dotfiles/git/gitattributes ~/.config/git/attributes
 	ln -Fis ~/.dotfiles/git/gitconfig ~/.config/git/config
+	cp ~/.dotfiles/git/gitconfig.local.sample ~/.config/git/config.local
 
 install-tmux:
 	mkdir -p ~/.config/tmux
 	ln -Fis ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+	touch ~/.config/tmux/local.conf
 
 install-ack:
 	ln -Fis ~/.dotfiles/ack/ackrc ~/.ackrc
 
 install-psql:
 	ln -Fis ~/.dotfiles/code/postgres/psqlrc ~/.psqlrc
+	mkdir -p ~/.config/psql/aliases
+	cp ~/.dotfiles/code/postgres/psqlrc.local.sample.sql ~/.config/psql/local.sql
 
 install-redis:
 	ln -Fis ~/.dotfiles/code/redis/redisclirc ~/.redisclirc
@@ -58,10 +62,5 @@ install-pry:
 install-local:
 	mkdir -p ~/.dotfiles/zfiles.local
 	touch ~/.dotfiles/zfiles.local/config.sh
-	touch ~/.dotfiles/zfiles.local/gitconfig
-	ln -Fis ~/.dotfiles/zfiles.local/gitconfig ~/.config/git/config.local
 	touch ~/.dotfiles/zfiles.local/bashrc
 	ln -Fis ~/.dotfiles/zfiles.local/bashrc ~/.bashrc.local
-	touch ~/.dotfiles/kitty/local.conf
-	touch ~/.dotfiles/tmux/tmux.local.conf
-	ln -Fis ~/.dotfiles/tmux/tmux.local.conf ~/.config/tmux/local.conf
