@@ -3,15 +3,24 @@
 export _TAB_CONFIGURATION="$HOME/.dotfiles/alacritty/tabs/tmux-tabs.conf"
 
 function tab() {
-  [[ -n $ALACRITTY ]] && tmux -f "$_TAB_CONFIGURATION" -L alacritty $@
+  echo "use alacritty-tabs"
+}
+
+function alacritty-tabs() {
+  [[ -z $ALACRITTY ]] && return
+  SUBCOMMAND=${*:-list-session}
+  if [[ $SUBCOMMAND == "new-session" ]]; then
+    echo "alacritty-tabs: nah fam"
+  fi
+  tmux -f "$_TAB_CONFIGURATION" -L alacritty "$SUBCOMMAND"
 }
 
 function rename-window() {
-  tab rename-window "$@"
+  alacritty-tabs rename-window "$@"
 }
 
 function rename-session() {
-  tab rename-session "$@"
+  alacritty-tabs rename-session "$@"
 }
 
 # Allow creating "regular" tmux sessions.
