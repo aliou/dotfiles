@@ -1,0 +1,13 @@
+bundler
+cocoapods
+gem-ctags
+git-bump
+pry
+rake
+ripper-tags
+rubocop
+rubocop-daemon
+rubocop-performance
+rubocop-rails
+solargraph
+tmuxinator
