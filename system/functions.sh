@@ -45,3 +45,9 @@ if [ -f "$1" ] ; then
        echo "'$1' is not a valid file"
     fi
 }
+
+vim() {
+  echo "You're calling vim. Did you mean to call nvim?"
+  sleep 5
+  /usr/local/bin/vim $@
+}
