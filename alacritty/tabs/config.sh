@@ -23,6 +23,9 @@ function rename-session() {
   alacritty-tabs rename-session "$@"
 }
 
+# Configure autocompletion by using tmux completion function.
+complete -F _tmux alacritty-tabs
+
 # Allow creating "regular" tmux sessions.
 if [[ -n "$ALACRITTY" ]] && [[ -n "$TMUX" ]]; then
   socket_name=$(echo "$TMUX" | cut -f1 -d',' | cut -d'/' -f5)
