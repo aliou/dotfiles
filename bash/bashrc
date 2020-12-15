@@ -12,6 +12,7 @@ if [[ -n "$PS1" ]] ; then
   # Source global definitions.
   [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
 
+  # Source completions.
   if [[ -d /usr/local/etc/bash_completion.d ]]; then
     for comp_file in /usr/local/etc/bash_completion.d/**
     do
