@@ -47,7 +47,7 @@ if [ -f "$1" ] ; then
 }
 
 vim() {
-  echo "You're calling vim. Did you mean to call nvim?"
+  echo "You're calling vim. Did you mean to call nvim? Sleeping for 5 seconds."
   sleep 5
   /usr/local/bin/vim $@
 }
