@@ -7,7 +7,6 @@ function tab() {
 }
 
 function alacritty-tabs() {
-  [[ -z $ALACRITTY ]] && return
   SUBCOMMAND=${*:-list-session}
   if [[ $SUBCOMMAND == "new-session" ]]; then
     echo "alacritty-tabs: nah fam"
