@@ -4,8 +4,9 @@
 [github]
   user = aliou
 [commit]
-  verbose = true
-  cleanup = scissors
+  verbose  = true
+  cleanup  = scissors
+  template = ~/.dotfiles/git/templates/commitmsg
 [include]
   # Contains custom config for the current machine.
   path = config.local
