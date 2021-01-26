@@ -20,7 +20,7 @@ p() {
 
   TARGET=$(
     find -L $FOLDERS -maxdepth 0 -type d | sort -f | sed "s|$BASE_PATH||g" \
-    | fzf
+    | fzf -q $_P_PREFIX
   )
 
   if [[ -n $TARGET ]]; then
