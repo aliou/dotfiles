@@ -30,6 +30,7 @@
   filediff      = diff --name-only
   ghost         = !"git status -s | grep \"^ D\" | cut -d ' ' -f 3- | xargs git rm"
   l             = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative -10 --decorate
+  rbease        = rebase
   root          = rev-parse --show-toplevel
   rv            = remote -v
   s             = status -sb
