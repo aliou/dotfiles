@@ -9,4 +9,3 @@ rubocop
 rubocop-daemon
 solargraph
 solargraph-rails --pre
-tmuxinator
