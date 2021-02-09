@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# TODO: Handle custom `docker-compose.yml` file.
+docker_compose_options=${DOCKER_COMPOSE_OPTIONS:-}
+
+docker-compose $docker_compose_options up -d $1 && \
+  docker-compose $docker_compose_options logs -f $1

@@ -14,7 +14,7 @@ all: install-bin \
 
 install-bin:
 	mkdir -p ~/code/bin
-	ln -Fis ~/.dotfiles/bin/* ~/code/bin/
+	ln -Fis ~/.dotfiles/code/docker/scripts/* ~/code/bin/
 
 install-bash:
 	ln -Fis ~/.dotfiles/bash/profile ~/.profile
