@@ -1,5 +1,4 @@
 bundler
-cocoapods
 gem-ctags
 jekyll
 pry
