@@ -547,19 +547,21 @@ key_bindings:
   # sequences for the tmux binding.
   # See <http://ascii-table.com/ansi-escape-sequences.php> for reference on the
   # escape sequences.
-  - { key: Tab,            mods: Control,            chars: "\x02\x0E" }
-  - { key: Tab,            mods: Control|Shift,      chars: "\x02\x10" }
+  # In the chars byte sequence, the first part must correpond to the alacritty-tabs prefix,
+  # currently <c-g>, and the second part to the key to type to execute the command.
+  - { key: Tab,            mods: Control,            chars: "\x07\x0E" }
+  - { key: Tab,            mods: Control|Shift,      chars: "\x07\x10" }
 
   # Move to tabs using <cmd-number>, like other terminals and browsers.
-  - { key: Key1,           mods: Command,            chars: "\x021" }
-  - { key: Key2,           mods: Command,            chars: "\x022" }
-  - { key: Key3,           mods: Command,            chars: "\x023" }
-  - { key: Key4,           mods: Command,            chars: "\x024" }
-  - { key: Key5,           mods: Command,            chars: "\x025" }
-  - { key: Key6,           mods: Command,            chars: "\x026" }
-  - { key: Key7,           mods: Command,            chars: "\x027" }
-  - { key: Key8,           mods: Command,            chars: "\x028" }
-  - { key: Key9,           mods: Command,            chars: "\x029" }
+  - { key: Key1,           mods: Command,            chars: "\x071" }
+  - { key: Key2,           mods: Command,            chars: "\x072" }
+  - { key: Key3,           mods: Command,            chars: "\x073" }
+  - { key: Key4,           mods: Command,            chars: "\x074" }
+  - { key: Key5,           mods: Command,            chars: "\x075" }
+  - { key: Key6,           mods: Command,            chars: "\x076" }
+  - { key: Key7,           mods: Command,            chars: "\x077" }
+  - { key: Key8,           mods: Command,            chars: "\x078" }
+  - { key: Key9,           mods: Command,            chars: "\x079" }
 
 debug:
   # Display the time it takes to redraw each frame.
