@@ -1,0 +1,5 @@
+#!/usr/bin/swift
+
+import Cocoa
+
+print(UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light")

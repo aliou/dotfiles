@@ -16,6 +16,11 @@ install-bin:
 	mkdir -p ~/code/bin
 	ln -Fis ~/.dotfiles/code/docker/scripts/* ~/code/bin/
 
+install-theme-change:
+	ln -Fis ~/.dotfiles/apple/scripts/update_theme ~/code/bin
+	ln -Fis ~/.dotfiles/apple/scripts/notify-theme-change /usr/local/bin
+	ln -Fis ~/.dotfiles/apple/scripts/me.aliou.notify-theme-change.plist ~/Library/LaunchAgents
+
 install-bash:
 	ln -Fis ~/.dotfiles/bash/profile ~/.profile
 	ln -Fis ~/.dotfiles/bash/bashrc ~/.bashrc

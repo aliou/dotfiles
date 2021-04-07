@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>me.aliou.notify-theme-change</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/usr/local/var/log/notify-theme-change.log</string>
+    <key>StandardOutPath</key>
+    <string>/usr/local/var/log/notify-theme-change.log</string>
+    <key>ProgramArguments</key>
+    <array>
+       <string>/usr/local/bin/notify-theme-change</string>
+       <string>/usr/local/bin/bash</string>
+       <string>-c</string>
+       <string>/Users/alioudiallo/code/bin/update_theme</string>
+    </array>
+</dict>
+</plist>
