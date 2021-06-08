@@ -86,7 +86,7 @@ alias gro='cd "$(git root)"'
 # TODO: Start using `gh` instead of `hub`?
 function hc() {
   if [[ -z $__PROJECT_FOLDER ]]; then
-    >&2 echo 'The environment variable __PROJECT_FOLDERS is not defined.'
+    >&2 echo 'The environment variable __PROJECT_FOLDER is not defined.'
     >&2 echo 'Please define it to use hc.'
     return 1
   fi
@@ -96,16 +96,16 @@ function hc() {
     return 1
   fi
 
-  if [ -x "$(command -v hub)" ]; then
+  if [ -x "$(command -v gh)" ]; then
     FOLDER="$__PROJECT_FOLDER/github.com/$1"
     if [ -d "$FOLDER" ]; then
       echo "Folder already exists. Pulling."
       cd "$FOLDER" && git pull
     else
-      hub clone "$1" "$FOLDER" && cd "$FOLDER" || return
+      gh repo clone "$1" "$FOLDER" && cd "$FOLDER" || return
     fi
   else
-    echo "\`hub\` is not installed. Install it by running \`brew install hub\`."
+    echo "\`gh\` is not installed. Install it by running \`brew install gh\`."
   fi
 }
 

@@ -1,3 +1,5 @@
+# Because this changes everytime the system changes (see last line), it is
+# excluded from git. Make sure to use `git add -f` when updating it.
 themes:
   cstm_dark: &dark
     # Default colors
@@ -114,4 +116,5 @@ themes:
       white:      '#a0a1a7' # mono-3
 
 # Changes with the system theme.
+# See line on top of the file.
 colors: *dark
