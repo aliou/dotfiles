@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Configure nvm
-if [[ -d "HOME/.nvm" ]]; then
+if [[ -d "$HOME/.nvm" ]]; then
   export NVM_DIR="$HOME/.nvm"
-  # This loads nvm
-  source "/usr/local/opt/nvm/nvm.sh"
 
+  # Load nvm.
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 
-  # This load the nvm bash completion.
-  source "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+  # Loading Bash completion.
+  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
