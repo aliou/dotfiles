@@ -83,7 +83,6 @@ alias gro='cd "$(git root)"'
 
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
-# TODO: Start using `gh` instead of `hub`?
 function hc() {
   if [[ -z $__PROJECT_FOLDER ]]; then
     >&2 echo 'The environment variable __PROJECT_FOLDER is not defined.'
