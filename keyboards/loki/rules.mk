@@ -1,0 +1,6 @@
+# Disable RGB for now.
+RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = IS31FL3733
+
+VIA_ENABLE = no
+LTO_ENABLE = yes
