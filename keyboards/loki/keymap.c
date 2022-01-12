@@ -51,24 +51,22 @@ void rgb_matrix_indicators_user(void)
     // Led colors depending on current layer.
     switch (biton32(layer_state)) {
         case _BL:
-            rgb_matrix_set_color(12, RGB_RED);
+            rgb_matrix_set_color(13, RGB_GREEN);
             break;
         case _FL:
-            rgb_matrix_set_color(11, RGB_BLUE);
-
-            rgb_matrix_set_color(25, RGB_BLUE); // W
-            rgb_matrix_set_color(39, RGB_BLUE); // A
-            rgb_matrix_set_color(38, RGB_BLUE); // S
-            rgb_matrix_set_color(37, RGB_BLUE); // D
-
-            rgb_matrix_set_color(48, RGB_RED); // B in red, for DFU.
+            rgb_matrix_set_color(13, RGB_RED);
+            rgb_matrix_set_color(48, RGB_RED); // Highlight key to go to DFU mode.
             break;
     }
 }
 
+uint8_t mod_state;
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
   static uint32_t key_timer;
+  static bool keycode_registered;
+
+  mod_state = get_mods();
 
   switch (keycode) {
     // Put keyboard in DFU mode when pression the combinaison for more than 500ms.
@@ -82,7 +80,47 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       }
       return false;
 
-    // Process all other keycodes normally.
+    // In the next few cases, something crazy is going on.
+    // To learn to use more the left shift key, from now on, I'll completely ignore the right shift key
+    // if it's used with harder to reach keys.
+    case KC_LBRC:
+    case KC_RBRC:
+    case KC_BSLS:
+    case KC_COMM:
+    case KC_DOT:
+      // Initialize a boolean variable that keeps track
+      // of the pressed key status: registered or not?
+      if (record->event.pressed) {
+        // Detect the activation of the right shift key.
+        if ((get_mods() & MOD_BIT(KC_RSFT)) == MOD_BIT(KC_RSFT)) {
+          // First temporarily canceling the right shift key so that
+          // shift isn't applied to the pressed key.
+          del_mods(KC_RSFT);
+
+          // Then register the key pressed.
+          register_code(keycode);
+
+          // Update the boolean variable to reflect the status of the keycode.
+          keycode_registered = true;
+
+          // Reapplying modifier state so that the held shift key(s)
+          // still work even after having tapped the pressed key.
+          set_mods(mod_state);
+
+          // Tell qmk that we've handled the key.
+          return false;
+        }
+      } else { // on release of the key.
+        // In case the key code is still being sent even after the release its key.
+        if (keycode_registered) {
+          unregister_code(keycode);
+          keycode_registered = false;
+          return false;
+        }
+      }
+      return true;
+      // Process all other keycodes normally.
+
     default:
       return true;
   }
