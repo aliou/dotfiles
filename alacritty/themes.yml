@@ -116,7 +116,7 @@ themes:
       white:      '#a0a1a7' # mono-3
 
   # github Alacritty Colors
-  github_dark: &dark
+  github_dark:
     # Default colors
     primary:
       background: '0x24292e'
@@ -211,6 +211,44 @@ themes:
     indexed_colors:
       - { index: 16, color: '0xd18616' }
       - { index: 17, color: '0xcd3131' }
+
+  alabaster_dark: &dark
+    # Default colors
+    primary:
+      background:        '#0e1415'
+      foreground:        '#cecece'
+
+    # Cursor colors
+    cursor:
+      text:   '#0e1415'
+      cursor: '#cd974b'
+
+    # Selection colors
+    selection:
+      text:       '#000000'
+      background: '#293334'
+
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#d2322d'
+      green:   '#6abf40'
+      yellow:  '#cd974b'
+      blue:    '#217EBC'
+      magenta: '#9B3596'
+      cyan:    '#178F79'
+      white:   '#cecece'
+
+    # Bright colors
+    bright:
+      black:   '#333333'
+      red:     '#c33c33'
+      green:   '#95cb82'
+      yellow:  '#dfdf8e'
+      blue:    '#71aed7'
+      magenta: '#cc8bc9'
+      cyan:    '#47BEA9'
+      white:   '#ffffff'
 
 # Changes with the system theme.
 # See line on top of the file.
