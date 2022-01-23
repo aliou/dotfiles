@@ -61,6 +61,8 @@ void rgb_matrix_indicators_user(void)
 }
 
 uint8_t mod_state;
+bool rewire_muscle_memory = false;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
   static uint32_t key_timer;
@@ -88,39 +90,42 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
     case KC_BSLS:
     case KC_COMM:
     case KC_DOT:
-      // Initialize a boolean variable that keeps track
-      // of the pressed key status: registered or not?
-      if (record->event.pressed) {
-        // Detect the activation of the right shift key.
-        if ((get_mods() & MOD_BIT(KC_RSFT)) == MOD_BIT(KC_RSFT)) {
-          // First temporarily canceling the right shift key so that
-          // shift isn't applied to the pressed key.
-          del_mods(KC_RSFT);
+      if (rewire_muscle_memory) {
+        // Initialize a boolean variable that keeps track
+        // of the pressed key status: registered or not?
+        if (record->event.pressed) {
+          // Detect the activation of the right shift key.
+          if ((get_mods() & MOD_BIT(KC_RSFT)) == MOD_BIT(KC_RSFT)) {
+            // First temporarily canceling the right shift key so that
+            // shift isn't applied to the pressed key.
+            del_mods(KC_RSFT);
 
-          // Then register the key pressed.
-          register_code(keycode);
+            // Then register the key pressed.
+            register_code(keycode);
 
-          // Update the boolean variable to reflect the status of the keycode.
-          keycode_registered = true;
+            // Update the boolean variable to reflect the status of the keycode.
+            keycode_registered = true;
 
-          // Reapplying modifier state so that the held shift key(s)
-          // still work even after having tapped the pressed key.
-          set_mods(mod_state);
+            // Reapplying modifier state so that the held shift key(s)
+            // still work even after having tapped the pressed key.
+            set_mods(mod_state);
 
-          // Tell qmk that we've handled the key.
-          return false;
+            // Tell qmk that we've handled the key.
+            return false;
+          }
+        } else { // on release of the key.
+          // In case the key code is still being sent even after the release its key.
+          if (keycode_registered) {
+            unregister_code(keycode);
+            keycode_registered = false;
+            return false;
+          }
         }
-      } else { // on release of the key.
-        // In case the key code is still being sent even after the release its key.
-        if (keycode_registered) {
-          unregister_code(keycode);
-          keycode_registered = false;
-          return false;
-        }
+        return true;
       }
       return true;
-      // Process all other keycodes normally.
 
+    // Process all other keycodes normally.
     default:
       return true;
   }
