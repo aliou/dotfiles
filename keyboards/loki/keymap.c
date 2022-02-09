@@ -11,7 +11,6 @@ enum alt_keycodes {
 };
 
 #define CTL_ESC  LCTL_T(KC_ESC)    // Tap for ESC, hold for CTRL.
-#define CMD_COM  CMD_T(KC_COMM)    // Emulate cmd + , to open preferences.
 #define CMD_BPC  CMD_T(KC_BSPC)    // Emulate cmd + backspace
 #define SHT_SLH  RSFT_T(KC_SLSH)   // Tap for right SHIFT, hold for Slash.
 
