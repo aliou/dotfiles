@@ -8,6 +8,7 @@
 *.out
 *.so
 *.so.*
+*.bin
 
 # Packages #
 ############
