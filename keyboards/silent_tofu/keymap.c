@@ -41,6 +41,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
 };
 
+// This will run when the keyboard is being suspended.
+// This is where we turn down all of our leds.
+void suspend_power_down_user(void) {
+    rgb_matrix_set_color_all(0x00, 0x00, 0x00);
+}
+
+void suspend_wakeup_init_user(void) {
+    rgb_matrix_set_color_all(RGB_RED);
+}
+
 void rgb_matrix_indicators_user(void)
 {
     // Turn off all leds.
