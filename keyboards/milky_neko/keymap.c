@@ -14,7 +14,7 @@ enum alt_keycodes {
 #define CTL_ESC  LCTL_T(KC_ESC)
 
 // Tap for right SHIFT, hold for Slash.
-// This is not particulary useful for this keyboard but it matches silent_tofu.
+// This is not particularly useful for this keyboard but it matches silent_tofu.
 #define SHT_SLH  RSFT_T(KC_SLSH)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL,  KC_LALT, KC_LGUI,                            KC_SPC,                            MO(_FN1), KC_RGUI, KC_RALT, KC_RCTL
   ),
 
-  // WASD for arrow keys + B for DFU mode.
+  // WASD for arrow keys + B for DFU mode + bottom right keys for arrow keys.
   [_FN1] = LAYOUT_60_ansi(
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,  KC_DEL,
     _______, _______, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______,
@@ -40,7 +40,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   static uint32_t key_timer;
 
   switch (keycode) {
-    // Put keyboard in DFU mode when pression the combinaison for more than 500ms.
+    // Put keyboard in DFU mode when pressing the combination for more than 500ms.
     case MN_DFU:
       if (record->event.pressed) {
         key_timer = timer_read32();
