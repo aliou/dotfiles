@@ -11,18 +11,16 @@ enum layers {
 
 enum custom_keycodes {
     T3_DFU = SAFE_RANGE,
-    T3_MUTE
 };
 
 #define DISABLED XXXXXXX
-#define T3_MUTE  G(KC_D)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NIL] = LAYOUT(MO(_ONE), MO(_TWO), MO(_THR)),
 
-    [_ONE] = LAYOUT(DISABLED, KC_VOLU,  KC_VOLD),
-    [_TWO] = LAYOUT(KC_UP,    DISABLED, KC_DOWN),
-    [_THR] = LAYOUT(T3_DFU,   _______,  DISABLED),
+    [_ONE] = LAYOUT(DISABLED, KC_F13,   KC_F14),
+    [_TWO] = LAYOUT(KC_F15,   DISABLED, KC_F16),
+    [_THR] = LAYOUT(T3_DFU,   KC_F17,   DISABLED),
 
     [_DEBUG] = LAYOUT(T3_DFU, _______, _______)
 };
@@ -89,7 +87,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 key_timer = timer_read32();
             } else {
                 if (timer_elapsed32(key_timer) >= 500) {
-                reset_keyboard();
+                    reset_keyboard();
                 }
             }
             return false;
