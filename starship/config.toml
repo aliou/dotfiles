@@ -1,0 +1,41 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = '''$hostname: ($directory )([\[$git_branch$git_commit$git_status\]](bold blue))( $cmd_duration)
+$jobs$character
+'''
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold red)'
+disabled = false
+
+[directory]
+format = '$path'
+
+[git_branch]
+format = '[$branch](bold blue)'
+only_attached = true
+
+[git_commit]
+format = '$hash'
+only_detached = true
+
+[git_status]
+stashed = '\$'
+modified = '#'
+untracked = '+'
+deleted = '-'
+format = '$untracked$modified$deleted$stashed'
+
+[cmd_duration]
+format = '[$duration](bold green)'
+
+[character]
+format = "$symbol "
+success_symbol = '[›](bold green)'
+error_symbol = '[›](bold red)'
+
+# TODO:
+# * Display "[WIP]" when last commit is wip.
+# * Display git stuff for sparse-checkouts.

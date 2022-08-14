@@ -5,4 +5,4 @@ complete -d cd
 
 # Setup prompt command to set the `hasjobs` variable and save the history after
 # each command.
-PROMPT_COMMAND='hasjobs=$(jobs -p); history -a; history -n'
+PROMPT_COMMAND='history -a; history -n'
