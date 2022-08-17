@@ -1,7 +1,7 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-format = '''$hostname: ($directory )([\[$git_branch$git_commit$git_status\]](bold blue))( $cmd_duration)
+format = '''$hostname: ($directory )([\[$git_branch$git_commit$git_status\]](bold blue))(${custom.git_wip})( $cmd_duration)
 $jobs$character
 '''
 
@@ -36,6 +36,11 @@ format = "$symbol "
 success_symbol = '[›](bold green)'
 error_symbol = '[›](bold red)'
 
+[custom.git_wip]
+command = 'echo "[WIP]"'
+when = "git log --pretty=format:'%s' -1 2> /dev/null | grep -ic wip"
+style = 'bold blue'
+format = "[$output]($style)"
+
 # TODO:
-# * Display "[WIP]" when last commit is wip.
 # * Display git stuff for sparse-checkouts.
