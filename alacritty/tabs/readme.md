@@ -1,16 +1,16 @@
 Configuration and scripts to add tab support to Alacritty using tmux.
 
 # How it works
-To handle tabs, we use tmux sessions with different settings as my regular tmux session.
+To handle tabs, we use tmux sessions with different settings as regular tmux sessions.
 
 ### Alacritty
-In the [Alacritty confiuration file](../config.yml), we configure the `shell` key (aka the command to run when starting Alacritty) to be tmux with custom options:
+In the [Alacritty confiuration file](../config.yml), we configure the `shell` key (i.e. the command to run when starting Alacritty) to run `tmux` with custom options:
 - We pass the custom configuration file,
-- We use another Socket name (`alacritty`) to not separate from other tmux sessions.
-This means that opening a new instance with the key binding <kbd>⌘</kbd> + <kbd>N</kbd>.
+- We use another Socket name (`alacritty`) to differentiate from other tmux sessions.
+This allows opening a new instance with the key binding <kbd>⌘</kbd> + <kbd>N</kbd>.
 
-We also configure key bindings:
-- <kbd>⌘</kbd> + <kbd>T</kbd>: Pretend to open a new tab by creating a new tmux window.
+We also configure some key bindings:
+- <kbd>⌘</kbd> + <kbd>T</kbd>: Pretend to open a new tab by creating a new `tmux` window.
 - <kbd>Ctrl</kbd> + <kbd>Tab</kbd>: Send escape sequences to move to the next window.
 - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>: Send escape sequences to move to the previous window.
 
