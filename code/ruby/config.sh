@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 if [[ -n $(command -v rbenv) ]]; then
-  # Only works if rbenv is installed from brew, be careful.
-  export RBENV_ROOT="/usr/local/var/rbenv"
+  export RBENV_ROOT="$HOME/.rbenv"
   eval "$(rbenv init -)"
 fi
 
