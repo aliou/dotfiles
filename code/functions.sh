@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
+# shellcheck disable=2016
+
 # Requirements:
 # - fzf <http://git.io/C4FBDw>
-# - ack
 
 export FUZZY_CMD="fzf"
-export SEARCH_CMD="$(command -v ack) --nocolor"
 
 p() {
   if [[ -z $__P_PROJECT_FOLDERS ]]; then
@@ -19,8 +19,9 @@ p() {
   local TARGET=
 
   TARGET=$(
+    # shellcheck disable=2086
     find -L $FOLDERS -maxdepth 0 -type d | sort -f | sed "s|$BASE_PATH||g" \
-    | fzf -q $_P_PREFIX
+    | fzf -q "$_P_PREFIX"
   )
 
   if [[ -n $TARGET ]]; then
