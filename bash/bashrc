@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck source=/dev/null
 
-start=`gdate +%s.%N`
+start=$(gdate +%s.%N)
 
 EDITOR="nvim"
 export EDITOR
@@ -13,8 +13,9 @@ if [[ -n "$PS1" ]] ; then
   [[ -s "/etc/bashrc" ]] && source "/etc/bashrc"
 
   # Source completions.
-  if [[ -d /usr/local/etc/bash_completion.d ]]; then
-    for comp_file in /usr/local/etc/bash_completion.d/**
+  bash_completion_dir="$(brew --prefix)/etc/bash_completion.d"
+  if [[ -d $bash_completion_dir ]]; then
+    for comp_file in "$bash_completion_dir"/**
     do
       source "$comp_file"
     done
@@ -35,8 +36,8 @@ if [[ -n "$PS1" ]] ; then
     export TERM='screen-256color'
   fi
 fi
-end=`gdate +%s.%N`
+end=$(gdate +%s.%N)
 
 # Only display in interactive shells.
 runtime=$( echo "$end - $start" | bc -l )
-[[ $- == *i* ]] && echo $runtime
+[[ $- == *i* ]] && echo "$runtime"
