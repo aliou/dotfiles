@@ -5,6 +5,7 @@
 function t() {
   local session_name
   if [[ -f .tmux ]] && [[ -x .tmux ]]; then
+    # shellcheck disable=1091
     source "$PWD/.tmux"
   else
     session_name="$(basename "$PWD" | sed 's/\.//g')"

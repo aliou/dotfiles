@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-theme=`echo $THEME | tr '[:upper:]' '[:lower:]'`
+# shellcheck disable=2153
+theme=$(echo "$THEME" | tr '[:upper:]' '[:lower:]')
 
 if [[ -z $theme ]]; then
   {
@@ -14,16 +15,16 @@ neovim_file="/tmp/.cstm.theme"
 alacritty_theme_file="/Users/alioudiallo/code/src/github.com/aliou/dotfiles/alacritty/themes.yml"
 
 # 1. Update the file so that neovim picks up the theme change.
-echo $theme > $neovim_file
+echo "$theme" > $neovim_file
 
 # 2. Change the alacritty configuration file to the new file.
 sed -i "" -e "s#^colors: \*.*#colors: *$theme#g" $alacritty_theme_file
 
 # 3. Update the tmux theme and reload the configuration.
 if [[ $theme == "light" ]]; then
-  tmux source-file "~/code/src/github.com/aliou/mando/tmux/mandolight.conf"
+  tmux source-file "$HOME/code/src/github.com/aliou/mando/tmux/mandolight.conf"
 fi
 
 if [[ $theme == "dark" ]]; then
-  tmux source-file "~/code/src/github.com/aliou/mando/tmux/mandolight.conf"
+  tmux source-file "$HOME/code/src/github.com/aliou/mando/tmux/mandolight.conf"
 fi
