@@ -4,8 +4,10 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --color=light -1'
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/Users/alioudiallo/code/src/github.com/junegunn/fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/Users/alioudiallo/code/src/github.com/junegunn/fzf/shell/key-bindings.bash"
+if [[ -f  "/opt/homebrew/opt/fzf/shell/key-bindings.bash" ]]; then
+  source "/opt/homebrew/opt/fzf/shell/key-bindings.bash"
+fi
