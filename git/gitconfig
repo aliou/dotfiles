@@ -50,9 +50,10 @@
 [init]
   templatedir = ~/.dotfiles/git/templates
 [filter "lfs"]
-  smudge   = git-lfs smudge %f
+  smudge = git-lfs smudge -- %f
   required = true
-  clean    = git-lfs clean %f
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
 [pager]
   diff = diff-highlight | less
   log  = diff-highlight | less
