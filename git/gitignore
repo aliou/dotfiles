@@ -34,7 +34,6 @@
 .DS_Store
 .DS_Store?
 .netrwhist
-Icon?
 Thumbs.db
 ehthumbs.db
 
@@ -77,6 +76,7 @@ TODO
 config/projections.json
 .pryrc
 .root
+.smug.yml
 
 # Tags
 tags
