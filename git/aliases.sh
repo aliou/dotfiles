@@ -28,9 +28,6 @@ alias agp=gap
 alias gpa=gap
 __git_complete gap _git_add
 
-alias gita='git add --intent-to-add'
-__git_complete gita _git_add
-
 alias gbr='g br'
 __git_complete gbr _git_branch
 
@@ -80,6 +77,8 @@ alias gundo='g undo'
 alias gunstash='g unstash'
 
 alias gro='cd "$(git root)"'
+
+alias gci="gh run list -b \$(git branch --no-color | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
 
 # Clone from gihub in the right directory.
 # TODO: Extract project path.
