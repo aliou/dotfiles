@@ -15,12 +15,14 @@ enum custom_keycodes {
 
 #define DISABLED XXXXXXX
 
+#define CMD_BU  CMD_T(KC_PAUS)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NIL] = LAYOUT(MO(_ONE), MO(_TWO), MO(_THR)),
 
-    [_ONE] = LAYOUT(DISABLED, KC_F13,   KC_F14),
-    [_TWO] = LAYOUT(KC_F15,   DISABLED, KC_F16),
-    [_THR] = LAYOUT(T3_DFU,   KC_F17,   DISABLED),
+    [_ONE] = LAYOUT(DISABLED, KC_F14,   KC_F15),
+    [_TWO] = LAYOUT(KC_F16,   DISABLED, KC_F17),
+    [_THR] = LAYOUT(T3_DFU,   KC_F18,   DISABLED),
 
     [_DEBUG] = LAYOUT(T3_DFU, _______, _______)
 };
