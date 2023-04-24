@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -eu
+
+# TODO: Test presence of port, display help otherwise
+# TODO: Handle timeout?
+
+while ! nc -z localhost "$PORT"; do
+  echo -n '.'
+  sleep 0.1
+done
+
+echo ""

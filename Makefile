@@ -15,6 +15,7 @@ all: install-bin \
 install-bin:
 	mkdir -p ~/code/bin
 	ln -Fis ~/.dotfiles/code/docker/scripts/* ~/code/bin/
+	ln -Fis ~/.dotfiles/bin/* ~/code/bin/
 
 install-theme-change:
 	ln -Fis ~/.dotfiles/apple/scripts/update_theme ~/code/bin
