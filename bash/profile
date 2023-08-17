@@ -1,4 +1,9 @@
 #!/bin/bash
 # shellcheck source=/dev/null
 
+# Setup homebrew stuff ASAP.
+if [[ -d /opt/homebrew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 [[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
