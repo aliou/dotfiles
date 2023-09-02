@@ -16,10 +16,12 @@ format = '$path'
 [git_branch]
 format = '[$branch](bold blue)'
 only_attached = true
+disabled = false
 
 [git_commit]
 format = '$hash'
 only_detached = true
+disabled = false
 
 [git_status]
 stashed = '\$'
@@ -27,6 +29,7 @@ modified = '#'
 untracked = '+'
 deleted = '-'
 format = '$untracked$modified$deleted$stashed'
+disabled = false
 
 [cmd_duration]
 format = '[$duration](bold green)'
@@ -41,6 +44,7 @@ command = 'echo "[WIP]"'
 when = "git log --pretty=format:'%s' -1 2> /dev/null | grep -ic wip"
 style = 'bold blue'
 format = "[$output]($style)"
+disabled = false
 
 # TODO:
 # * Display git stuff for sparse-checkouts.
