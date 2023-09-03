@@ -3,12 +3,16 @@
 alias rm="rm -iv"
 alias mv="mv -iv"
 
-alias vi=$EDITOR
-alias im=$EDITOR
-alias vm=$EDITOR
+alias vi="\$EDITOR"
+alias im="\$EDITOR"
+alias vm="\$EDITOR"
+alias vim="\$EDITOR"
 
-# alias ls="ls -lAGh"
-alias ls="exa -la --git"
+if [[ -x /usr/local/bin/exa ]]; then
+  alias ls="exa -la"
+else
+  alias ls="ls -lAGh"
+fi
 
 alias l1='echo "use t1"'
 alias l2='echo "use t2"'
