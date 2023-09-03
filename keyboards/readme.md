@@ -1,5 +1,10 @@
 # qmk configurations for my keyboards.
 
+## Compiling firmwares
+* [Setup `qmk` locally](https://docs.qmk.fm/#/newbs_getting_started)
+* Link (`ln`) each keymaps to the corresponding keyboard keymap in the qmk directory.
+* Compile the firmware with `qmk compile -kb [KEYBOARD] -km [KEYMAP]`
+
 ### [`cstm`](./cstm)
 Case: [Drop Alt High Profile][] from [Drop](https://drop.com/?referer=R3SREZ)
 PCB: Custom PCB

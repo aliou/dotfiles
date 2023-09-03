@@ -2,4 +2,7 @@
 # enable it to test the PCB.
 VIA_ENABLE = no
 
-DYNAMIC_TAPPING_TERM_ENABLE = yes
+# Disable all of the lights
+# Cop lights, flashlights, spotlights
+# Strobe lights, street lights (All of the lights, all of the lights)
+RGBLIGHT_ENABLE = no
