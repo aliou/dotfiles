@@ -9,6 +9,7 @@
 --ignore-dir=coverage
 --ignore-dir=node_modules
 --ignore-dir=deps
+--ignore-dir=dist
 
 --ignore-file=is:tags
 
