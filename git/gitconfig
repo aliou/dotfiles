@@ -42,7 +42,8 @@
   untracked-add = !"git untracked | xargs git add"
   untracked-rm  = !"git untracked | xargs rm"
 [push]
-  default = tracking
+  default = current
+  authSetupRemote = true
 [pull]
   ff = only
 [help]
