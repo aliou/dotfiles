@@ -64,6 +64,8 @@ Session.vim
 .vimrc
 NetrwTreeListing*
 .projections.json
+.nvim.lua
+
 .ruby-version
 *.backup
 .byebug_history
