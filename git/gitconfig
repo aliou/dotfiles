@@ -39,6 +39,8 @@
   undo          = reset HEAD~1
   unstash       = !"git stash pop"
   untracked     = !"git ls-files --others --exclude-standard"
+  untracked-add = !"git untracked | xargs git add"
+  untracked-rm  = !"git untracked | xargs rm"
 [push]
   default = tracking
 [pull]
