@@ -1,0 +1,34 @@
+{
+  "workbench.preferredLightColorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+  "window.titleBarStyle": "native",
+  "workbench.colorCustomizations": {
+    "sideBar.background": "#00000000",
+    "sideBarSectionHeader.background": "#00000000",
+    "activityBar.background": "#00000000"
+  },
+  "apc.electron": {
+    "backgroundColor": "#00000000",
+    "titleBarStyle": "hidden",
+    "vibrancy": "sidebar",
+    "visualEffectState": "followWindow",
+    "trafficLightPosition": {
+      "x": 9,
+      "y": 9
+    }
+  },
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 40,
+    "itemSize": 32
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 22
+  },
+  "apc.imports": [
+    "/Users/alioudiallo/.dotfiles/vscode/stylesheet.css"
+  ],
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Default Light Modern",
+}

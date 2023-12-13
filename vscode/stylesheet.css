@@ -1,0 +1,200 @@
+/* Color variables */
+:root {
+  --custom-separator: rgba(0, 0, 0, 0.1);
+  --custom-accent-blue: rgb(0, 122, 255);
+  --custom-fill-primary: rgba(120, 120, 128, 0.2);
+  @media (prefers-color-scheme: dark) {
+    --custom-separator: rgba(255, 255, 255, 0.1);
+    --custom-accent-blue: rgb(10, 132, 255);
+    --custom-fill-primary: rgba(120, 120, 128, 0.36);
+  }
+}
+
+/* Focus rings */
+.monaco-action-bar .action-item.checked .active-item-indicator {
+  display: none !important;
+}
+.monaco-workbench .synthetic-focus,
+.monaco-workbench [tabindex="0"]:focus,
+.monaco-workbench [tabindex="-1"]:focus,
+.monaco-workbench button:focus,
+.monaco-workbench input[type="button"]:focus,
+.monaco-workbench input[type="checkbox"]:focus,
+.monaco-workbench input[type="search"]:focus,
+.monaco-workbench input[type="text"]:focus,
+.monaco-workbench select:focus,
+.monaco-workbench textarea:focus {
+  outline-width: 0 !important;
+}
+.monaco-workbench .monaco-list:not(.element-focused):focus:before {
+  outline-width: 0 !important;
+}
+
+/* BORDERS */
+
+/* Side bar border color */
+.monaco-workbench {
+  --vscode-sideBar-border: var(--custom-separator) !important;
+  --vscode-sideBarSectionHeader-border: var(--custom-separator) !important;
+}
+.part.sidebar.left.pane-composite-part {
+  border-right-color: var(--vscode-sideBar-border) !important;
+}
+.part.auxiliarybar.basepanel.right.pane-composite-part {
+  border-left-color: var(--vscode-sideBar-border) !important;
+}
+/* Tabs bar bottom */
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  > .tabs-and-actions-container.tabs-border-bottom:after {
+  --tabs-border-bottom-color: var(--custom-separator) !important;
+}
+/* Tab right */
+.tab.tab-actions-right {
+  border-right-color: var(--custom-separator) !important;
+}
+/* First tab left when no side bar */
+body
+  > .monaco-workbench
+  > .monaco-grid-view
+  > .monaco-grid-branch-node
+  > .monaco-split-view2
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view.visible
+  > .monaco-grid-branch-node
+  > .monaco-split-view2
+  > .monaco-scrollable-element
+  > .split-view-container
+  > .split-view-view:nth-of-type(2):not(:has(.visible))
+  ~ .split-view-view.visible
+  .tabs-container {
+  margin-left: 5px;
+  & > .tab:first-of-type {
+    border-left: solid 1px var(--custom-separator) !important;
+  }
+}
+/* Status bar top */
+.monaco-workbench .part.statusbar {
+  --status-border-top-color: var(--custom-separator) !important;
+}
+/* Activity bar top */
+.part.activitybar.bordered {
+  border-color: var(--custom-separator) !important;
+}
+
+/* Active tab top border */
+.tab-border-top-container {
+  display: none !important;
+}
+
+/* Scroll bars */
+.monaco-scrollable-element > .scrollbar > .slider {
+  border-radius: 999px;
+  transition: background-color 0.25s;
+
+  background-color: rgb(195, 195, 195) !important;
+  &:hover {
+    background-color: rgb(125, 125, 125) !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgb(107, 107, 107) !important;
+    &:hover {
+      background-color: rgb(149, 149, 149) !important;
+    }
+  }
+}
+.monaco-scrollable-element > .scrollbar.vertical {
+  width: 14px !important;
+}
+.monaco-scrollable-element > .scrollbar.vertical > .slider {
+  width: 8px !important;
+  left: 3.5px !important;
+}
+.monaco-scrollable-element > .scrollbar.horizontal {
+  height: 14px !important;
+}
+.monaco-scrollable-element > .scrollbar.horizontal > .slider {
+  height: 8px !important;
+  top: 3px !important;
+}
+
+/* Tabs bar background when no tabs are open */
+.title.tabs:has(.empty) {
+  background-color: transparent !important;
+}
+
+/* Buttons */
+.monaco-workbench {
+  --vscode-button-background: var(--custom-accent-blue) !important;
+  --vscode-button-hoverBackground: var(--custom-accent-blue) !important;
+
+  --vscode-statusBarItem-remoteBackground: var(--custom-accent-blue) !important;
+  --vscode-statusBarItem-remoteForeground: #ffffff;
+  --vscode-statusBarItem-remoteHoverForeground: #ffffff;
+  --vscode-statusBarItem-remoteHoverBackground: var(
+    --vscode-statusBarItem-remoteBackground
+  ) !important;
+}
+.monaco-button {
+  border-radius: 5px;
+}
+
+/* Input containers */
+.monaco-inputbox {
+  border-radius: 5px;
+}
+
+/* Editor scroll shadow or decoration */
+.monaco-editor .scroll-decoration {
+  z-index: 5 !important;
+  height: 0 !important;
+  box-shadow: none !important;
+  border-bottom: solid 1px var(--custom-separator) !important;
+}
+.sticky-widget[widgetid="editor\.contrib\.stickyScrollWidget"] {
+  box-shadow: none !important;
+  border-bottom: solid 1px var(--custom-separator) !important;
+}
+
+/* Side bar items */
+.monaco-workbench {
+  --vscode-list-focusOutline: transparent !important;
+  --vscode-list-focusAndSelectionOutline: transparent !important;
+
+  --vscode-list-activeSelectionBackground: rgba(0, 122, 255, 0.75) !important;
+  --vscode-list-activeSelectionForeground: rgb(255, 255, 255) !important;
+  --vscode-list-activeSelectionIconForeground: rgb(255, 255, 255) !important;
+  --vscode-list-inactiveSelectionBackground: var(
+    --custom-fill-primary
+  ) !important;
+  --vscode-list-hoverBackground: transparent !important;
+
+  @media (prefers-color-scheme: dark) {
+    --vscode-list-activeSelectionBackground: rgba(
+      10,
+      132,
+      255,
+      0.75
+    ) !important;
+  }
+}
+.sidebar .monaco-list-rows {
+  margin-bottom: 10px !important;
+  padding-bottom: 10px !important;
+}
+.sidebar .monaco-list-row {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  width: calc(100% - 20px) !important;
+  border-radius: 5px !important;
+}
+
+/* Breadcrumb background color matching search bar */
+.editor-widget.find-widget {
+  background-color: var(--vscode-breadcrumb-background) !important;
+}
