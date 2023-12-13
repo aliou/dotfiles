@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# shellcheck source=/dev/null
 
 export FZF_DEFAULT_OPTS='--height 40% --reverse --color=light -1'
 
