@@ -27,7 +27,7 @@ alias cdd='cd ~/.dotfiles'
 alias cdg='cd ~/code/src/github.com/aliou/'
 alias cds='cd ~/code/src'
 alias cdt='cd ~/code/tmp'
-alias cdv='cd ~/.vim'
+alias cdv='cd ~/.config/nvim'
 
 # Reloads the shell without having PATH re-adding to himself.
 alias update="unset PATH ; exec \$SHELL"
