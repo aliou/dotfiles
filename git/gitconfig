@@ -20,6 +20,7 @@
   br            = branch
   branches      = branch -a
   c             = commit -v
+  cleanup = "!git remote prune origin && git checkout -q main && git for-each-ref refs/heads/ '--format=%(refname:short)' | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done"
   conflicted    = diff --name-only --diff-filter=U
   d             = diff --ignore-all-space
   dc            = diff --cached --ignore-all-space
@@ -52,6 +53,7 @@
   helper = osxkeychain
 [init]
   templatedir = ~/.dotfiles/git/templates
+  defaultBranch = main
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   required = true
