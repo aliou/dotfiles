@@ -12,6 +12,15 @@ if [[ -d "$HOME/.nvm" ]]; then
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 fi
 
-# Configure tab completion for pnpm.
-# shellcheck disable=2015
-[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . "$HOME/.config/tabtab/bash/__tabtab.bash" || true
+# Configure pnpm
+if [[ -d "$HOME/Library/pnpm" ]]; then
+  export PNPM_HOME="/Users/alioudiallo/Library/pnpm"
+
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
+
+  # Loading Bash completion.
+  [ -s "$PNPM_HOME/bash_completion" ] && source "$PNPM_HOME/bash_completion"
+fi
