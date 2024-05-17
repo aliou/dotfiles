@@ -10,4 +10,4 @@ do
   source "$code_file"
 done
 
-export PATH="$HOME/code/bin:$PATH"
+export PATH="$HOME/code/bin:$PATH:${HOME}/.local/bin"
